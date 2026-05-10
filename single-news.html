@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お知らせ個別</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="page-newsdetail">
+    <!-- <div id="loading" class="loading">
+      <div class="loader">Loading...</div>
+    </div> -->
+    <div id="page_top"><a href="#"></a></div>
+    <header>
+      <div class="header_inner">
+        <h2 class="title">
+          <a href="./index.html"><img src="./img/logo.png" /></a>
+        </h2>
+        <nav class="header_wrap">
+          <ul class="header_wrap_nav">
+            <li class="header_wrap_nav_list">
+              <a href="./company.html" class="header_wrap_nav_list_a"
+                >会社情報</a
+              >
+            </li>
+            <li class="header_wrap_nav_list">
+              <a href="./services.html" class="header_wrap_nav_list_a"
+                >事業内容</a
+              >
+            </li>
+            <li class="header_wrap_nav_list">
+              <a href="./works.html" class="header_wrap_nav_list_a">導入事例</a>
+            </li>
+            <li class="header_wrap_nav_list">
+              <a href="./career.html" class="header_wrap_nav_list_a"
+                >採用情報</a
+              >
+            </li>
+            <li class="header_wrap_nav_list">
+              <a href="./archive-news.html" class="header_wrap_nav_list_a"
+                >お知らせ</a
+              >
+            </li>
+            <li class="header_wrap_nav_list">
+              <a href="./archive-blog.html" class="header_wrap_nav_list_a"
+                >ブログ</a
+              >
+            </li>
+            <li class="header_wrap_nav_list">
+              <a
+                href="./contact.html"
+                class="header_wrap_nav_list_a button_contact"
+                >お問い合わせ</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="h-open sp-only">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav id="h-nav" class="sp-only">
+        <div id="h-nav__list">
+          <ul>
+            <li><a href="./company.html">会社情報</a></li>
+            <li><a href="./services.html">事業内容</a></li>
+            <li><a href="./works.html">導入事例</a></li>
+            <li><a href="./archive-news.html">お知らせ</a></li>
+            <li><a href="./career.html">採用情報</a></li>
+            <li><a href="./archive-blog.html">ブログ</a></li>
+            <li><a href="./contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <section id="news_single">
+          <article class="news_article" aria-label="お知らせ本文">
+            <!-- メタ情報（一覧と同じclass名を使う） -->
+            <div class="news_meta">
+              <time class="news-date" datetime="2025-12-01">2025.12.01</time>
+              <span class="news-cat" data-cat="information">information</span>
+            </div>
+            <!-- タイトル -->
+            <h3 class="news_title">
+              年末年始期間のお問い合わせ受付停止について
+            </h3>
+            <!-- 本文（WP化で the_content() に置き換える予定） -->
+            <div class="news_body">
+              <p>平素は格別のお引き立てをいただき厚くお礼申し上げます。</p>
+              <p>
+                弊社では年末年始休業に伴い、誠に勝手ながら下記日程のお問い合わせ受付を停止させていただきます。
+              </p>
+              <h6>お問い合わせ受付停止期間</h6>
+              <p>2025年12月29日（月）〜2026年1月4日（日）</p>
+              <p>
+                上記期間のお電話およびメール等によるお問い合わせにつきましては、2026年1月5日（月）以降に順次対応いたします。
+              </p>
+            </div>
+            <!-- 戻るボタン（WP化でアーカイブURLへ） -->
+            <div class="news_actions">
+              <a class="viewbutton_a viewbutton_a--back" href="./archive-news.html">
+                <span class="icon" aria-hidden="true"></span>
+                <span class="txt">Back to List</span>
+              </a>
+            </div>
+          </article>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div class="footer_container">
+        <div class="footer_container_leftgroup">
+          <img src="./img/logo.png" />
+          <h5>株式会社NEXILL</h5>
+          <h5>〒150-8377 東京都渋谷区宇田川町15-1<br />渋谷ビル 10階</h5>
+          <div class="footer_container_leftgroup_icongroup">
+            <a href="#"><img src="./img/icon/icon_facebook.png" /></a>
+            <a href="#"><img src="./img/icon/icon_instagram.png" /></a>
+          </div>
+        </div>
+        <div class="footer_container_rightgroup">
+          <div class="footer_container_rightgroup_item">
+            <h6 class="footer_nav_title">
+              <a href="#">会社情報</a>
+            </h6>
+            <ul class="footer_nav_list">
+              <li><a href="./company.html#company_mission">企業理念</a></li>
+              <li>
+                <a href="./company.htmlcompany_message">社長メッセージ</a>
+              </li>
+              <li><a href="./company.html#company_about">会社概要</a></li>
+              <li>
+                <a href="./company.html#company_accessmap">アクセスマップ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_container_rightgroup_item">
+            <h6 class="footer_nav_title">
+              <a href="./services.html">事業内容</a>
+            </h6>
+            <ul class="footer_nav_list">
+              <li><a href="./services.html#services">Webサイト制作</a></li>
+              <li>
+                <a href="./services.html#application">アプリケーション開発</a>
+              </li>
+              <li><a href="./services.html#maintenance">保守運用</a></li>
+              <li><a href="./services.html#services_faq">よくあるご質問</a></li>
+            </ul>
+          </div>
+          <div class="footer_container_rightgroup_item">
+            <h6 class="footer_nav_title">
+              <a href="./works.html">導入事例</a>
+            </h6>
+            <ul class="footer_nav_list">
+              <li><a href="./works.html#works_list">導入事例一覧</a></li>
+              <li><a href="./works.html#works_voice">お客様の声</a></li>
+            </ul>
+          </div>
+          <div class="footer_container_rightgroup_item">
+            <h6 class="footer_nav_title">
+              <a href="./archive-news.html">お知らせ</a>
+            </h6>
+          </div>
+          <div class="footer_container_rightgroup_item">
+            <h6 class="footer_nav_title">
+              <a href="./career.html">採用情報</a>
+            </h6>
+          </div>
+          <div class="footer_container_rightgroup_item">
+            <h6 class="footer_nav_title">
+              <a href="./contact.html">お問い合わせ</a>
+            </h6>
+          </div>
+          <div class="footer_container_rightgroup_item">
+            <h6 class="footer_nav_title">
+              <a href="./archive-blog.html">ブログ</a>
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="footer_attention">
+        <div class="footer_attention_left">
+          <a href="#">Privacy policy</a>
+          <a href="#">特定商取引に基づく表示</a>
+        </div>
+        <div class="footer_attention_right">
+          <h6>@2026. NEXILL Inc. All Rights Reserved.</h6>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./js/loading.js"></script>
+    <script type="text/javascript" src="./js/header.js"></script>
+    <script type="text/javascript" src="./js/fadein.js"></script>
+    <script type="text/javascript" src="./js/faq.js"></script>
+    <script type="text/javascript" src="./js/smooth_scroll.js"></script>
+  </body>
+</html>

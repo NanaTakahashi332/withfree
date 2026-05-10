@@ -1,0 +1,130 @@
+@use "../setting" as s;
+
+@mixin container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@mixin container_inline {
+  width: 90%;
+  text-align: center;
+}
+
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin viewbutton_a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 40px;
+  background: #252f66;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1;
+}
+
+@mixin viewbutton_a_tabsize {
+  padding: 0.5rem 1.5rem;
+  font-size: 16px;
+}
+
+@mixin viewbutton_a_txt {
+  white-space: nowrap;
+}
+
+@mixin viewbutton_a_icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  display: grid;
+  place-items: center;
+  // font-size: 26px;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0.75rem;
+}
+
+@mixin viewbutton_a_icon_tabsize {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+// トップページセクションタイトル
+@mixin section_title {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin: 0;
+  font-family: "Barlow";
+}
+
+@mixin section_title_en {
+  font-size: 90px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  // グラデーション
+  background: linear-gradient(90deg, #6ccee7 0%, #296aa2 55%, #252f66 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Barlow";
+}
+
+@mixin section_title_jp {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #252f66;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  font-family: "Barlow";
+}
+
+// 子ページ　セクションタイトル
+@mixin child_sec_title {
+  position: relative;
+  display: block;
+  margin-bottom: 3rem;
+  padding-bottom: 0.75rem;
+  font-family: "Barlow";
+}
+
+@mixin child_sec_title_after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+}
+
+// 左側の濃い短い線（アクセント）
+@mixin child_sec_title_before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 260px; // 短い線の長さ
+  z-index: 1;
+}
+
+@mixin section_top {
+  padding-top: 6rem;
+}
