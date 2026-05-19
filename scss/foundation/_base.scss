@@ -171,15 +171,17 @@ body {
 }
 
 // ヘッダー
+// :root {
+//   --header-h: 72px;
+// }
 :root {
-  --header-h: 72px;
+  --header-h: 70px;
 }
 header {
   height: var(--header-h);
   box-sizing: border-box;
   align-items: center;
   gap: 3rem;
-  // padding: 0.3rem 0;
   padding: 0;
   position: relative;
   position: fixed;
@@ -187,7 +189,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: $white;
+  // background-color: $white;
+  background-color: transparent;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -202,6 +205,7 @@ header {
     align-items: center;
     gap: 3rem;
     position: relative;
+    border-radius: 50%;
     .title {
       width: 15%;
       @include mq(tab) {
