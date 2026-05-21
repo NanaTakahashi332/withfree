@@ -310,7 +310,6 @@ header {
             linear-gradient(135deg, #c58fff 0%, #6667ab 100%); /* 外側のグラデーション枠 */
           background-clip: padding-box, border-box;
           opacity: 1;
-          // transform: translateY(-1px);
         }
       }
     }
@@ -873,14 +872,10 @@ footer {
     article {
       .fv {
         width: 100%;
-        // --header-h: 80px; // ヘッダー高さ（必要なら後で調整）
-        // height: calc(100vh - var(--header-h)); /* fallback */
-        // height: calc(100dvh - var(--header-h)); /* 新しいブラウザ用 */
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        // background-image: url("../img/top/fv.png");
         color: $font_basic;
         .fv-wrapper {
           @include container;
@@ -1023,7 +1018,6 @@ footer {
               height: 100%;
               flex-shrink: 0;
               width: calc((100% - (1.5rem * 3)) / 4);
-              // animation: loopSlider 20s linear infinite;
               animation: loopSlider 20s ease-in-out infinite;
               & img {
                 width: 100%;
@@ -1249,7 +1243,6 @@ footer {
         .top-whychoosewithfree_wrapper {
           @include container;
           .top-whychoosewithfree_wrapper_heading {
-            // display: inline-block;
             text-align: center;
             .top-whychoosewithfree_wrapper_heading_main {
               margin: 0.5rem 0;
@@ -1260,865 +1253,473 @@ footer {
               font-size: 18px;
             }
           }
-        }
-      }
-
-      #top_company {
-        background-color: $weak_bright_blue;
-        .top_company_group {
-          padding: 4rem 0 2rem;
-          @include container;
-          @include flex_between;
-          gap: 5%;
-          @include mq(pc) {
-            gap: 5%;
-          }
-          @include mq(tab) {
-            display: block;
-          }
-          .top_company_group_left {
-            width: 60%;
-            @include mq(pc) {
-              width: 50%;
-            }
-            @include mq(tab) {
-              width: 100%;
-            }
-            & h4 {
-              margin-bottom: 4rem;
-              color: $navy;
-              font-size: 22px;
-              line-height: 1.5;
-              @include mq(tab) {
-                font-size: 20px;
-                margin-bottom: 1rem;
-              }
-              @include mq(sp) {
-                font-size: 18px;
-              }
-            }
-            .top_company_group_viewbutton_a {
-              @include viewbutton_a;
-            }
-            .top_company_group_viewbutton_a .txt {
-              @include viewbutton_a_txt;
-            }
-            .top_company_group_viewbutton_a .icon {
-              @include viewbutton_a_icon;
-            }
-          }
-          .top_company_group_right {
-            line-height: 1.5;
-            font-size: 18px;
-            @include mq(tab) {
-              margin-top: 2rem;
-            }
-            .top_company_group_right_p {
-              margin-bottom: 2rem;
-            }
-            @include mq(pc) {
-              font-size: 100%;
-            }
-            @include mq(tab) {
-              font-size: 14px;
-            }
-            @include mq(sp) {
-              font-size: 10px;
-            }
-          }
-        }
-        .top_company_loopwrapper {
-          display: flex;
-          width: 100%;
-          overflow: hidden;
-          .top_company_loopwrapper_text {
-            flex: 0 0 auto;
-            white-space: nowrap;
-            font-size: 80px;
-            overflow: hidden;
-            padding-left: 20px;
-            color: $white;
-            line-height: 1.5;
-            @include mq(tab) {
-              font-size: 60px;
-            }
-            @include mq(sp) {
-              font-size: 40px;
-            }
-          }
-          .top_company_loopwrapper_text:nth-child(odd) {
-            animation: loop 50s -25s linear infinite;
-          }
-          .top_company_loopwrapper_text:nth-child(even) {
-            animation: loop2 50s linear infinite;
-          }
-          @keyframes loop {
-            0% {
-              transform: translateX(100%);
-            }
-            to {
-              transform: translateX(-100%);
-            }
-          }
-          @keyframes loop2 {
-            0% {
-              transform: translateX(0);
-            }
-            to {
-              transform: translateX(-200%);
-            }
-          }
-        }
-      }
-      // =====トップページ  services 事業内容=====
-      #top_services {
-        --divider-h: 110px; /* V字の深さ */
-        --pad-top: 4rem;
-        --pad-bottom: 8rem; /* V字の手前の余白 */
-        width: 100%;
-        background-color: $weak_bright_blue;
-        box-sizing: border-box;
-        position: relative;
-        padding: var(--pad-top) 0 calc(var(--pad-bottom) + var(--divider-h));
-        // bottomのセクション区切り
-        clip-path: polygon(
-          0 0,
-          100% 0,
-          100% calc(100% - var(--divider-h)),
-          50% 100%,
-          0 calc(100% - var(--divider-h))
-        );
-        // V字で切られる部分
-        @include mq(tab) {
-          --divider-h: 70px;
-          --pad-bottom: 4rem;
-        }
-        @include mq(sp) {
-          --divider-h: 50px;
-          --pad-top: 0rem;
-          --pad-bottom: 3rem;
-          padding-top: 3rem;
-        }
-        .sec-title {
-          @include section_title;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.5rem;
-          .sec-title__en {
-            @include section_title_en;
-            @include mq(pc) {
-              font-size: 80px;
-            }
-            @include mq(pc) {
-              font-size: 70px;
-            }
-            @include mq(sp) {
-              font-size: 50px;
-            }
-          }
-          .sec-title__jp {
-            @include section_title_jp;
-          }
-        }
-        .top_services_group {
-          margin-top: 2rem;
-          @include flex_between;
-          gap: 5%;
-          @include mq(pc) {
-            display: block;
-            margin: 0 auto;
-          }
-          .vision_title_sp {
-            display: none;
-            @include mq(sp) {
-              display: block;
-              margin-bottom: 2rem;
-            }
-          }
-          .top_services_group_leftbox {
-            width: 25%;
-            margin-left: 5%;
-            @include mq(tab) {
-              width: 90%;
-              box-sizing: border-box;
-            }
-            .top_services_left_sticky {
-              position: sticky;
-              top: 110px;
-              display: grid;
-              gap: 2.5rem;
-              align-content: start;
-              z-index: 5;
-              @include mq(pc) {
-                position: static;
-                top: auto;
-              }
-            }
-            .top_services_viewbutton {
-              @include mq(tab) {
-                margin-top: 2rem;
-              }
-              .top_services_viewbutton_a {
-                @include viewbutton_a;
-              }
-              .top_services_viewbutton_a .txt {
-                @include viewbutton_a_txt;
-              }
-              .top_services_viewbutton_a .icon {
-                @include viewbutton_a_icon;
-              }
-            }
-          }
-          .top_services_group_rightbox {
-            width: 70%;
-            background-color: $white;
-            justify-self: end;
-            display: flex;
-            flex-direction: column;
-            gap: 3.2rem;
-            background: #ffffff;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            padding: 5%;
-            box-sizing: border-box;
-            @include mq(pc) {
-              width: 90%;
-              margin: 2rem auto 0;
+          .top-whychoosewithfree_wrapper_merit {
+            @include flex_center;
+            justify-content: flex-start;
+            gap: 2rem;
+            margin-right: auto;
+            & li {
+              padding: 0.5rem 1rem;
               border-radius: 20px;
+              font-size: 16px;
             }
-            .top_services_group_rightbox_item {
-              /* 画像→見出し→本文の間を整える */
-              display: grid;
-              gap: 1rem;
-              width: 100%;
-              padding: 0 2rem;
-              margin-right: 5%;
-              box-sizing: border-box;
-              @include mq(tab) {
-                margin-right: 0;
-                padding: 0;
+            .top-whychoosewithfree_wrapper_merit_accept {
+              color: $white;
+              background-image: linear-gradient(
+                -45deg,
+                #a5b1f4 0%,
+                #6b7dd7 100%
+              );
+            }
+            .top-whychoosewithfree_wrapper_merit_order {
+              color: $purple_heading_sub;
+              border: 1.5px solid transparent;
+              background-image:
+                linear-gradient(#ffffff, #ffffff),
+                linear-gradient(-45deg, #a5b1f4 0%, #6b7dd7 100%); /* 外側のグラデーション枠 */
+              background-clip: padding-box, border-box;
+            }
+          }
+          .top-whychoosewithfree_wrapper_group {
+            margin-top: 4rem;
+            .top-whychoosewithfree_wrapper_group_heading {
+              display: flex;
+              align-items: center;
+              gap: 1.5rem;
+              padding-bottom: 1.5rem;
+              border-bottom: 2px dotted #cccccc;
+              margin-bottom: 1.5rem;
+              .top-whychoosewithfree_wrapper_group_heading_number {
+                background-color: $purple_numberbackground_whychoosewithfree;
+                color: $white;
+                border-radius: 50%;
+                width: 72px;
+                height: 72px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                p:first-child {
+                  font-size: 12px;
+                  // font-weight: bold;
+                  margin: 0 0 4px 0;
+                  // line-height: 1;
+                }
+                p:last-child {
+                  font-size: 28px;
+                  font-weight: bold;
+                  // margin: 0;
+                  // line-height: 1;
+                }
               }
-              .top_services_group_rightbox_item_img {
-                width: 100%;
-                box-sizing: border-box;
+              h4 {
+                font-size: 24px;
+                font-weight: bold;
+                color: #333333;
+                margin: 0;
+              }
+            }
+            > p {
+              line-height: 1.8;
+              color: #666666;
+              margin-bottom: 2.5rem;
+            }
+            .top-whychoosewithfree_wrapper_group_card {
+              display: flex;
+              justify-content: space-between;
+              gap: 24px;
+              .top-whychoosewithfree_wrapper_group_card_item {
+                width: calc((100% - 48px) / 3);
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
                 overflow: hidden;
-                border-radius: 10px;
-                aspect-ratio: 16 / 9;
-                img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  display: block;
+                .top-whychoosewithfree_wrapper_group_card_item_img {
+                  background-color: #f2f2f2;
+                  padding: 30px 20px;
+                  text-align: center;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  img {
+                    width: 80%;
+                    height: auto;
+                    object-fit: contain;
+                  }
                 }
-                transform: scale(1.001); /* 端の1px隙間を防止する*/
+                .top-whychoosewithfree_wrapper_group_card_item_content {
+                  padding: 24px 20px;
+                  h3 {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #333333;
+                    text-align: center;
+                    margin: 0 0 16px 0;
+                  }
+                  p {
+                    font-size: 12px;
+                    line-height: 1.6;
+                    color: #666666;
+                    text-align: left;
+                    margin: 0;
+                  }
+                }
               }
-              .top_services_group_rightbox_item_heading {
-                margin: 0.4rem 0 0;
-                font-size: 30px;
-                font-weight: 800;
-                color: $blue;
-                letter-spacing: 0.02em;
-                line-height: 1.2;
-                @include mq(tab) {
-                  font-size: 24px;
-                }
-                @include mq(sp) {
+            }
+          }
+        }
+      }
+      #top-environment {
+        margin: 4rem 0;
+        .top-environment_wrapper {
+          @include container;
+          & h3 {
+            font-size: 30px;
+            line-height: 1.5;
+            & span {
+              margin: 0 0.2rem;
+              background-image: linear-gradient(
+                to right,
+                #c58fff 0%,
+                #6667ab 100%
+              );
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+              font-weight: bolder;
+              font-size: 38px;
+            }
+          }
+          .top-environment_group {
+            @include flex_between;
+            gap: 5%;
+            .top-environment_group_textbox {
+              width: 50%;
+              .top-environment_group_textbox_text {
+                margin: 1.5rem 0;
+                line-height: 1.5;
+                & span {
+                  margin: 0 0.2rem;
+                  background-image: linear-gradient(
+                    to right,
+                    #c58fff 0%,
+                    #6667ab 100%
+                  );
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  font-weight: bolder;
                   font-size: 20px;
                 }
               }
-              .top_services_group_rightbox_item_txt {
-                margin: 0;
-                font-size: 0.95rem;
-                line-height: 1.9;
-                color: #252f66;
-                opacity: 0.9;
-                @include mq(tab) {
-                  font-size: 14px;
-                }
-                @include mq(sp) {
-                  font-size: 12px;
-                }
+            }
+            .top-environment_group_img {
+              width: 40%;
+              align-self: center;
+              & img {
+                width: 100%;
               }
             }
           }
         }
       }
-      // =====トップページ　Works 事例紹介=====
-      #top_works {
-        @include container;
-        padding-top: 4rem;
-        color: $font_basic;
-        box-sizing: border-box;
-        .sec-title {
-          @include section_title;
-          .sec-title__en {
-            @include section_title_en;
-            @include mq(pc) {
-              font-size: 80px;
-            }
-            @include mq(pc) {
-              font-size: 70px;
-            }
-            @include mq(sp) {
-              font-size: 50px;
-            }
-          }
-          .sec-title__jp {
-            @include section_title_jp;
-          }
+      #top-cta_free {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        padding: 8rem 0;
+        background-image:
+          linear-gradient(
+            135deg,
+            rgba(138, 178, 226, 0.85) 0%,
+            rgba(155, 120, 198, 0.85) 100%
+          ),
+          url("/img/cta_backgroundimg.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: $white;
+        text-align: center;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: -10%; /* 画面幅より少し大きくして自然なカーブにする */
+          width: 120%;
+          height: 100px; /* カーブの深さ（へこみ具合） */
+          background-color: #ffffff; /* ★上下のセクションの背景色（白）と合わせる */
+          border-radius: 50%;
+          z-index: 2;
         }
-        .top_works_mainitem {
-          margin: 4rem 0 3rem;
-          transition:
-            opacity 0.4s ease,
-            transform 0.4s ease;
-          @include mq(tab) {
-            width: 100%;
-          }
+        &::before {
+          top: -50px; /* 半分だけ見せてへこみを作る */
+        }
+        &::after {
+          bottom: -50px; /* 半分だけ見せてへこみを作る */
+        }
+        > * {
+          position: relative;
+          z-index: 3;
+        }
+        & h2 {
+          margin-bottom: 1rem;
+          font-size: 28px;
+        }
+        & p {
+          line-height: 1.5;
+          font-size: 16px;
+        }
+        .top-cta_free_button {
+          display: inline-flex;
+          align-items: center;
+          background-color: #6667ab;
+          border-radius: 50px;
+          padding: 0.5rem 2rem 0.5rem 0.5rem;
+          margin-top: 3rem;
+          cursor: pointer;
+          transition: opacity 0.3s ease;
           &:hover {
-            opacity: 0.85;
-            transform: translateY(-2px);
+            opacity: 0.8;
           }
-          a {
-            display: flex;
-            align-items: stretch;
-            gap: 2.5%;
-            text-decoration: none;
-            color: inherit;
-            transition:
-              opacity 0.4s ease,
-              transform 0.4s ease;
-            @include mq(tab) {
-              display: block;
-            }
-            a:hover {
-              opacity: 0.85;
-              transform: translateY(-2px);
-            }
-            .top_works_mainitem_img {
-              width: 100%;
-              @include mq(tab) {
-                width: 100%;
-              }
-              img {
-                width: 100%;
-                object-fit: cover;
-              }
-            }
-            .top_works_mainitem_txtgroup {
-              width: 45%;
-              @include mq(tab) {
-                width: 100%;
-              }
-              & h4 {
-                font-size: 20px;
-                line-height: 1.5;
-                @include mq(tab) {
-                  font-size: 18px;
-                }
-                @include mq(sp) {
-                  font-size: 14px;
-                }
-              }
-              .tag {
-                display: inline-block;
-                margin-top: 1rem;
-                padding: 0.5rem 1.5rem;
-                background-color: $weak_gray;
-                color: $blue;
-                border-radius: 40px;
-              }
-            }
+          .top-cta_free_button_registration {
+            background-color: #ffffff;
+            color: #6667ab;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 1rem;
           }
-        }
-        .top_works_others {
-          @include flex_between;
-          gap: 2%;
-          margin-bottom: 3rem;
-          @include mq(tab) {
-            display: block;
+          .top-cta_free_button_serch {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
           }
-          .top_works_others_item {
-            width: 30%;
-            transition:
-              opacity 0.4s ease,
-              transform 0.4s ease;
-            @include mq(tab) {
-              width: 100%;
-              margin: 3rem 0;
-            }
-            &:hover {
-              opacity: 0.85;
-              transform: translateY(-2px);
-            }
-            a {
-              display: block;
-              color: inherit;
-              transition:
-                opacity 0.4s ease,
-                transform 0.4s ease;
-              a:hover {
-                opacity: 0.85;
-                transform: translateY(-2px);
-              }
-              .top_works_others_item_img {
-                width: 100%;
-                & img {
-                  width: 100%;
-                  object-fit: cover;
-                }
-              }
-              .top_works_others_item_txtgroup {
-                font-size: 20px;
-                line-height: 1.5;
-                @include mq(tab) {
-                  font-size: 16px;
-                }
-                @include mq(sp) {
-                  font-size: 14px;
-                }
-              }
-              .tag {
-                display: inline-block;
-                margin-top: 1rem;
-                padding: 0.25em 0.75rem;
-                background-color: $weak_gray;
-                color: $blue;
-                border-radius: 40px;
-                font-size: 12px;
-              }
-            }
-          }
-        }
-        .top_works_viewbutton_a {
-          @include viewbutton_a;
-        }
-        .top_works_viewbutton_a .txt {
-          @include viewbutton_a_txt;
-        }
-        .top_works_viewbutton_a .icon {
-          @include viewbutton_a_icon;
         }
       }
-
-      // =====トップページ　News お知らせ=====
-      #top_news {
-        @include container;
-        margin-top: 6rem;
-        padding-top: 4rem;
-        color: $font_basic;
-        @include mq(sp) {
-          margin-top: 4rem;
-        }
-        .top_news_headinggroup {
-          @include flex_between;
-          margin-bottom: 3rem;
-          @include mq(tab) {
-            display: block;
-            margin-bottom: 1.5rem;
+      #top-casestudies {
+        background-color: $blue_casestudies_background;
+        padding: 5rem 0;
+        color: $font_gray;
+        .top-casestudies_wrapper {
+          // @include container;
+          display: grid;
+          overflow: hidden;
+          .top-casestudies_wrapper_heading_main {
+            font-size: 34px;
+            font-weight: bold;
+            margin: 0 0 0.5rem 0;
           }
-          .sec-title {
-            @include section_title;
-            .sec-title__en {
-              @include section_title_en;
-              @include mq(pc) {
-                font-size: 80px;
-              }
-              @include mq(tab) {
-                font-size: 70px;
-              }
-              @include mq(sp) {
-                font-size: 50px;
-              }
-            }
-            .sec-title__jp {
-              @include section_title_jp;
-            }
+          .top-casestudies_wrapper_heading_sub {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 3rem 0;
           }
-        }
-        .top_news_viewbutton {
-          margin: 2rem 0 0 0;
-          .top_news_viewbutton_a {
-            @include viewbutton_a;
-          }
-          .top_news_viewbutton_a .txt {
-            @include viewbutton_a_txt;
-          }
-          .top_news_viewbutton_a .icon {
-            @include viewbutton_a_icon;
-          }
-        }
-        .top_news_list {
-          margin: 0;
-          padding: 0;
-          .top_news_list_item {
-            border-bottom: 2px solid rgba(37, 47, 102, 0.35);
-            .top_news_list_item_link {
-              display: grid;
-              grid-template-columns: 120px 150px 1fr; /* 日付 / カテゴリ / タイトル */
-              align-items: center;
-              gap: 2rem;
-              padding: 1.4rem 0.5rem;
-              text-decoration: none;
-              color: inherit;
-              transition:
-                background-color 0.2s ease,
-                transform 0.2s ease;
-              @include mq(tab) {
-                grid-template-columns: auto auto 1fr; // date / cat / (余り)
-                grid-template-areas:
-                  "date cat ."
-                  "title title title";
-                column-gap: 0.75rem;
-                row-gap: 0.75rem;
-              }
-              &:hover {
-                background-color: rgba(108, 206, 231, 0.12);
-              }
-              .news-date {
-                font-weight: 700;
-                color: $font_basic;
-                font-size: 18px;
-                letter-spacing: 0.02em;
-                white-space: nowrap;
-              }
-              .news-cat {
-                justify-self: start;
-                display: inline-flex;
+          .top-casestudies_wrapper_category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 4rem 0;
+            align-items: center;
+            li {
+              overflow: hidden;
+              background-color: #ffffff;
+              border-radius: 50px;
+              a {
+                display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 0.5rem 1rem;
-                border-radius: 40px;
-                border: 2px solid rgba(108, 206, 231, 0.8);
-                color: $bright_blue;
-                font-weight: 700;
-                letter-spacing: 0.08em;
-                white-space: nowrap;
-              }
-              .news-title {
-                color: $font_basic;
-                font-size: 18px;
-                line-height: 1.5;
-                white-space: normal;
-                overflow: visible;
-                text-overflow: clip;
-                /* タイトルが長い時に1行で省略する */
-                // white-space: nowrap;
-                // overflow: hidden;
-                // text-overflow: ellipsis;
-                @include mq(tab) {
-                  grid-area: title;
-                  width: 100%;
-                  justify-self: stretch;
-                  font-size: 16px;
-                }
-                @include mq(sp) {
-                  font-size: 14px;
-                }
-              }
-              .news_body {
-                & p {
-                  color: $font_basic;
-                }
-              }
-            }
-          }
-        }
-      }
-      // =====トップページ　Career 採用情報=====
-      #top_career {
-        width: 100%;
-        margin-top: 6rem;
-        padding: 5rem 0;
-        background-color: rgba(37, 47, 102, 1);
-        background-image: radial-gradient(
-          rgba(41, 106, 162, 0.8) 3%,
-          rgba(235, 232, 239, 0.8)
-        );
-        border-radius: 40px;
-        .top_career_group {
-          @include container;
-          @include flex_between;
-          @include mq(tab) {
-            display: block;
-          }
-          .sec-title-white {
-            @include section_title;
-            @include mq(tab) {
-              margin-bottom: 1.5rem;
-            }
-            .sec-title-white__en {
-              @include section_title_en;
-              font-weight: 1000;
-              letter-spacing: 0.02em;
-              line-height: 1;
-              color: $white;
-              @include mq(pc) {
-                font-size: 80px;
-              }
-              @include mq(pc) {
-                font-size: 70px;
-              }
-              @include mq(sp) {
-                font-size: 50px;
-              }
-            }
-            .sec-title-white__jp {
-              @include section_title_jp;
-              color: $white;
-            }
-          }
-          .top_career_group_viewbutton_a {
-            @include viewbutton_a;
-          }
-          .top_career_group_viewbutton_a .txt {
-            @include viewbutton_a_txt;
-          }
-          .top_career_group_viewbutton_a .icon {
-            @include viewbutton_a_icon;
-          }
-        }
-        & p {
-          margin: 4rem 0 2rem;
-          padding-left: 5%;
-          color: $white;
-          font-size: 20px;
-          line-height: 1.5;
-          @include mq(tab) {
-            width: 90%;
-            margin: 2rem auto 0;
-            padding-left: 0;
-            font-size: 14px;
-          }
-          @include mq(pc) {
-            font-size: 12px;
-          }
-        }
-        .marquee-right {
-          overflow: hidden;
-          & ul {
-            animation: marquee-right 25s linear infinite;
-            display: flex;
-            margin: 3rem 0;
-            padding: 0;
-            width: max-content;
-            & li {
-              list-style: none;
-              padding: 0 1rem;
-              width: calc(50vw / 3 - 10px); /* 3 写真の枚数にあわせる */
-              aspect-ratio: 3/ 4;
-              overflow: hidden;
-              border-radius: 10px;
-              @include mq(pc) {
-                width: calc(80vw / 3 - 10px);
-              }
-              @include mq(tab) {
-                width: calc(100vw / 3 - 10px);
-              }
-              & img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-            }
-          }
-        }
-        @keyframes marquee-right {
-          from {
-            transform: translateX(0%);
-          }
-          to {
-            transform: translateX(-50%);
-          }
-        }
-      }
-      // =====トップページ　パネル (お問い合わせ、ブログ)=====
-      #top_panel {
-        @include container;
-        @include flex_between;
-        padding: 4rem 0;
-        @include mq(tab) {
-          display: block;
-        }
-        .top_panel_a {
-          display: block;
-          width: 47.5%;
-          @include mq(tab) {
-            width: 100%;
-          }
-          .top_panel_a_item {
-            position: relative;
-            background: $bright_blue;
-            border-radius: 12px;
-            padding: 2rem 2.2rem;
-            box-sizing: border-box;
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            @include mq(tab) {
-              margin-top: 2rem;
-            }
-            &::before {
-              content: "";
-              position: absolute;
-              inset: 0;
-              background: center / cover no-repeat;
-              opacity: 0;
-              transform: scale(1.04);
-              transition:
-                opacity 0.45s ease,
-                transform 0.45s ease;
-              z-index: 0;
-            }
-            &::after {
-              content: "";
-              position: absolute;
-              inset: 0;
-              background: rgba(37, 47, 102, 0.25);
-              opacity: 0;
-              transition: opacity 0.45s ease;
-              z-index: 1;
-            }
-            > * {
-              position: relative;
-              z-index: 2;
-            }
-            .top_panel_a_item_arrow {
-              transition:
-                transform 0.35s ease,
-                background-color 0.35s ease;
-            }
-            &:hover .top_panel_a_item {
-              transform: translateY(-2px);
-              box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
-            }
-            // hover時に背景画像を表示する
-            &:hover .top_panel_a_item::before {
-              opacity: 1;
-              transform: scale(1);
-            }
-            &:hover .top_panel_a_item::after {
-              opacity: 1;
-            }
-            &:hover .top_panel_a_item_arrow {
-              transform: translate(2px, -2px);
-              background-color: rgba(255, 255, 255, 0.12);
-            }
-            .sec-title-white {
-              @include section_title;
-              margin: 0 0 2rem;
-              @include mq(pc) {
-                display: flex;
-                flex-direction: column;
-                gap: 0.25rem;
-              }
-              .sec-title-white__en {
-                @include section_title_en;
-                color: $white;
-                font-size: 60px;
-                @include mq(pc) {
-                  font-size: 50px;
-                }
-                @include mq(sp) {
-                  font-size: 40px;
-                }
-              }
-              .sec-title-white__jp {
-                @include section_title_jp;
-                color: #fff;
-                opacity: 0.9;
-              }
-            }
-            p {
-              margin-bottom: 4rem;
-              color: $white;
-              font-size: 1rem;
-              line-height: 1.7;
-              opacity: 0.95;
-              @include mq(tab) {
-                margin-bottom: 0;
                 font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+                background-image: linear-gradient(
+                  to right,
+                  #a5b1f4 0%,
+                  #6b7dd7 100%
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                transition: opacity 0.3s ease;
+                line-height: 1;
+                &:hover {
+                  opacity: 0.7;
+                }
               }
-              @include mq(sp) {
-                font-size: 12px;
+              &:first-child {
+                background-image: linear-gradient(
+                  to right,
+                  #a5b1f4 0%,
+                  #6b7dd7 100%
+                );
+                background-color: transparent;
+                a {
+                  background-image: none;
+                  -webkit-background-clip: border-box;
+                  background-clip: border-box;
+                  color: #ffffff;
+                }
               }
             }
-            .top_panel_a_item_arrow {
-              position: absolute;
-              right: 1.4rem;
-              bottom: 1.2rem;
-              width: 52px;
-              height: 52px;
-              border-radius: 999px;
-              border: 2px solid rgba(255, 255, 255, 0.85);
-              display: grid;
-              place-items: center;
-              color: #fff;
-              font-size: 22px;
-              line-height: 1;
+          }
+          .top-casestudies_wrapper_work {
+            grid-column: 1;
+            grid-row: 3;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 4rem;
+            animation: caseStudiesSlide 54s linear infinite;
+            animation-direction: var(--case-slider-direction, normal);
+            &:nth-of-type(3) {
+              animation-delay: -18s;
+            }
+            &:nth-of-type(4) {
+              animation-delay: -36s;
+            }
+            .top-casestudies_wrapper_work_img {
+              width: 48%;
+              & img {
+                width: 100%;
+              }
+            }
+            .top-casestudies_wrapper_work_textbox {
+              width: 48%;
+              .top-casestudies_wrapper_work_textbox_outline {
+                border-bottom: 1px solid #cccccc;
+                padding-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
+                h4 {
+                  font-size: 24px;
+                  font-weight: bold;
+                  margin: 0 0 1rem 0;
+                  color: #333333;
+                }
+                ul {
+                  display: flex;
+                  gap: 12px;
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                  li {
+                    background-color: #aeb5c0; /* 薄いグレー */
+                    color: #ffffff;
+                    padding: 4px 16px;
+                    border-radius: 50px;
+                    font-size: 12px;
+                    font-weight: bold;
+                  }
+                }
+              }
+              .top-casestudies_wrapper_work_textbox_engineer {
+                border-bottom: 1px solid #cccccc;
+                padding-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
+                .top-casestudies_wrapper_work_textbox_engineer_detail {
+                  display: flex;
+                  align-items: center;
+                  gap: 1.5rem;
+                  margin-bottom: 1rem;
+                  .top-casestudies_wrapper_work_textbox_engineer_detail_name {
+                    p:first-child {
+                      font-size: 12px;
+                      color: #666666;
+                      margin: 0 0 4px 0;
+                    }
+                    p:last-child {
+                      font-size: 16px;
+                      font-weight: bold;
+                      margin: 0;
+                    }
+                  }
+                  img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  }
+                }
+                .top-casestudies_wrapper_work_textbox_engineer_tag {
+                  display: flex;
+                  gap: 16px;
+                  p {
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: #555555;
+                    margin: 0;
+                  }
+                }
+              }
+              & p {
+                font-size: 14px;
+                color: #888888;
+                font-weight: bold;
+                margin: 0;
+                cursor: pointer;
+              }
             }
           }
-          &:hover .top_panel_a_item {
-            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+          @keyframes caseStudiesSlide {
+            0% {
+              transform: translateX(170%);
+            }
+            100% {
+              transform: translateX(-170%);
+            }
           }
-          &:hover .top_panel_a_item::before {
-            opacity: 1;
-            transform: scale(1);
+          .top-casestudies_wrapper_controls {
+            grid-column: 1;
+            grid-row: 3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            pointer-events: none;
+            z-index: 2;
           }
-          &:hover .top_panel_a_item::after {
-            opacity: 1;
+          .top-casestudies_wrapper_control {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            padding: 0;
+            border-radius: 50%;
+            border: 1px solid #cccccc;
+            background-color: #ffffff;
+            color: $font_gray;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+            cursor: pointer;
+            pointer-events: auto;
           }
-          &:hover .top_panel_a_item_arrow {
-            background-color: rgba(255, 255, 255, 0.12);
-          }
-        }
-        .top_panel_a:first-child .top_panel_a_item::before {
-          background-image: url("../img/top/top_contact_hover.jpg");
-        }
-        .top_panel_a:last-child .top_panel_a_item::before {
-          background-image: url("../img/top/top_blog_hover.jpg");
-        }
-      }
-      .top_panel_loopwrapper {
-        display: flex;
-        width: 100%;
-        overflow: hidden;
-        .top_panel_loopwrapper_text {
-          flex: 0 0 auto;
-          white-space: nowrap;
-          font-size: 80px;
-          overflow: hidden;
-          padding-left: 20px;
-          color: $weak_gray;
-          line-height: 1.5;
-          @include mq(tab) {
-            font-size: 60px;
-          }
-          @include mq(sp) {
-            font-size: 40px;
-          }
-        }
-        .top_panel_loopwrapper_text:nth-child(odd) {
-          animation: loop 50s -25s linear infinite;
-        }
-        .top_panel_loopwrapper_text:nth-child(even) {
-          animation: loop2 50s linear infinite;
-        }
-        @keyframes loop {
-          0% {
-            transform: translateX(100%);
-          }
-          to {
-            transform: translateX(-100%);
-          }
-        }
-        @keyframes loop2 {
-          0% {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-200%);
+          .top-casestudies_wrapper_button {
+            grid-column: 1;
+            grid-row: 4;
+            text-align: center;
+            h3 {
+              display: inline-block;
+              background-color: $purple_heading;
+              color: $white;
+              padding: 16px 40px;
+              border-radius: 50px;
+              font-size: 16px;
+              font-weight: bold;
+              margin: 0;
+              cursor: pointer;
+              transition: opacity 0.3s ease;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+              &:hover {
+                opacity: 0.8;
+              }
+            }
           }
         }
       }
@@ -2280,77 +1881,6 @@ footer {
               }
               @include mq(sp) {
                 font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-      #company_about {
-        @include container;
-        @include section_top;
-        dl {
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
-          font-size: 18px;
-          line-height: 1.5;
-          @include mq(tab) {
-            font-size: 14px;
-          }
-          @include mq(sp) {
-            font-size: 12px;
-          }
-          dt {
-            width: 30%;
-            padding-bottom: 20px;
-            margin-bottom: 10px;
-            color: $blue;
-          }
-          dd {
-            width: 70%;
-            padding-bottom: 20px;
-            margin-bottom: 10px;
-            color: $font_basic;
-          }
-        }
-      }
-      #company_accessmap {
-        @include container;
-        @include section_top;
-        .company_accessmap_container {
-          @include flex_between;
-          gap: 3%;
-          @include mq(tab) {
-            display: block;
-          }
-          .company_accessmap_container_txt {
-            width: 48.5%;
-            @include mq(tab) {
-              width: 100%;
-              margin-bottom: 3rem;
-            }
-            .company_accessmap_container_txt_item {
-              margin-bottom: 3rem;
-              & h6 {
-                margin-bottom: 0.75rem;
-                font-size: 20px;
-                color: $navy;
-                @include mq(tab) {
-                  font-size: 20px;
-                }
-                @include mq(sp) {
-                  font-size: 18px;
-                }
-              }
-              & p {
-                font-size: 16px;
-                line-height: 1.5;
-                @include mq(tab) {
-                  font-size: 14px;
-                }
-                @include mq(sp) {
-                  font-size: 12px;
-                }
               }
             }
           }
