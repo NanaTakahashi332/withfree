@@ -1723,6 +1723,255 @@ footer {
           }
         }
       }
+      #top-pricingplan {
+        @include container;
+        padding: 6rem 0;
+        text-align: center;
+        color: #333333;
+
+        .top-pricingplan_wrapper {
+          @include container;
+
+          /* ▼ 見出し周りのスタイル ▼ */
+          .top-pricingplan_wrapper_heading {
+            margin-bottom: 3rem;
+
+            p {
+              display: inline-block;
+              border: 1px solid #cccccc;
+              border-radius: 50px;
+              padding: 4px 20px;
+              font-size: 12px;
+              font-weight: bold;
+              color: #888888;
+              margin-bottom: 1rem;
+            }
+
+            .top-pricingplan_wrapper_heading_main {
+              font-size: 32px;
+              font-weight: bold;
+              margin: 0 0 0.5rem 0;
+            }
+
+            .top-pricingplan_wrapper_heading_sub {
+              font-size: 16px;
+              font-weight: bold;
+              margin: 0;
+            }
+          }
+
+          /* ▼ マホ版レスポンシブ：横スクロール*/
+          .scroll {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0.5rem 0 1.5rem;
+          }
+
+          /* ▼ ② 新しい Flexbox レイアウト ▼ */
+          .top-pricingplan_wrapper_cards {
+            display: flex;
+            gap: 12px; /* ★ここがプラン間の「隙間」になります。カンプに合わせて調整OK！ */
+            width: 100%;
+            min-width: 800px; /* スクロールさせるための最低幅 */
+            margin: 0 auto 2rem;
+
+            /* --- 各プランの列（共通） --- */
+            .plan_column {
+              display: flex;
+              flex-direction: column;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              border-radius: 8px; /* 列全体の角を丸くする */
+              overflow: hidden; /* 角丸からはみ出た部分を隠す */
+              background-color: #ffffff;
+
+              /* プランの列（右4つ）は同じ幅にする */
+              &:not(.plan_labels) {
+                flex: 1; /* 残りの幅を均等に分ける */
+                /* ★ここで列を囲う枠線を指定 */
+                border: 1px solid transparent; /* 初期値は透明 */
+              }
+
+              /* 項目名（左端）の列だけ少し細くする */
+              &.plan_labels {
+                width: 16%;
+                flex-shrink: 0;
+                background-color: transparent;
+                li {
+                  background-color: #f5f5f5;
+                  font-size: 14px;
+                  border-right: none;
+                  border-left: none;
+                  border-bottom: 2px solid #ffffff;
+                  &:last-child {
+                    border-bottom: none;
+                  }
+                }
+              }
+
+              /* --- セル（li）の共通スタイル --- */
+
+              li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 1.5rem 1rem;
+                font-size: 24px;
+                font-weight: bold;
+                color: #555555;
+                /* 各セルの下線を引く（一番下は引かない） */
+                // border-bottom: 1px solid #e0e0e0;
+                min-height: 80px; /* セルの高さが揃うように最低値を設定 */
+                &:last-child {
+                  border-bottom: none;
+                }
+                &.header_cell {
+                  color: #ffffff;
+                  font-size: 16px;
+                  padding: 1rem;
+                  border-bottom: none;
+                  &.none {
+                    background-color: transparent;
+                  }
+                }
+                /* 獲得報酬などの小さいテキスト */
+                &.small {
+                  font-size: 20px;
+                  flex-direction: column; /* 縦並びにする場合 */
+                  span {
+                    font-size: 12px;
+                    color: #888888;
+                    margin: 0 4px;
+                  }
+                }
+              }
+              /* --- 各プラン個別のテーマカラーと枠線設定 --- */
+
+              /* プラチナム（黒） */
+              &.plan_platinum {
+                border: 1px solid #000000;
+                border-radius: 8px;
+                overflow: hidden;
+
+                .header_cell {
+                  background-color: #000000;
+                  color: #ffffff; /* 見出しの文字色を白に */
+                }
+
+                li {
+                  position: relative;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 1.5rem;
+                    right: 1.5rem;
+                    border-bottom: 1px solid #000000;
+                  }
+                  &.header_cell::after,
+                  &:last-child::after {
+                    display: none;
+                  }
+                }
+              }
+              /* ゴールド（黄色背景・青枠） */
+              &.plan_gold {
+                /* ▼ 修正1：頭に & を追加！ ▼ */
+                border: 1px solid #f7b500;
+                border-radius: 8px; /* 角丸を追加 */
+                overflow: hidden; /* 角丸の隠しを追加 */
+
+                .header_cell {
+                  background-color: #f7b500;
+                  color: #ffffff;
+                }
+
+                /* ▼ 追加：プラチナムの横線の仕組みをコピー（色は青） ▼ */
+                li {
+                  position: relative;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 1.5rem;
+                    right: 1.5rem;
+                    border-bottom: 1px solid #f7b500;
+                  }
+
+                  &.header_cell::after,
+                  &:last-child::after {
+                    display: none;
+                  }
+                }
+              }
+              /* シルバー */
+              &.plan_silver {
+                border: 1px solid #a5a5a5;
+                border-radius: 8px;
+                overflow: hidden;
+
+                .header_cell {
+                  background-color: #a5a5a5;
+                  color: #ffffff;
+                }
+                /* ▼ 追加：横線の仕組みをコピー（色はグレー） ▼ */
+                li {
+                  position: relative;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 1.5rem;
+                    right: 1.5rem;
+                    border-bottom: 1px solid #a5a5a5;
+                  }
+
+                  &.header_cell::after,
+                  &:last-child::after {
+                    display: none;
+                  }
+                }
+              }
+              /* グリーン（緑） */
+              &.plan_green {
+                /* ▼ 修正：頭に & を追加し、borderを一括指定に ▼ */
+                border: 1px solid #3ad66f;
+                border-radius: 8px;
+                overflow: hidden;
+                .header_cell {
+                  background-color: #3ad66f;
+                  color: #ffffff;
+                }
+                /* ▼ 追加：横線の仕組みをコピー（色は緑） ▼ */
+                li {
+                  position: relative;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 1.5rem;
+                    right: 1.5rem;
+                    border-bottom: 1px solid #3ad66f;
+                  }
+                  &.header_cell::after,
+                  &:last-child::after {
+                    display: none;
+                  }
+                }
+              }
+            }
+            .note {
+              font-size: 11px;
+              color: #888888;
+              text-align: left;
+              margin: 0.25rem 0;
+            }
+          }
+        }
+      }
       #top-support {
         padding: 6rem 0;
         background-image: url(/img/support-background.svg);
@@ -1753,7 +2002,6 @@ footer {
                 justify-content: flex-end;
                 margin-bottom: 0;
               }
-
               .top-support_wrapper_howtouse_cardgroup_card {
                 width: 26%;
                 flex-shrink: 0;
@@ -1807,6 +2055,137 @@ footer {
                   margin: 0;
                 }
               }
+            }
+          }
+        }
+      }
+      footer {
+        /* カンプの背景色に近いダークグレーを指定（必要に応じて微調整してください） */
+        background-color: #4a4e59;
+        color: #ffffff;
+        padding: 6rem 0 2rem;
+
+        /* ※もしフッター上部の「ゆるやかなカーブ」を画像で表現する場合は、ここに background-image を追加してください */
+
+        .footer-wrapper {
+          @include container; /* 赤線の範囲（最大幅）に収めるためのコンテナ */
+
+          /* ▼ 上部：メッセージとCTAボタンのエリア ▼ */
+          .footer-wrapper_message {
+            text-align: center;
+            margin-bottom: 6rem; /* 下の要素との余白 */
+
+            h3 {
+              font-size: 32px;
+              font-weight: bold;
+              letter-spacing: 0.05em;
+              margin: 0 0 1.5rem 0;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 1.8;
+              margin: 0;
+            }
+
+            /* ボタン全体の設定 */
+            .top-cta_free_button {
+              display: inline-flex; /* 横並びにしつつ、中身の幅に合わせる */
+              align-items: center;
+              background-color: #ffffff;
+              color: #333333;
+              padding: 8px 32px 8px 8px; /* 左側はバッジが来るので余白を少なめに */
+              border-radius: 50px; /* ピル型（完全な角丸） */
+              margin-top: 2.5rem;
+              cursor: pointer;
+              transition: opacity 0.3s ease;
+
+              &:hover {
+                opacity: 0.8;
+              }
+
+              /* 中の「登録無料」バッジ */
+              .top-cta_free_button_registration {
+                background-color: #4a4e59;
+                color: #ffffff;
+                font-size: 14px;
+                padding: 10px 24px;
+                border-radius: 50px;
+                margin: 0 24px 0 0; /* 右側のテキストとの余白 */
+              }
+
+              /* 「案件を確認してみる ▶」のテキスト */
+              .top-cta_free_button_serch {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0;
+              }
+            }
+          }
+
+          /* ▼ 中部：ロゴとプラットフォーム名のエリア ▼ */
+          .footer-wrapper_info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            img {
+              height: 40px; /* 実際のロゴ画像のサイズに合わせて調整してください */
+              width: auto;
+            }
+
+            h6 {
+              font-size: 16px;
+              font-weight: normal;
+              margin: 0;
+            }
+          }
+
+          /* ▼ 下部：リンク一覧とコピーライトのエリア ▼ */
+          .footer-wrapper_bottom {
+            display: flex;
+            justify-content: space-between; /* 左右に振り分ける魔法 */
+            align-items: center;
+            flex-wrap: wrap; /* スマホなどで画面が狭くなった時に折り返す */
+            gap: 1rem;
+            padding-top: 1rem;
+
+            ul {
+              display: flex;
+              align-items: center;
+              gap: 2rem; /* リンク同士の隙間 */
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                a {
+                  display: flex;
+                  align-items: center;
+                  gap: 6px; /* テキストと外部リンクアイコンの隙間 */
+                  color: #ffffff;
+                  font-size: 13px;
+                  text-decoration: none;
+                  cursor: pointer;
+                  transition: opacity 0.3s ease;
+
+                  &:hover {
+                    opacity: 0.7;
+                  }
+
+                  img {
+                    width: 12px;
+                    height: 12px;
+                  }
+                }
+              }
+            }
+            h6 {
+              font-size: 12px;
+              font-weight: normal;
+              margin: 0;
+              color: #cccccc;
             }
           }
         }

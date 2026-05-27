@@ -1857,6 +1857,256 @@ footer .footer_attention .footer_attention_right h6 {
 .page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_button h3:hover {
   opacity: 0.8;
 }
+.page-top main article #top-pricingplan {
+  width: 90%;
+  margin: 0 auto;
+  padding: 6rem 0;
+  text-align: center;
+  color: #333333;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  /* ▼ 見出し周りのスタイル ▼ */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_heading {
+  margin-bottom: 3rem;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_heading p {
+  display: inline-block;
+  border: 1px solid #cccccc;
+  border-radius: 50px;
+  padding: 4px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #888888;
+  margin-bottom: 1rem;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_heading .top-pricingplan_wrapper_heading_main {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_heading .top-pricingplan_wrapper_heading_sub {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper {
+  /* ▼ マホ版レスポンシブ：横スクロール*/
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0 1.5rem;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper {
+  /* ▼ ② 新しい Flexbox レイアウト ▼ */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards {
+  display: flex;
+  gap: 12px; /* ★ここがプラン間の「隙間」になります。カンプに合わせて調整OK！ */
+  width: 100%;
+  min-width: 800px; /* スクロールさせるための最低幅 */
+  margin: 0 auto 2rem;
+  /* --- 各プランの列（共通） --- */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px; /* 列全体の角を丸くする */
+  overflow: hidden; /* 角丸からはみ出た部分を隠す */
+  background-color: #ffffff;
+  /* プランの列（右4つ）は同じ幅にする */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column:not(.plan_labels) {
+  flex: 1; /* 残りの幅を均等に分ける */
+  /* ★ここで列を囲う枠線を指定 */
+  border: 1px solid transparent; /* 初期値は透明 */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+  /* 項目名（左端）の列だけ少し細くする */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_labels {
+  width: 16%;
+  flex-shrink: 0;
+  background-color: transparent;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_labels li {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #ffffff;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_labels li:last-child {
+  border-bottom: none;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+  /* --- セル（li）の共通スタイル --- */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555555;
+  /* 各セルの下線を引く（一番下は引かない） */
+  min-height: 80px; /* セルの高さが揃うように最低値を設定 */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li:last-child {
+  border-bottom: none;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.header_cell {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 1rem;
+  border-bottom: none;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.header_cell.none {
+  background-color: transparent;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li {
+  /* 獲得報酬などの小さいテキスト */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.small {
+  font-size: 20px;
+  flex-direction: column; /* 縦並びにする場合 */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.small span {
+  font-size: 12px;
+  color: #888888;
+  margin: 0 4px;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+  /* --- 各プラン個別のテーマカラーと枠線設定 --- */
+  /* プラチナム（黒） */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum .header_cell {
+  background-color: #000000;
+  color: #ffffff; /* 見出しの文字色を白に */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li {
+  position: relative;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  border-bottom: 1px solid #000000;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li:last-child::after {
+  display: none;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+  /* ゴールド（黄色背景・青枠） */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold {
+  /* ▼ 修正1：頭に & を追加！ ▼ */
+  border: 1px solid #f7b500;
+  border-radius: 8px; /* 角丸を追加 */
+  overflow: hidden; /* 角丸の隠しを追加 */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold .header_cell {
+  background-color: #f7b500;
+  color: #ffffff;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold {
+  /* ▼ 追加：プラチナムの横線の仕組みをコピー（色は青） ▼ */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li {
+  position: relative;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  border-bottom: 1px solid #f7b500;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li:last-child::after {
+  display: none;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+  /* シルバー */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver {
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver .header_cell {
+  background-color: #a5a5a5;
+  color: #ffffff;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver {
+  /* ▼ 追加：横線の仕組みをコピー（色はグレー） ▼ */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li {
+  position: relative;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  border-bottom: 1px solid #a5a5a5;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li:last-child::after {
+  display: none;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+  /* グリーン（緑） */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green {
+  /* ▼ 修正：頭に & を追加し、borderを一括指定に ▼ */
+  border: 1px solid #3ad66f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green .header_cell {
+  background-color: #3ad66f;
+  color: #ffffff;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green {
+  /* ▼ 追加：横線の仕組みをコピー（色は緑） ▼ */
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li {
+  position: relative;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  border-bottom: 1px solid #3ad66f;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li:last-child::after {
+  display: none;
+}
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .note {
+  font-size: 11px;
+  color: #888888;
+  text-align: left;
+  margin: 0.25rem 0;
+}
 .page-top main article #top-support {
   padding: 6rem 0;
   background-image: url(/img/support-background.svg);
@@ -1944,4 +2194,128 @@ footer .footer_attention .footer_attention_right h6 {
   color: #666666;
   text-align: left;
   margin: 0;
+}
+.page-top main article footer {
+  /* カンプの背景色に近いダークグレーを指定（必要に応じて微調整してください） */
+  background-color: #4a4e59;
+  color: #ffffff;
+  padding: 6rem 0 2rem;
+  /* ※もしフッター上部の「ゆるやかなカーブ」を画像で表現する場合は、ここに background-image を追加してください */
+}
+.page-top main article footer .footer-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  /* 赤線の範囲（最大幅）に収めるためのコンテナ */
+  /* ▼ 上部：メッセージとCTAボタンのエリア ▼ */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message {
+  text-align: center;
+  margin-bottom: 6rem; /* 下の要素との余白 */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message h3 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin: 0 0 1.5rem 0;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message {
+  /* ボタン全体の設定 */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button {
+  display: inline-flex; /* 横並びにしつつ、中身の幅に合わせる */
+  align-items: center;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 8px 32px 8px 8px; /* 左側はバッジが来るので余白を少なめに */
+  border-radius: 50px; /* ピル型（完全な角丸） */
+  margin-top: 2.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button:hover {
+  opacity: 0.8;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button {
+  /* 中の「登録無料」バッジ */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button .top-cta_free_button_registration {
+  background-color: #4a4e59;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  margin: 0 24px 0 0; /* 右側のテキストとの余白 */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button {
+  /* 「案件を確認してみる ▶」のテキスト */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button .top-cta_free_button_serch {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.page-top main article footer .footer-wrapper {
+  /* ▼ 中部：ロゴとプラットフォーム名のエリア ▼ */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_info img {
+  height: 40px; /* 実際のロゴ画像のサイズに合わせて調整してください */
+  width: auto;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_info h6 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+.page-top main article footer .footer-wrapper {
+  /* ▼ 下部：リンク一覧とコピーライトのエリア ▼ */
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_bottom {
+  display: flex;
+  justify-content: space-between; /* 左右に振り分ける魔法 */
+  align-items: center;
+  flex-wrap: wrap; /* スマホなどで画面が狭くなった時に折り返す */
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_bottom ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* リンク同士の隙間 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_bottom ul li a {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* テキストと外部リンクアイコンの隙間 */
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_bottom ul li a:hover {
+  opacity: 0.7;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_bottom ul li a img {
+  width: 12px;
+  height: 12px;
+}
+.page-top main article footer .footer-wrapper .footer-wrapper_bottom h6 {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+  color: #cccccc;
 }
