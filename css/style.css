@@ -1372,7 +1372,7 @@ header #h-nav ul li a {
   margin: 0;
 }
 .page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_work .top-casestudies_wrapper_work_textbox .top-casestudies_wrapper_work_textbox_outline ul li {
-  background-color: #aeb5c0; /* 薄いグレー */
+  background-color: #aeb5c0;
   color: #ffffff;
   padding: 4px 16px;
   border-radius: 50px;
