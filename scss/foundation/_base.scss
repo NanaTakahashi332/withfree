@@ -35,7 +35,7 @@ body {
   inset: 0;
   display: grid;
   place-items: center;
-  background: $blue;
+  background: $purple_numberbackground_whychoosewithfree;
   z-index: 99999;
   opacity: 1;
   visibility: visible;
@@ -107,69 +107,6 @@ body {
   }
 }
 
-// ページトップリンク
-// #page_top {
-//   width: 80px;
-//   height: 80px;
-//   position: fixed;
-//   right: 0;
-//   bottom: 0;
-//   background: $navy;
-//   opacity: 0.8;
-//   z-index: 10000;
-//   border-radius: 50px;
-//   @include mq(tab) {
-//     width: 60px;
-//     height: 60px;
-//   }
-//   @include mq(sp) {
-//     width: 40px;
-//     height: 40px;
-//   }
-// }
-
-// #page_top a {
-//   position: relative;
-//   display: block;
-//   width: 80px;
-//   height: 80px;
-//   text-decoration: none;
-//   @include mq(tab) {
-//     width: 60px;
-//     height: 60px;
-//   }
-//   @include mq(sp) {
-//     width: 40px;
-//     height: 40px;
-//   }
-// }
-// #page_top a::before {
-//   font-family: "Font Awesome 5 Free";
-//   font-weight: 900;
-//   content: "\f106";
-//   font-size: 40px;
-//   color: #fff;
-//   position: absolute;
-//   width: 40px;
-//   height: 40px;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   margin: auto;
-//   text-align: center;
-//   @include mq(tab) {
-//     font-size: 30px;
-//     width: 30px;
-//     height: 30px;
-//   }
-//   @include mq(sp) {
-//     font-size: 20px;
-//     width: 20px;
-//     height: 20px;
-//   }
-// }
-
 // ヘッダー
 :root {
   --header-h: 70px;
@@ -177,29 +114,22 @@ body {
 header {
   height: var(--header-h);
   box-sizing: border-box;
-  // align-items: center;
-  // gap: 3rem;
   padding: 0;
-  // position: relative;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  // background-color: $white;
   background-color: transparent;
   top: 0;
   left: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
-  // border-radius: 20%;
   .header_inner {
     width: 70%;
-    // height: 100%;
     height: 80%;
     display: flex;
-    // margin: 0 auto;
     margin: 2% auto 0;
     padding: 0 2.5%;
     @include flex_between;
@@ -459,338 +389,6 @@ header {
   }
 }
 
-// フッター
-footer {
-  width: 100%;
-  margin-top: 4rem;
-  padding: 4rem 0;
-  background-color: $weak_gray;
-  color: $navy;
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  a:hover {
-    opacity: 0.8;
-  }
-  .footer_container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 6%;
-    padding-bottom: 3rem;
-    @include mq(pc) {
-      width: 80%;
-      display: block;
-    }
-    @include mq(sp) {
-      display: block;
-      padding-bottom: 2rem;
-    }
-  }
-  // フッター左ブロック
-  .footer_container_leftgroup {
-    width: 28%;
-    @include mq(pc) {
-      display: block;
-      width: 80%;
-      // margin: 0 auto 2rem;
-    }
-    @include mq(sp) {
-      width: 100%;
-      display: block;
-      padding-bottom: 2rem;
-    }
-    img {
-      max-width: 180px;
-      height: auto;
-      display: block;
-      margin-bottom: 1.5rem;
-    }
-    h5 {
-      width: 100%;
-      margin: 0 0 0.7rem;
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      line-height: 1.5;
-    }
-    .footer_container_leftgroup_icongroup {
-      margin-top: 1.6rem;
-      display: flex;
-      gap: 1rem;
-      @include mq(pc) {
-        margin: 0 0 2rem 0;
-      }
-      img {
-        width: 36px;
-        height: 36px;
-        object-fit: contain;
-        margin: 0;
-        cursor: pointer;
-        @include mq(sp) {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
-  // フッター右ブロック（メニュー群）
-  .footer_container_rightgroup {
-    width: 72%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
-    column-gap: 3.5rem;
-    row-gap: 2.5rem;
-    @include mq(pc) {
-      width: 100%;
-    }
-    @include mq(tab) {
-      width: 100%;
-      grid-template-columns: repeat(2, minmax(140px, 1fr));
-      column-gap: 2rem;
-      row-gap: 2rem;
-    }
-  }
-  .footer_container_rightgroup_item {
-    min-height: 2.2rem;
-  }
-  .footer_nav_title {
-    margin: 0 0 0.5rem;
-    font-size: 1.15rem;
-    font-weight: 900;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    a {
-      display: inline-block;
-      position: relative;
-      padding-bottom: 0.25rem;
-      @include mq(tab) {
-        font-size: 16px;
-      }
-    }
-    a:hover {
-      opacity: 1;
-    }
-    a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      background: #252f66;
-      transform: scaleX(0);
-      transform-origin: left;
-      opacity: 0;
-      transition:
-        transform 0.35s ease,
-        opacity 0.35s ease;
-    }
-    a:hover::after {
-      transform: scaleX(1);
-      opacity: 0.35;
-    }
-  }
-  .footer_nav_list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-      margin: 0 0 0.55rem;
-    }
-    a {
-      display: inline-block;
-      font-size: 0.95rem;
-      letter-spacing: 0.03em;
-      opacity: 1;
-      @include mq(tab) {
-        font-size: 14px;
-      }
-    }
-    a:hover {
-      opacity: 1;
-      transition:
-        0.2s ease,
-        opacity 0.2s ease;
-    }
-  }
-  // フッター下段（注意書き）
-  .footer_attention {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 1.4rem;
-    border-top: 2px solid rgba(255, 255, 255, 1);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    font-weight: 200;
-    @include mq(sp) {
-      display: block;
-    }
-    a {
-      font-size: 0.95rem;
-      opacity: 0.85;
-      display: inline-block;
-      margin-bottom: 0.6rem;
-      @include mq(tab) {
-        font-size: 12px;
-      }
-    }
-    a:hover {
-      opacity: 1;
-    }
-    .footer_attention_left {
-      display: flex;
-      flex-direction: column;
-    }
-    .footer_attention_right {
-      margin-left: auto;
-      text-align: right;
-      @include mq(sp) {
-        margin-left: 0;
-        text-align: left;
-        margin-top: 1rem;
-      }
-      & h6 {
-        font-weight: lighter;
-        @include mq(tab) {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-}
-
-// 子ページ共通　セクションタイトル
-.child_sec_title {
-  @include child_sec_title;
-  font-size: 40px;
-  font-weight: 900;
-  color: $navy;
-  @include mq(pc) {
-    font-size: 36px;
-  }
-  @include mq(tab) {
-    font-size: 30px;
-  }
-  @include mq(sp) {
-    font-size: 24px;
-  }
-  &::after {
-    @include child_sec_title_after;
-    background: $weak_gray;
-  }
-  &::before {
-    @include child_sec_title_before;
-    background: $bright_blue;
-  }
-}
-
-// 子ページ共通　ページ上部見出し部分
-#childpage_heading {
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-image: url("../img/childpage_background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 6rem;
-  .childpage_heading_container {
-    @include flex_between;
-    @include container;
-    padding: 4rem 0;
-    @include mq(tab) {
-      display: block;
-    }
-    .childpage_heading_container_description {
-      width: 70%;
-      @include mq(tab) {
-        width: 100%;
-      }
-      & h2 {
-        @include section_title_en;
-        margin-bottom: 2rem;
-        font-size: 60px;
-        font-weight: 800;
-        @include mq(tab) {
-          font-size: 50px;
-        }
-        @include mq(sp) {
-          font-size: 40px;
-        }
-      }
-      & p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: $navy;
-        @include mq(pc) {
-          font-size: 16px;
-        }
-        @include mq(tab) {
-          font-size: 14px;
-        }
-        @include mq(sp) {
-          font-size: 12px;
-        }
-      }
-    }
-    .childpage_heading_container_pagelink {
-      width: 24%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      @include mq(tab) {
-        margin-top: 4rem;
-        width: 100%;
-      }
-      & li {
-        & a {
-          display: inline-block;
-          font-size: 18px;
-          line-height: 2;
-          color: $navy;
-          font-weight: 600;
-          position: relative;
-          display: inline-block;
-          margin-bottom: 0.5rem;
-          @include mq(pc) {
-            font-size: 16px;
-          }
-          @include mq(tab) {
-            font-size: 14px;
-          }
-          @include mq(sp) {
-            font-size: 12px;
-          }
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: $navy;
-            transform: scaleX(0);
-            transform-origin: left;
-            opacity: 0;
-            transition:
-              transform 0.35s ease,
-              opacity 0.35s ease;
-          }
-          &:hover::after,
-          &:focus-visible::after {
-            transform: scaleX(1);
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-}
-
 // フェードインアニメーションの設定
 /* フェードアップのスタイル */
 .fadeUp {
@@ -870,222 +468,229 @@ footer {
 
   main {
     article {
-      .fv {
-        width: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
+      #top-fv {
+        background-image: url(/img/fv-background.svg);
         background-repeat: no-repeat;
-        color: $font_basic;
-        .fv-wrapper {
-          @include container;
-          padding-top: 5rem;
-          display: flex;
-          justify-content: space-between;
-          .fv-wrapper_group {
-            width: 55%;
-            & p {
-              width: 40%;
-              margin: 0 auto;
-              padding: 0.5rem 1rem;
-              text-align: center;
-              color: $white;
-              background-image: linear-gradient(
-                135deg,
-                #c58fff 0%,
-                #6667ab 100%
-              );
-              border-radius: 20px;
-            }
-            .fv-wrapper_group_logogroup {
-              width: 100%;
-              margin: 1rem 0;
-              @include flex_between;
-              gap: 5%;
-              align-items: center;
-              .fv-wrapper_group_logogroup_img {
-                width: 30%;
-                & img {
-                  width: 100%;
-                }
-              }
-              & h4 {
-                display: inline-block;
-              }
-            }
-            & h1 {
-              font-size: 30px;
-              line-height: 40px;
-            }
-            & h2 {
-              margin: 2rem 0;
-              font-size: 18px;
-              line-height: 26px;
-            }
-            .fv-wrapper_group_worries {
-              margin: 1rem auto;
-              & h3 {
-                margin-bottom: 1rem;
-                text-align: center;
-              }
-              .fv-wrapper_group_worries_img {
-                width: 60%;
+        background-size: cover;
+        background-position: center;
+        .fv {
+          width: 100%;
+          background-attachment: fixed;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          color: $font_basic;
+          .fv-wrapper {
+            @include container;
+            padding: 8rem 0 2rem;
+            display: flex;
+            justify-content: center;
+            // gap: 2.5%;
+            .fv-wrapper_group {
+              width: 50%;
+              & p {
+                width: 40%;
                 margin: 0 auto;
-                & img {
-                  width: 100%;
+                padding: 0.5rem 1rem;
+                text-align: center;
+                color: $white;
+                background-image: linear-gradient(
+                  135deg,
+                  #c58fff 0%,
+                  #6667ab 100%
+                );
+                border-radius: 20px;
+              }
+              .fv-wrapper_group_logogroup {
+                width: 100%;
+                margin: 2rem 0;
+                display: flex;
+                gap: 5%;
+                align-items: center;
+                .fv-wrapper_group_logogroup_img {
+                  width: 30%;
+                  & img {
+                    width: 100%;
+                  }
+                }
+                & h4 {
+                  display: inline-block;
+                  font-size: 22px;
+                }
+              }
+              & h1 {
+                font-size: 30px;
+                line-height: 40px;
+              }
+              & h2 {
+                margin: 2rem 0;
+                font-size: 18px;
+                line-height: 26px;
+              }
+              .fv-wrapper_group_worries {
+                margin: 1rem auto;
+                & h3 {
+                  margin-bottom: 1rem;
+                  text-align: center;
+                }
+                .fv-wrapper_group_worries_img {
+                  width: 60%;
+                  margin: 0 auto;
+                  & img {
+                    width: 100%;
+                  }
                 }
               }
             }
-          }
-          .fv-wrapper_img {
-            width: 40%;
-            & img {
-              width: 100%;
+            .fv-wrapper_img {
+              width: 50%;
+              & img {
+                width: 100%;
+              }
             }
           }
         }
-      }
 
-      // =====導入実績社名ロゴ=====
-      #top-customers {
-        padding: 1rem 0;
-        background-color: $white;
-        .top-customers_slider {
-          display: flex;
-          gap: 1.5rem;
-          overflow: hidden;
-          & li {
-            width: auto;
-            height: 100%;
-          }
-          & :nth-child(odd) {
-            animation: loop3 80s -40s linear infinite;
-          }
-          & :nth-child(even) {
-            animation: loop4 80s linear infinite;
-          }
-          @keyframes loop3 {
-            0% {
-              transform: translateX(100%);
-            }
-            to {
-              transform: translateX(-100%);
-            }
-          }
-          @keyframes loop4 {
-            0% {
-              transform: translateX(0);
-            }
-            to {
-              transform: translateX(-200%);
-            }
-          }
-        }
-      }
-
-      // ======FOR ALL FREELANCERS=====
-      #top-forallfreelancers {
-        background-color: #ccc;
-        .top-forallfreelancers_wrapper {
-          @include container;
-          padding: 4rem 0;
-          & h3 {
-            display: inline-block;
-            background-image: linear-gradient(
-              to right,
-              #c58fff 0%,
-              #6667ab 100%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-size: 40px;
-            font-weight: bold;
-            opacity: 0.2;
-          }
-          & p {
-            margin: 2rem 0;
-            line-height: 1.5;
-            color: $strong_gray;
-            font-weight: bold;
-          }
-          .top-forallfreelancers_wrapper_slider {
+        // =====導入実績社名ロゴ=====
+        #top-customers {
+          padding: 1rem 0;
+          background-color: $white;
+          .top-customers_slider {
             display: flex;
             gap: 1.5rem;
             overflow: hidden;
             & li {
-              width: 100%;
+              width: auto;
               height: 100%;
-              flex-shrink: 0;
-              width: calc((100% - (1.5rem * 3)) / 4);
-              animation: loopSlider 20s ease-in-out infinite;
-              & img {
-                width: 100%;
-                height: auto;
-                display: block;
+            }
+            & :nth-child(odd) {
+              animation: loop3 80s -40s linear infinite;
+            }
+            & :nth-child(even) {
+              animation: loop4 80s linear infinite;
+            }
+            @keyframes loop3 {
+              0% {
+                transform: translateX(100%);
+              }
+              to {
+                transform: translateX(-100%);
+              }
+            }
+            @keyframes loop4 {
+              0% {
+                transform: translateX(0);
+              }
+              to {
+                transform: translateX(-200%);
               }
             }
           }
-          .slider-pagination {
-            display: flex;
-            justify-content: flex-end;
-            gap: 8px;
-            margin-top: 24px;
-            .dot {
-              width: 32px;
-              height: 3px;
-              background-color: #ffffff;
-              animation: activeDot 20s infinite;
+        }
+
+        // ======FOR ALL FREELANCERS=====
+        #top-forallfreelancers {
+          .top-forallfreelancers_wrapper {
+            @include container;
+            padding: 4rem 0;
+            & h3 {
+              display: inline-block;
+              background-image: linear-gradient(
+                to right,
+                #c58fff 0%,
+                #6667ab 100%
+              );
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+              font-size: 40px;
+              font-weight: bold;
+              opacity: 0.2;
             }
-            .dot:nth-child(1) {
-              animation-delay: 0s;
+            & p {
+              margin: 2rem 0;
+              line-height: 1.5;
+              color: $strong_gray;
+              font-weight: bold;
             }
-            .dot:nth-child(2) {
-              animation-delay: -15s;
+            .top-forallfreelancers_wrapper_slider {
+              display: flex;
+              gap: 1.5rem;
+              overflow: hidden;
+              & li {
+                width: 100%;
+                height: 100%;
+                flex-shrink: 0;
+                width: calc((100% - (1.5rem * 3)) / 4);
+                animation: loopSlider 20s ease-in-out infinite;
+                & img {
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                }
+              }
             }
-            .dot:nth-child(3) {
-              animation-delay: -10s;
-            }
-            .dot:nth-child(4) {
-              animation-delay: -5s;
+            .slider-pagination {
+              display: flex;
+              justify-content: flex-end;
+              gap: 8px;
+              margin-top: 24px;
+              .dot {
+                width: 32px;
+                height: 3px;
+                background-color: #ffffff;
+                animation: activeDot 20s infinite;
+              }
+              .dot:nth-child(1) {
+                animation-delay: 0s;
+              }
+              .dot:nth-child(2) {
+                animation-delay: -15s;
+              }
+              .dot:nth-child(3) {
+                animation-delay: -10s;
+              }
+              .dot:nth-child(4) {
+                animation-delay: -5s;
+              }
             }
           }
         }
-      }
-      @keyframes loopSlider {
-        /* 1枚目（初期位置）で一時停止：0%〜15% */
-        0%,
-        15% {
-          transform: translateX(0);
+        @keyframes loopSlider {
+          /* 1枚目（初期位置）で一時停止：0%〜15% */
+          0%,
+          15% {
+            transform: translateX(0);
+          }
+          /* 2枚目へ移動して一時停止：25%〜40% */
+          25%,
+          40% {
+            transform: translateX(calc(-100% - 1.5rem));
+          }
+          /* 3枚目へ移動して一時停止：50%〜65% */
+          50%,
+          65% {
+            transform: translateX(calc(-200% - 3rem));
+          }
+          /* 4枚目へ移動して一時停止：75%〜90% */
+          75%,
+          90% {
+            transform: translateX(calc(-300% - 4.5rem));
+          }
+          /* 次のループへ繋ぐ（1枚目と同じ状態）：100% */
+          100% {
+            transform: translateX(calc(-400% - (1.5rem * 4)));
+          }
         }
-        /* 2枚目へ移動して一時停止：25%〜40% */
-        25%,
-        40% {
-          transform: translateX(calc(-100% - 1.5rem));
-        }
-        /* 3枚目へ移動して一時停止：50%〜65% */
-        50%,
-        65% {
-          transform: translateX(calc(-200% - 3rem));
-        }
-        /* 4枚目へ移動して一時停止：75%〜90% */
-        75%,
-        90% {
-          transform: translateX(calc(-300% - 4.5rem));
-        }
-        /* 次のループへ繋ぐ（1枚目と同じ状態）：100% */
-        100% {
-          transform: translateX(calc(-400% - (1.5rem * 4)));
-        }
-      }
-      @keyframes activeDot {
-        0%,
-        24.99% {
-          background-color: #6667ab;
-        }
-        25%,
-        100% {
-          background-color: #ffffff;
+        @keyframes activeDot {
+          0%,
+          24.99% {
+            background-color: #6667ab;
+          }
+          25%,
+          100% {
+            background-color: #ffffff;
+          }
         }
       }
 
@@ -1097,6 +702,7 @@ footer {
         background-repeat: no-repeat;
         .top-introduction_wrapper {
           @include container;
+          padding: 5vw 0;
           & h4 {
             padding: 3rem 0;
             line-height: 1.5;
@@ -1104,13 +710,17 @@ footer {
             color: $font_basic;
           }
           .top-introduction_wrapper_group {
-            padding: 1rem 2rem;
+            width: 80%;
+            margin-bottom: -120px;
+            padding: 2rem 2rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem 1rem;
+            gap: 1rem;
             background-color: $white;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 0 20px 0 0;
+            border-radius: 0 50px 0 0;
+            position: relative;
+            z-index: 5;
             & li {
               padding: 0.5rem 1rem;
               background-color: $weak_gray;
@@ -1123,12 +733,14 @@ footer {
       }
       #top-features {
         background-image: url(/img/featuresofwithfree.svg);
-        padding: 4rem 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 8rem 0 4rem;
         color: $font_basic;
         .top-features_wrapper {
           @include container;
           .top-features_wrapper_heading {
-            // display: inline-block;
             text-align: center;
             .top-features_wrapper_heading_main {
               margin: 0.5rem 0;
@@ -1238,6 +850,7 @@ footer {
           }
         }
       }
+      // =====whychoosewithfree======
       #top-whychoosewithfree {
         margin-top: 4rem;
         .top-whychoosewithfree_wrapper {
@@ -1424,11 +1037,15 @@ footer {
           }
         }
       }
-      #top-cta_free {
+      // =====CTA=====
+      .top-cta_free {
         position: relative;
         overflow: hidden;
         z-index: 1;
         padding: 8rem 0;
+        margin-top: -50px;
+        margin-bottom: -5px;
+
         background-image:
           linear-gradient(
             135deg,
@@ -1441,22 +1058,30 @@ footer {
         background-repeat: no-repeat;
         color: $white;
         text-align: center;
-        &::before,
+
+        -webkit-mask-image: radial-gradient(
+          ellipse 60% 50px at top center,
+          transparent 99%,
+          black 100%
+        );
+        mask-image: radial-gradient(
+          ellipse 60% 50px at top center,
+          transparent 99%,
+          black 100%
+        );
         &::after {
           content: "";
           position: absolute;
-          left: -10%; /* 画面幅より少し大きくして自然なカーブにする */
+          left: -10%;
           width: 120%;
-          height: 100px; /* カーブの深さ（へこみ具合） */
-          background-color: #ffffff; /* ★上下のセクションの背景色（白）と合わせる */
+          height: 100px;
           border-radius: 50%;
           z-index: 2;
+          bottom: -50px;
+          background-color: #ffffff;
         }
-        &::before {
-          top: -50px; /* 半分だけ見せてへこみを作る */
-        }
-        &::after {
-          bottom: -50px; /* 半分だけ見せてへこみを作る */
+        &.is-blue-bottom::after {
+          background-color: #e3edfd;
         }
         > * {
           position: relative;
@@ -1499,31 +1124,35 @@ footer {
           }
         }
       }
+
+      // =====制作事例=====
       #top-casestudies {
         background-color: $blue_casestudies_background;
         padding: 5rem 0;
         color: $font_gray;
         .top-casestudies_wrapper {
-          // @include container;
           display: grid;
           overflow: hidden;
-          .top-casestudies_wrapper_heading_main {
-            font-size: 34px;
-            font-weight: bold;
-            margin: 0 0 0.5rem 0;
-          }
-          .top-casestudies_wrapper_heading_sub {
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0 0 3rem 0;
+          .top-casestudies_wrapper_heading {
+            @include container;
+            .top-casestudies_wrapper_heading_main {
+              font-size: 34px;
+              font-weight: bold;
+              margin: 0 0 0.5rem 0;
+            }
+            .top-casestudies_wrapper_heading_sub {
+              font-size: 16px;
+              font-weight: bold;
+              margin: 0 0 3rem 0;
+            }
           }
           .top-casestudies_wrapper_category {
+            @include container;
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             list-style: none;
             padding: 0;
-            margin: 0 0 4rem 0;
             align-items: center;
             li {
               overflow: hidden;
@@ -1575,7 +1204,7 @@ footer {
             align-items: center;
             justify-content: space-between;
             gap: 40px;
-            margin-bottom: 4rem;
+            margin: 4rem 0;
             animation: caseStudiesSlide 54s linear infinite;
             animation-direction: var(--case-slider-direction, normal);
             &:nth-of-type(3) {
@@ -1723,251 +1352,213 @@ footer {
           }
         }
       }
+      // =====料金プラン=====
       #top-pricingplan {
         @include container;
         padding: 6rem 0;
         text-align: center;
         color: #333333;
-
         .top-pricingplan_wrapper {
           @include container;
-
-          /* ▼ 見出し周りのスタイル ▼ */
           .top-pricingplan_wrapper_heading {
             margin-bottom: 3rem;
-
             p {
               display: inline-block;
               border: 1px solid #cccccc;
               border-radius: 50px;
-              padding: 4px 20px;
-              font-size: 12px;
+              padding: 0.5rem 1rem;
+              font-size: 14px;
               font-weight: bold;
               color: #888888;
               margin-bottom: 1rem;
             }
-
             .top-pricingplan_wrapper_heading_main {
               font-size: 32px;
               font-weight: bold;
               margin: 0 0 0.5rem 0;
             }
-
             .top-pricingplan_wrapper_heading_sub {
               font-size: 16px;
               font-weight: bold;
               margin: 0;
             }
           }
-
-          /* ▼ マホ版レスポンシブ：横スクロール*/
           .scroll {
             width: 100%;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             padding: 0.5rem 0 1.5rem;
-          }
-
-          /* ▼ ② 新しい Flexbox レイアウト ▼ */
-          .top-pricingplan_wrapper_cards {
-            display: flex;
-            gap: 12px; /* ★ここがプラン間の「隙間」になります。カンプに合わせて調整OK！ */
-            width: 100%;
-            min-width: 800px; /* スクロールさせるための最低幅 */
-            margin: 0 auto 2rem;
-
-            /* --- 各プランの列（共通） --- */
-            .plan_column {
+            .top-pricingplan_wrapper_cards {
               display: flex;
-              flex-direction: column;
-              list-style: none;
-              padding: 0;
-              margin: 0;
-              border-radius: 8px; /* 列全体の角を丸くする */
-              overflow: hidden; /* 角丸からはみ出た部分を隠す */
-              background-color: #ffffff;
-
-              /* プランの列（右4つ）は同じ幅にする */
-              &:not(.plan_labels) {
-                flex: 1; /* 残りの幅を均等に分ける */
-                /* ★ここで列を囲う枠線を指定 */
-                border: 1px solid transparent; /* 初期値は透明 */
-              }
-
-              /* 項目名（左端）の列だけ少し細くする */
-              &.plan_labels {
-                width: 16%;
-                flex-shrink: 0;
-                background-color: transparent;
+              gap: 12px;
+              width: 100%;
+              min-width: 800px;
+              margin: 0 auto 2rem;
+              .plan_column {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                border-radius: 8px;
+                overflow: hidden;
+                background-color: #ffffff;
+                &:not(.plan_labels) {
+                  flex: 1;
+                  border: 1px solid transparent;
+                }
+                &.plan_labels {
+                  width: 16%;
+                  flex-shrink: 0;
+                  background-color: transparent;
+                  li {
+                    background-color: #f5f5f5;
+                    font-size: 14px;
+                    border-right: none;
+                    border-left: none;
+                    border-bottom: 2px solid #ffffff;
+                    &:last-child {
+                      border-bottom: none;
+                    }
+                  }
+                }
                 li {
-                  background-color: #f5f5f5;
-                  font-size: 14px;
-                  border-right: none;
-                  border-left: none;
-                  border-bottom: 2px solid #ffffff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  padding: 1.5rem 1rem;
+                  font-size: 24px;
+                  font-weight: bold;
+                  color: #555555;
+                  // border-bottom: 1px solid #e0e0e0;
+                  min-height: 80px;
                   &:last-child {
                     border-bottom: none;
                   }
-                }
-              }
-
-              /* --- セル（li）の共通スタイル --- */
-
-              li {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 1.5rem 1rem;
-                font-size: 24px;
-                font-weight: bold;
-                color: #555555;
-                /* 各セルの下線を引く（一番下は引かない） */
-                // border-bottom: 1px solid #e0e0e0;
-                min-height: 80px; /* セルの高さが揃うように最低値を設定 */
-                &:last-child {
-                  border-bottom: none;
-                }
-                &.header_cell {
-                  color: #ffffff;
-                  font-size: 16px;
-                  padding: 1rem;
-                  border-bottom: none;
-                  &.none {
-                    background-color: transparent;
+                  &.header_cell {
+                    color: #ffffff;
+                    font-size: 16px;
+                    padding: 1rem;
+                    border-bottom: none;
+                    &.none {
+                      background-color: transparent;
+                    }
+                  }
+                  &.small {
+                    font-size: 20px;
+                    flex-direction: column;
+                    line-height: 24px;
+                    span {
+                      font-size: 12px;
+                      color: #888888;
+                      margin: 0 0.5rem;
+                    }
                   }
                 }
-                /* 獲得報酬などの小さいテキスト */
-                &.small {
-                  font-size: 20px;
-                  flex-direction: column; /* 縦並びにする場合 */
-                  span {
-                    font-size: 12px;
-                    color: #888888;
-                    margin: 0 4px;
+                &.plan_platinum {
+                  border: 1px solid #000000;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  .header_cell {
+                    background-color: #000000;
+                    color: #ffffff; /* 見出しの文字色を白に */
+                  }
+                  li {
+                    position: relative;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      bottom: 0;
+                      left: 1.5rem;
+                      right: 1.5rem;
+                      border-bottom: 1px solid #000000;
+                    }
+                    &.header_cell::after,
+                    &:last-child::after {
+                      display: none;
+                    }
                   }
                 }
-              }
-              /* --- 各プラン個別のテーマカラーと枠線設定 --- */
-
-              /* プラチナム（黒） */
-              &.plan_platinum {
-                border: 1px solid #000000;
-                border-radius: 8px;
-                overflow: hidden;
-
-                .header_cell {
-                  background-color: #000000;
-                  color: #ffffff; /* 見出しの文字色を白に */
-                }
-
-                li {
-                  position: relative;
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 1.5rem;
-                    right: 1.5rem;
-                    border-bottom: 1px solid #000000;
+                &.plan_gold {
+                  border: 1px solid #f7b500;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  .header_cell {
+                    background-color: #f7b500;
+                    color: #ffffff;
                   }
-                  &.header_cell::after,
-                  &:last-child::after {
-                    display: none;
+                  li {
+                    position: relative;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      bottom: 0;
+                      left: 1.5rem;
+                      right: 1.5rem;
+                      border-bottom: 1px solid #f7b500;
+                    }
+                    &.header_cell::after,
+                    &:last-child::after {
+                      display: none;
+                    }
                   }
                 }
-              }
-              /* ゴールド（黄色背景・青枠） */
-              &.plan_gold {
-                /* ▼ 修正1：頭に & を追加！ ▼ */
-                border: 1px solid #f7b500;
-                border-radius: 8px; /* 角丸を追加 */
-                overflow: hidden; /* 角丸の隠しを追加 */
-
-                .header_cell {
-                  background-color: #f7b500;
-                  color: #ffffff;
-                }
-
-                /* ▼ 追加：プラチナムの横線の仕組みをコピー（色は青） ▼ */
-                li {
-                  position: relative;
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 1.5rem;
-                    right: 1.5rem;
-                    border-bottom: 1px solid #f7b500;
+                &.plan_silver {
+                  border: 1px solid #a5a5a5;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  .header_cell {
+                    background-color: #a5a5a5;
+                    color: #ffffff;
                   }
-
-                  &.header_cell::after,
-                  &:last-child::after {
-                    display: none;
+                  li {
+                    position: relative;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      bottom: 0;
+                      left: 1.5rem;
+                      right: 1.5rem;
+                      border-bottom: 1px solid #a5a5a5;
+                    }
+                    &.header_cell::after,
+                    &:last-child::after {
+                      display: none;
+                    }
                   }
                 }
-              }
-              /* シルバー */
-              &.plan_silver {
-                border: 1px solid #a5a5a5;
-                border-radius: 8px;
-                overflow: hidden;
-
-                .header_cell {
-                  background-color: #a5a5a5;
-                  color: #ffffff;
-                }
-                /* ▼ 追加：横線の仕組みをコピー（色はグレー） ▼ */
-                li {
-                  position: relative;
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 1.5rem;
-                    right: 1.5rem;
-                    border-bottom: 1px solid #a5a5a5;
+                &.plan_green {
+                  border: 1px solid #3ad66f;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  .header_cell {
+                    background-color: #3ad66f;
+                    color: $white;
                   }
-
-                  &.header_cell::after,
-                  &:last-child::after {
-                    display: none;
-                  }
-                }
-              }
-              /* グリーン（緑） */
-              &.plan_green {
-                /* ▼ 修正：頭に & を追加し、borderを一括指定に ▼ */
-                border: 1px solid #3ad66f;
-                border-radius: 8px;
-                overflow: hidden;
-                .header_cell {
-                  background-color: #3ad66f;
-                  color: #ffffff;
-                }
-                /* ▼ 追加：横線の仕組みをコピー（色は緑） ▼ */
-                li {
-                  position: relative;
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 1.5rem;
-                    right: 1.5rem;
-                    border-bottom: 1px solid #3ad66f;
-                  }
-                  &.header_cell::after,
-                  &:last-child::after {
-                    display: none;
+                  li {
+                    position: relative;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      bottom: 0;
+                      left: 1.5rem;
+                      right: 1.5rem;
+                      border-bottom: 1px solid #3ad66f;
+                    }
+                    &.header_cell::after,
+                    &:last-child::after {
+                      display: none;
+                    }
                   }
                 }
               }
             }
             .note {
-              font-size: 11px;
+              font-size: 12px;
               color: #888888;
               text-align: left;
-              margin: 0.25rem 0;
+              margin: 0.5rem 0;
             }
           }
         }
@@ -2057,64 +1648,160 @@ footer {
               }
             }
           }
+          .top-support_wrapper_faq {
+            padding: 6rem 0;
+            color: #333333;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            &_heading {
+              text-align: center;
+              margin-bottom: 3rem;
+
+              &_main {
+                font-size: 36px;
+                font-weight: bold;
+                margin: 0 0 0.5rem 0;
+                color: #555555;
+              }
+
+              &_sub {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0;
+                color: #777777;
+              }
+            }
+            &_list {
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+              &_item {
+                background-color: #ffffff;
+                border-radius: 12px;
+                padding: 2rem 2.5rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                &_q {
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  gap: 1.5rem;
+                  &_icon {
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #7b61ff;
+                    line-height: 1;
+                  }
+                  &_text {
+                    flex: 1;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 0;
+                    color: #333333;
+                  }
+                  &_plus {
+                    position: relative;
+                    width: 16px;
+                    height: 16px;
+                    flex-shrink: 0;
+                    &::before,
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      background-color: #7b61ff;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      transition:
+                        transform 0.3s ease,
+                        opacity 0.3s ease;
+                    }
+                    &::before {
+                      width: 100%;
+                      height: 2px;
+                    }
+                    &::after {
+                      width: 2px;
+                      height: 100%;
+                      opacity: 1;
+                    }
+                  }
+                }
+                &_q_answer {
+                  margin-top: 1.5rem;
+                  padding-left: calc(28px + 1.5rem);
+                  display: none;
+                  & p {
+                    line-height: 1.5rem;
+                  }
+                }
+                &.is-open {
+                  .top-support_wrapper_faq_list_item_q_plus::after {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       footer {
-        /* カンプの背景色に近いダークグレーを指定（必要に応じて微調整してください） */
-        background-color: #4a4e59;
+        background-color: transparent;
         color: #ffffff;
-        padding: 6rem 0 2rem;
-
-        /* ※もしフッター上部の「ゆるやかなカーブ」を画像で表現する場合は、ここに background-image を追加してください */
-
+        margin-top: -8vw;
+        padding: 8rem 0 2rem;
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -20%;
+          width: 140%;
+          height: 100%;
+          background-color: #3e4252;
+          border-radius: 50% 50% 0 0 / 8vw 8vw 0 0;
+          z-index: -1;
+        }
         .footer-wrapper {
-          @include container; /* 赤線の範囲（最大幅）に収めるためのコンテナ */
-
-          /* ▼ 上部：メッセージとCTAボタンのエリア ▼ */
+          @include container;
           .footer-wrapper_message {
             text-align: center;
-            margin-bottom: 6rem; /* 下の要素との余白 */
-
+            margin-bottom: 6rem;
             h3 {
               font-size: 32px;
               font-weight: bold;
               letter-spacing: 0.05em;
               margin: 0 0 1.5rem 0;
             }
-
             p {
               font-size: 14px;
               line-height: 1.8;
               margin: 0;
             }
-
-            /* ボタン全体の設定 */
             .top-cta_free_button {
-              display: inline-flex; /* 横並びにしつつ、中身の幅に合わせる */
+              display: inline-flex;
               align-items: center;
               background-color: #ffffff;
               color: #333333;
-              padding: 8px 32px 8px 8px; /* 左側はバッジが来るので余白を少なめに */
-              border-radius: 50px; /* ピル型（完全な角丸） */
+              padding: 8px 32px 8px 8px;
+              border-radius: 50px;
               margin-top: 2.5rem;
               cursor: pointer;
               transition: opacity 0.3s ease;
-
               &:hover {
                 opacity: 0.8;
               }
-
-              /* 中の「登録無料」バッジ */
               .top-cta_free_button_registration {
                 background-color: #4a4e59;
                 color: #ffffff;
                 font-size: 14px;
                 padding: 10px 24px;
                 border-radius: 50px;
-                margin: 0 24px 0 0; /* 右側のテキストとの余白 */
+                margin: 0 24px 0 0;
               }
-
-              /* 「案件を確認してみる ▶」のテキスト */
               .top-cta_free_button_serch {
                 font-size: 16px;
                 font-weight: bold;
@@ -2122,58 +1809,48 @@ footer {
               }
             }
           }
-
-          /* ▼ 中部：ロゴとプラットフォーム名のエリア ▼ */
           .footer-wrapper_info {
             display: flex;
             align-items: center;
             gap: 1.5rem;
             margin-bottom: 1.5rem;
-
             img {
-              height: 40px; /* 実際のロゴ画像のサイズに合わせて調整してください */
+              height: 40px;
               width: auto;
             }
-
             h6 {
               font-size: 16px;
               font-weight: normal;
               margin: 0;
             }
           }
-
-          /* ▼ 下部：リンク一覧とコピーライトのエリア ▼ */
           .footer-wrapper_bottom {
             display: flex;
-            justify-content: space-between; /* 左右に振り分ける魔法 */
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* スマホなどで画面が狭くなった時に折り返す */
+            flex-wrap: wrap;
             gap: 1rem;
             padding-top: 1rem;
-
             ul {
               display: flex;
               align-items: center;
-              gap: 2rem; /* リンク同士の隙間 */
+              gap: 2rem;
               list-style: none;
               padding: 0;
               margin: 0;
-
               li {
                 a {
                   display: flex;
                   align-items: center;
-                  gap: 6px; /* テキストと外部リンクアイコンの隙間 */
+                  gap: 6px;
                   color: #ffffff;
                   font-size: 13px;
                   text-decoration: none;
                   cursor: pointer;
                   transition: opacity 0.3s ease;
-
                   &:hover {
                     opacity: 0.7;
                   }
-
                   img {
                     width: 12px;
                     height: 12px;
@@ -2185,7 +1862,7 @@ footer {
               font-size: 12px;
               font-weight: normal;
               margin: 0;
-              color: #cccccc;
+              color: $white;
             }
           }
         }

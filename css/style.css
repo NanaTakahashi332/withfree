@@ -193,7 +193,7 @@ body {
   inset: 0;
   display: grid;
   place-items: center;
-  background: #296aa2;
+  background: #5c6bc0;
   z-index: 99999;
   opacity: 1;
   visibility: visible;
@@ -575,403 +575,6 @@ header #h-nav ul li a {
   }
 }
 
-footer {
-  width: 100%;
-  margin-top: 4rem;
-  padding: 4rem 0;
-  background-color: #f1f1f1;
-  color: #252f66;
-}
-footer a {
-  color: inherit;
-  text-decoration: none;
-}
-footer a:hover {
-  opacity: 0.8;
-}
-footer .footer_container {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 6%;
-  padding-bottom: 3rem;
-}
-@media screen and (max-width: 1024px) {
-  footer .footer_container {
-    width: 80%;
-    display: block;
-  }
-}
-@media screen and (max-width: 480px) {
-  footer .footer_container {
-    display: block;
-    padding-bottom: 2rem;
-  }
-}
-footer .footer_container_leftgroup {
-  width: 28%;
-}
-@media screen and (max-width: 1024px) {
-  footer .footer_container_leftgroup {
-    display: block;
-    width: 80%;
-  }
-}
-@media screen and (max-width: 480px) {
-  footer .footer_container_leftgroup {
-    width: 100%;
-    display: block;
-    padding-bottom: 2rem;
-  }
-}
-footer .footer_container_leftgroup img {
-  max-width: 180px;
-  height: auto;
-  display: block;
-  margin-bottom: 1.5rem;
-}
-footer .footer_container_leftgroup h5 {
-  width: 100%;
-  margin: 0 0 0.7rem;
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  line-height: 1.5;
-}
-footer .footer_container_leftgroup .footer_container_leftgroup_icongroup {
-  margin-top: 1.6rem;
-  display: flex;
-  gap: 1rem;
-}
-@media screen and (max-width: 1024px) {
-  footer .footer_container_leftgroup .footer_container_leftgroup_icongroup {
-    margin: 0 0 2rem 0;
-  }
-}
-footer .footer_container_leftgroup .footer_container_leftgroup_icongroup img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  margin: 0;
-  cursor: pointer;
-}
-@media screen and (max-width: 480px) {
-  footer .footer_container_leftgroup .footer_container_leftgroup_icongroup img {
-    width: 30px;
-    height: 30px;
-  }
-}
-footer .footer_container_rightgroup {
-  width: 72%;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(160px, 1fr));
-  column-gap: 3.5rem;
-  row-gap: 2.5rem;
-}
-@media screen and (max-width: 1024px) {
-  footer .footer_container_rightgroup {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  footer .footer_container_rightgroup {
-    width: 100%;
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-    column-gap: 2rem;
-    row-gap: 2rem;
-  }
-}
-footer .footer_container_rightgroup_item {
-  min-height: 2.2rem;
-}
-footer .footer_nav_title {
-  margin: 0 0 0.5rem;
-  font-size: 1.15rem;
-  font-weight: 900;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-}
-footer .footer_nav_title a {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 0.25rem;
-}
-@media screen and (max-width: 768px) {
-  footer .footer_nav_title a {
-    font-size: 16px;
-  }
-}
-footer .footer_nav_title a:hover {
-  opacity: 1;
-}
-footer .footer_nav_title a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #252f66;
-  transform: scaleX(0);
-  transform-origin: left;
-  opacity: 0;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-footer .footer_nav_title a:hover::after {
-  transform: scaleX(1);
-  opacity: 0.35;
-}
-footer .footer_nav_list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-footer .footer_nav_list li {
-  margin: 0 0 0.55rem;
-}
-footer .footer_nav_list a {
-  display: inline-block;
-  font-size: 0.95rem;
-  letter-spacing: 0.03em;
-  opacity: 1;
-}
-@media screen and (max-width: 768px) {
-  footer .footer_nav_list a {
-    font-size: 14px;
-  }
-}
-footer .footer_nav_list a:hover {
-  opacity: 1;
-  transition: 0.2s ease, opacity 0.2s ease;
-}
-footer .footer_attention {
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 1.4rem;
-  border-top: 2px solid rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  font-weight: 200;
-}
-@media screen and (max-width: 480px) {
-  footer .footer_attention {
-    display: block;
-  }
-}
-footer .footer_attention a {
-  font-size: 0.95rem;
-  opacity: 0.85;
-  display: inline-block;
-  margin-bottom: 0.6rem;
-}
-@media screen and (max-width: 768px) {
-  footer .footer_attention a {
-    font-size: 12px;
-  }
-}
-footer .footer_attention a:hover {
-  opacity: 1;
-}
-footer .footer_attention .footer_attention_left {
-  display: flex;
-  flex-direction: column;
-}
-footer .footer_attention .footer_attention_right {
-  margin-left: auto;
-  text-align: right;
-}
-@media screen and (max-width: 480px) {
-  footer .footer_attention .footer_attention_right {
-    margin-left: 0;
-    text-align: left;
-    margin-top: 1rem;
-  }
-}
-footer .footer_attention .footer_attention_right h6 {
-  font-weight: lighter;
-}
-@media screen and (max-width: 768px) {
-  footer .footer_attention .footer_attention_right h6 {
-    font-size: 12px;
-  }
-}
-
-.child_sec_title {
-  position: relative;
-  display: block;
-  margin-bottom: 3rem;
-  padding-bottom: 0.75rem;
-  font-family: "Barlow";
-  font-size: 40px;
-  font-weight: 900;
-  color: #252f66;
-}
-@media screen and (max-width: 1024px) {
-  .child_sec_title {
-    font-size: 36px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .child_sec_title {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .child_sec_title {
-    font-size: 24px;
-  }
-}
-.child_sec_title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  background: #f1f1f1;
-}
-.child_sec_title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 260px;
-  z-index: 1;
-  background: #6ccee7;
-}
-
-#childpage_heading {
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-image: url("../img/childpage_background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 6rem;
-}
-#childpage_heading .childpage_heading_container {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-  padding: 4rem 0;
-}
-@media screen and (max-width: 768px) {
-  #childpage_heading .childpage_heading_container {
-    display: block;
-  }
-}
-#childpage_heading .childpage_heading_container .childpage_heading_container_description {
-  width: 70%;
-}
-@media screen and (max-width: 768px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_description {
-    width: 100%;
-  }
-}
-#childpage_heading .childpage_heading_container .childpage_heading_container_description h2 {
-  font-size: 90px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  background: linear-gradient(90deg, #6ccee7 0%, #296aa2 55%, #252f66 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-family: "Barlow";
-  margin-bottom: 2rem;
-  font-size: 60px;
-  font-weight: 800;
-}
-@media screen and (max-width: 768px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_description h2 {
-    font-size: 50px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_description h2 {
-    font-size: 40px;
-  }
-}
-#childpage_heading .childpage_heading_container .childpage_heading_container_description p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #252f66;
-}
-@media screen and (max-width: 1024px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_description p {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_description p {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_description p {
-    font-size: 12px;
-  }
-}
-#childpage_heading .childpage_heading_container .childpage_heading_container_pagelink {
-  width: 24%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-@media screen and (max-width: 768px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_pagelink {
-    margin-top: 4rem;
-    width: 100%;
-  }
-}
-#childpage_heading .childpage_heading_container .childpage_heading_container_pagelink li a {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 2;
-  color: #252f66;
-  font-weight: 600;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-@media screen and (max-width: 1024px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_pagelink li a {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_pagelink li a {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #childpage_heading .childpage_heading_container .childpage_heading_container_pagelink li a {
-    font-size: 12px;
-  }
-}
-#childpage_heading .childpage_heading_container .childpage_heading_container_pagelink li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #252f66;
-  transform: scaleX(0);
-  transform-origin: left;
-  opacity: 0;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-#childpage_heading .childpage_heading_container .childpage_heading_container_pagelink li a:hover::after, #childpage_heading .childpage_heading_container .childpage_heading_container_pagelink li a:focus-visible::after {
-  transform: scaleX(1);
-  opacity: 1;
-}
-
 /* フェードアップのスタイル */
 .fadeUp {
   animation: fadeUpAnime 0.8s forwards; /* fadeUpAnimeを0.8秒で一回実行 */
@@ -1051,7 +654,13 @@ footer .footer_attention .footer_attention_right h6 {
   box-sizing: border-box;
   color: #333333;
 }
-.page-top main article .fv {
+.page-top main article #top-fv {
+  background-image: url(/img/fv-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.page-top main article #top-fv .fv {
   width: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -1059,17 +668,17 @@ footer .footer_attention .footer_attention_right h6 {
   background-repeat: no-repeat;
   color: #515151;
 }
-.page-top main article .fv .fv-wrapper {
+.page-top main article #top-fv .fv .fv-wrapper {
   width: 90%;
   margin: 0 auto;
-  padding-top: 5rem;
+  padding: 8rem 0 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group {
-  width: 55%;
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group {
+  width: 50%;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group p {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group p {
   width: 40%;
   margin: 0 auto;
   padding: 0.5rem 1rem;
@@ -1078,69 +687,69 @@ footer .footer_attention .footer_attention_right h6 {
   background-image: linear-gradient(135deg, #c58fff 0%, #6667ab 100%);
   border-radius: 20px;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup {
   width: 100%;
-  margin: 1rem 0;
+  margin: 2rem 0;
   display: flex;
-  justify-content: space-between;
   gap: 5%;
   align-items: center;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup .fv-wrapper_group_logogroup_img {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup .fv-wrapper_group_logogroup_img {
   width: 30%;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup .fv-wrapper_group_logogroup_img img {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup .fv-wrapper_group_logogroup_img img {
   width: 100%;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup h4 {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup h4 {
   display: inline-block;
+  font-size: 22px;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group h1 {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group h1 {
   font-size: 30px;
   line-height: 40px;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group h2 {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group h2 {
   margin: 2rem 0;
   font-size: 18px;
   line-height: 26px;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries {
   margin: 1rem auto;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries h3 {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries h3 {
   margin-bottom: 1rem;
   text-align: center;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img {
   width: 60%;
   margin: 0 auto;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img img {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img img {
   width: 100%;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_img {
-  width: 40%;
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_img {
+  width: 50%;
 }
-.page-top main article .fv .fv-wrapper .fv-wrapper_img img {
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_img img {
   width: 100%;
 }
-.page-top main article #top-customers {
+.page-top main article #top-fv #top-customers {
   padding: 1rem 0;
   background-color: #ffffff;
 }
-.page-top main article #top-customers .top-customers_slider {
+.page-top main article #top-fv #top-customers .top-customers_slider {
   display: flex;
   gap: 1.5rem;
   overflow: hidden;
 }
-.page-top main article #top-customers .top-customers_slider li {
+.page-top main article #top-fv #top-customers .top-customers_slider li {
   width: auto;
   height: 100%;
 }
-.page-top main article #top-customers .top-customers_slider :nth-child(odd) {
+.page-top main article #top-fv #top-customers .top-customers_slider :nth-child(odd) {
   animation: loop3 80s -40s linear infinite;
 }
-.page-top main article #top-customers .top-customers_slider :nth-child(even) {
+.page-top main article #top-fv #top-customers .top-customers_slider :nth-child(even) {
   animation: loop4 80s linear infinite;
 }
 @keyframes loop3 {
@@ -1159,15 +768,12 @@ footer .footer_attention .footer_attention_right h6 {
     transform: translateX(-200%);
   }
 }
-.page-top main article #top-forallfreelancers {
-  background-color: #ccc;
-}
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper {
   width: 90%;
   margin: 0 auto;
   padding: 4rem 0;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper h3 {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper h3 {
   display: inline-block;
   background-image: linear-gradient(to right, #c58fff 0%, #6667ab 100%);
   -webkit-background-clip: text;
@@ -1177,51 +783,51 @@ footer .footer_attention .footer_attention_right h6 {
   font-weight: bold;
   opacity: 0.2;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper p {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper p {
   margin: 2rem 0;
   line-height: 1.5;
   color: #4b5563;
   font-weight: bold;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .top-forallfreelancers_wrapper_slider {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .top-forallfreelancers_wrapper_slider {
   display: flex;
   gap: 1.5rem;
   overflow: hidden;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .top-forallfreelancers_wrapper_slider li {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .top-forallfreelancers_wrapper_slider li {
   width: 100%;
   height: 100%;
   flex-shrink: 0;
   width: calc((100% - 4.5rem) / 4);
   animation: loopSlider 20s ease-in-out infinite;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .top-forallfreelancers_wrapper_slider li img {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .top-forallfreelancers_wrapper_slider li img {
   width: 100%;
   height: auto;
   display: block;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
   margin-top: 24px;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot {
   width: 32px;
   height: 3px;
   background-color: #ffffff;
   animation: activeDot 20s infinite;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(1) {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(1) {
   animation-delay: 0s;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(2) {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(2) {
   animation-delay: -15s;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(3) {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(3) {
   animation-delay: -10s;
 }
-.page-top main article #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(4) {
+.page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .slider-pagination .dot:nth-child(4) {
   animation-delay: -5s;
 }
 @keyframes loopSlider {
@@ -1263,6 +869,7 @@ footer .footer_attention .footer_attention_right h6 {
 .page-top main article #top-introduction .top-introduction_wrapper {
   width: 90%;
   margin: 0 auto;
+  padding: 5vw 0;
 }
 .page-top main article #top-introduction .top-introduction_wrapper h4 {
   padding: 3rem 0;
@@ -1271,13 +878,17 @@ footer .footer_attention .footer_attention_right h6 {
   color: #515151;
 }
 .page-top main article #top-introduction .top-introduction_wrapper .top-introduction_wrapper_group {
-  padding: 1rem 2rem;
+  width: 80%;
+  margin-bottom: -120px;
+  padding: 2rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  gap: 1rem;
   background-color: #ffffff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 0 20px 0 0;
+  border-radius: 0 50px 0 0;
+  position: relative;
+  z-index: 5;
 }
 .page-top main article #top-introduction .top-introduction_wrapper .top-introduction_wrapper_group li {
   padding: 0.5rem 1rem;
@@ -1288,7 +899,10 @@ footer .footer_attention .footer_attention_right h6 {
 }
 .page-top main article #top-features {
   background-image: url(/img/featuresofwithfree.svg);
-  padding: 4rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 0 4rem;
   color: #515151;
 }
 .page-top main article #top-features .top-features_wrapper {
@@ -1576,47 +1190,49 @@ footer .footer_attention .footer_attention_right h6 {
 .page-top main article #top-environment .top-environment_wrapper .top-environment_group .top-environment_group_img img {
   width: 100%;
 }
-.page-top main article #top-cta_free {
+.page-top main article .top-cta_free {
   position: relative;
   overflow: hidden;
   z-index: 1;
   padding: 8rem 0;
+  margin-top: -50px;
+  margin-bottom: -5px;
   background-image: linear-gradient(135deg, rgba(138, 178, 226, 0.85) 0%, rgba(155, 120, 198, 0.85) 100%), url("/img/cta_backgroundimg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
   text-align: center;
+  -webkit-mask-image: radial-gradient(ellipse 60% 50px at top center, transparent 99%, black 100%);
+  mask-image: radial-gradient(ellipse 60% 50px at top center, transparent 99%, black 100%);
 }
-.page-top main article #top-cta_free::before, .page-top main article #top-cta_free::after {
+.page-top main article .top-cta_free::after {
   content: "";
   position: absolute;
-  left: -10%; /* 画面幅より少し大きくして自然なカーブにする */
+  left: -10%;
   width: 120%;
-  height: 100px; /* カーブの深さ（へこみ具合） */
-  background-color: #ffffff; /* ★上下のセクションの背景色（白）と合わせる */
+  height: 100px;
   border-radius: 50%;
   z-index: 2;
+  bottom: -50px;
+  background-color: #ffffff;
 }
-.page-top main article #top-cta_free::before {
-  top: -50px; /* 半分だけ見せてへこみを作る */
+.page-top main article .top-cta_free.is-blue-bottom::after {
+  background-color: #e3edfd;
 }
-.page-top main article #top-cta_free::after {
-  bottom: -50px; /* 半分だけ見せてへこみを作る */
-}
-.page-top main article #top-cta_free > * {
+.page-top main article .top-cta_free > * {
   position: relative;
   z-index: 3;
 }
-.page-top main article #top-cta_free h2 {
+.page-top main article .top-cta_free h2 {
   margin-bottom: 1rem;
   font-size: 28px;
 }
-.page-top main article #top-cta_free p {
+.page-top main article .top-cta_free p {
   line-height: 1.5;
   font-size: 16px;
 }
-.page-top main article #top-cta_free .top-cta_free_button {
+.page-top main article .top-cta_free .top-cta_free_button {
   display: inline-flex;
   align-items: center;
   background-color: #6667ab;
@@ -1626,10 +1242,10 @@ footer .footer_attention .footer_attention_right h6 {
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
-.page-top main article #top-cta_free .top-cta_free_button:hover {
+.page-top main article .top-cta_free .top-cta_free_button:hover {
   opacity: 0.8;
 }
-.page-top main article #top-cta_free .top-cta_free_button .top-cta_free_button_registration {
+.page-top main article .top-cta_free .top-cta_free_button .top-cta_free_button_registration {
   background-color: #ffffff;
   color: #6667ab;
   padding: 12px 24px;
@@ -1638,14 +1254,14 @@ footer .footer_attention .footer_attention_right h6 {
   font-weight: bold;
   margin-right: 1rem;
 }
-.page-top main article #top-cta_free .top-cta_free_button .top-cta_free_button_serch {
+.page-top main article .top-cta_free .top-cta_free_button .top-cta_free_button_serch {
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 .page-top main article #top-casestudies {
-  background-color: rgba(143, 185, 246, 0.1450980392);
+  background-color: #e3edfd;
   padding: 5rem 0;
   color: #333333;
 }
@@ -1653,23 +1269,28 @@ footer .footer_attention .footer_attention_right h6 {
   display: grid;
   overflow: hidden;
 }
-.page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_heading_main {
+.page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_heading {
+  width: 90%;
+  margin: 0 auto;
+}
+.page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_heading .top-casestudies_wrapper_heading_main {
   font-size: 34px;
   font-weight: bold;
   margin: 0 0 0.5rem 0;
 }
-.page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_heading_sub {
+.page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_heading .top-casestudies_wrapper_heading_sub {
   font-size: 16px;
   font-weight: bold;
   margin: 0 0 3rem 0;
 }
 .page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_category {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   list-style: none;
   padding: 0;
-  margin: 0 0 4rem 0;
   align-items: center;
 }
 .page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_category li {
@@ -1713,7 +1334,7 @@ footer .footer_attention .footer_attention_right h6 {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   animation: caseStudiesSlide 54s linear infinite;
   animation-direction: var(--case-slider-direction, normal);
 }
@@ -1867,7 +1488,6 @@ footer .footer_attention .footer_attention_right h6 {
 .page-top main article #top-pricingplan .top-pricingplan_wrapper {
   width: 90%;
   margin: 0 auto;
-  /* ▼ 見出し周りのスタイル ▼ */
 }
 .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_heading {
   margin-bottom: 3rem;
@@ -1876,8 +1496,8 @@ footer .footer_attention .footer_attention_right h6 {
   display: inline-block;
   border: 1px solid #cccccc;
   border-radius: 50px;
-  padding: 4px 20px;
-  font-size: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
   font-weight: bold;
   color: #888888;
   margin-bottom: 1rem;
@@ -1892,64 +1512,49 @@ footer .footer_attention .footer_attention_right h6 {
   font-weight: bold;
   margin: 0;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper {
-  /* ▼ マホ版レスポンシブ：横スクロール*/
-}
 .page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding: 0.5rem 0 1.5rem;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper {
-  /* ▼ ② 新しい Flexbox レイアウト ▼ */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards {
   display: flex;
-  gap: 12px; /* ★ここがプラン間の「隙間」になります。カンプに合わせて調整OK！ */
+  gap: 12px;
   width: 100%;
-  min-width: 800px; /* スクロールさせるための最低幅 */
+  min-width: 800px;
   margin: 0 auto 2rem;
-  /* --- 各プランの列（共通） --- */
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
-  border-radius: 8px; /* 列全体の角を丸くする */
-  overflow: hidden; /* 角丸からはみ出た部分を隠す */
+  border-radius: 8px;
+  overflow: hidden;
   background-color: #ffffff;
-  /* プランの列（右4つ）は同じ幅にする */
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column:not(.plan_labels) {
-  flex: 1; /* 残りの幅を均等に分ける */
-  /* ★ここで列を囲う枠線を指定 */
-  border: 1px solid transparent; /* 初期値は透明 */
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column:not(.plan_labels) {
+  flex: 1;
+  border: 1px solid transparent;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
-  /* 項目名（左端）の列だけ少し細くする */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_labels {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_labels {
   width: 16%;
   flex-shrink: 0;
   background-color: transparent;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_labels li {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_labels li {
   background-color: #f5f5f5;
   font-size: 14px;
   border-right: none;
   border-left: none;
   border-bottom: 2px solid #ffffff;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_labels li:last-child {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_labels li:last-child {
   border-bottom: none;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
-  /* --- セル（li）の共通スタイル --- */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1958,50 +1563,43 @@ footer .footer_attention .footer_attention_right h6 {
   font-size: 24px;
   font-weight: bold;
   color: #555555;
-  /* 各セルの下線を引く（一番下は引かない） */
-  min-height: 80px; /* セルの高さが揃うように最低値を設定 */
+  min-height: 80px;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li:last-child {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column li:last-child {
   border-bottom: none;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.header_cell {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column li.header_cell {
   color: #ffffff;
   font-size: 16px;
   padding: 1rem;
   border-bottom: none;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.header_cell.none {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column li.header_cell.none {
   background-color: transparent;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li {
-  /* 獲得報酬などの小さいテキスト */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.small {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column li.small {
   font-size: 20px;
-  flex-direction: column; /* 縦並びにする場合 */
+  flex-direction: column;
+  line-height: 24px;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column li.small span {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column li.small span {
   font-size: 12px;
   color: #888888;
-  margin: 0 4px;
+  margin: 0 0.5rem;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
-  /* --- 各プラン個別のテーマカラーと枠線設定 --- */
-  /* プラチナム（黒） */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_platinum {
   border: 1px solid #000000;
   border-radius: 8px;
   overflow: hidden;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum .header_cell {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_platinum .header_cell {
   background-color: #000000;
   color: #ffffff; /* 見出しの文字色を白に */
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_platinum li {
   position: relative;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_platinum li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2009,29 +1607,22 @@ footer .footer_attention .footer_attention_right h6 {
   right: 1.5rem;
   border-bottom: 1px solid #000000;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_platinum li:last-child::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_platinum li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_platinum li:last-child::after {
   display: none;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
-  /* ゴールド（黄色背景・青枠） */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold {
-  /* ▼ 修正1：頭に & を追加！ ▼ */
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_gold {
   border: 1px solid #f7b500;
-  border-radius: 8px; /* 角丸を追加 */
-  overflow: hidden; /* 角丸の隠しを追加 */
+  border-radius: 8px;
+  overflow: hidden;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold .header_cell {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_gold .header_cell {
   background-color: #f7b500;
   color: #ffffff;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold {
-  /* ▼ 追加：プラチナムの横線の仕組みをコピー（色は青） ▼ */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_gold li {
   position: relative;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_gold li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2039,28 +1630,22 @@ footer .footer_attention .footer_attention_right h6 {
   right: 1.5rem;
   border-bottom: 1px solid #f7b500;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_gold li:last-child::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_gold li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_gold li:last-child::after {
   display: none;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
-  /* シルバー */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_silver {
   border: 1px solid #a5a5a5;
   border-radius: 8px;
   overflow: hidden;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver .header_cell {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_silver .header_cell {
   background-color: #a5a5a5;
   color: #ffffff;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver {
-  /* ▼ 追加：横線の仕組みをコピー（色はグレー） ▼ */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_silver li {
   position: relative;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_silver li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2068,29 +1653,22 @@ footer .footer_attention .footer_attention_right h6 {
   right: 1.5rem;
   border-bottom: 1px solid #a5a5a5;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_silver li:last-child::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_silver li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_silver li:last-child::after {
   display: none;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column {
-  /* グリーン（緑） */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green {
-  /* ▼ 修正：頭に & を追加し、borderを一括指定に ▼ */
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_green {
   border: 1px solid #3ad66f;
   border-radius: 8px;
   overflow: hidden;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green .header_cell {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_green .header_cell {
   background-color: #3ad66f;
   color: #ffffff;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green {
-  /* ▼ 追加：横線の仕組みをコピー（色は緑） ▼ */
-}
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_green li {
   position: relative;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_green li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2098,14 +1676,14 @@ footer .footer_attention .footer_attention_right h6 {
   right: 1.5rem;
   border-bottom: 1px solid #3ad66f;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .plan_column.plan_green li:last-child::after {
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_green li.header_cell::after, .page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .top-pricingplan_wrapper_cards .plan_column.plan_green li:last-child::after {
   display: none;
 }
-.page-top main article #top-pricingplan .top-pricingplan_wrapper .top-pricingplan_wrapper_cards .note {
-  font-size: 11px;
+.page-top main article #top-pricingplan .top-pricingplan_wrapper .scroll .note {
+  font-size: 12px;
   color: #888888;
   text-align: left;
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
 }
 .page-top main article #top-support {
   padding: 6rem 0;
@@ -2195,22 +1773,122 @@ footer .footer_attention .footer_attention_right h6 {
   text-align: left;
   margin: 0;
 }
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq {
+  padding: 6rem 0;
+  color: #333333;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_heading_main {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #555555;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_heading_sub {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #777777;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1.5rem;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_icon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7b61ff;
+  line-height: 1;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_text {
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #333333;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_plus {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_plus::before, .page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_plus::after {
+  content: "";
+  position: absolute;
+  background-color: #7b61ff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_plus::before {
+  width: 100%;
+  height: 2px;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_plus::after {
+  width: 2px;
+  height: 100%;
+  opacity: 1;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_answer {
+  margin-top: 1.5rem;
+  padding-left: calc(28px + 1.5rem);
+  display: none;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item_q_answer p {
+  line-height: 1.5rem;
+}
+.page-top main article #top-support .top-support_wrapper .top-support_wrapper_faq_list_item.is-open .top-support_wrapper_faq_list_item_q_plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
 .page-top main article footer {
-  /* カンプの背景色に近いダークグレーを指定（必要に応じて微調整してください） */
-  background-color: #4a4e59;
+  background-color: transparent;
   color: #ffffff;
-  padding: 6rem 0 2rem;
-  /* ※もしフッター上部の「ゆるやかなカーブ」を画像で表現する場合は、ここに background-image を追加してください */
+  margin-top: -8vw;
+  padding: 8rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+.page-top main article footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 140%;
+  height: 100%;
+  background-color: #3e4252;
+  border-radius: 50% 50% 0 0/8vw 8vw 0 0;
+  z-index: -1;
 }
 .page-top main article footer .footer-wrapper {
   width: 90%;
   margin: 0 auto;
-  /* 赤線の範囲（最大幅）に収めるためのコンテナ */
-  /* ▼ 上部：メッセージとCTAボタンのエリア ▼ */
 }
 .page-top main article footer .footer-wrapper .footer-wrapper_message {
   text-align: center;
-  margin-bottom: 6rem; /* 下の要素との余白 */
+  margin-bottom: 6rem;
 }
 .page-top main article footer .footer-wrapper .footer-wrapper_message h3 {
   font-size: 32px;
@@ -2223,16 +1901,13 @@ footer .footer_attention .footer_attention_right h6 {
   line-height: 1.8;
   margin: 0;
 }
-.page-top main article footer .footer-wrapper .footer-wrapper_message {
-  /* ボタン全体の設定 */
-}
 .page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button {
-  display: inline-flex; /* 横並びにしつつ、中身の幅に合わせる */
+  display: inline-flex;
   align-items: center;
   background-color: #ffffff;
   color: #333333;
-  padding: 8px 32px 8px 8px; /* 左側はバッジが来るので余白を少なめに */
-  border-radius: 50px; /* ピル型（完全な角丸） */
+  padding: 8px 32px 8px 8px;
+  border-radius: 50px;
   margin-top: 2.5rem;
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -2240,27 +1915,18 @@ footer .footer_attention .footer_attention_right h6 {
 .page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button:hover {
   opacity: 0.8;
 }
-.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button {
-  /* 中の「登録無料」バッジ */
-}
 .page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button .top-cta_free_button_registration {
   background-color: #4a4e59;
   color: #ffffff;
   font-size: 14px;
   padding: 10px 24px;
   border-radius: 50px;
-  margin: 0 24px 0 0; /* 右側のテキストとの余白 */
-}
-.page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button {
-  /* 「案件を確認してみる ▶」のテキスト */
+  margin: 0 24px 0 0;
 }
 .page-top main article footer .footer-wrapper .footer-wrapper_message .top-cta_free_button .top-cta_free_button_serch {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-}
-.page-top main article footer .footer-wrapper {
-  /* ▼ 中部：ロゴとプラットフォーム名のエリア ▼ */
 }
 .page-top main article footer .footer-wrapper .footer-wrapper_info {
   display: flex;
@@ -2269,7 +1935,7 @@ footer .footer_attention .footer_attention_right h6 {
   margin-bottom: 1.5rem;
 }
 .page-top main article footer .footer-wrapper .footer-wrapper_info img {
-  height: 40px; /* 実際のロゴ画像のサイズに合わせて調整してください */
+  height: 40px;
   width: auto;
 }
 .page-top main article footer .footer-wrapper .footer-wrapper_info h6 {
@@ -2277,21 +1943,18 @@ footer .footer_attention .footer_attention_right h6 {
   font-weight: normal;
   margin: 0;
 }
-.page-top main article footer .footer-wrapper {
-  /* ▼ 下部：リンク一覧とコピーライトのエリア ▼ */
-}
 .page-top main article footer .footer-wrapper .footer-wrapper_bottom {
   display: flex;
-  justify-content: space-between; /* 左右に振り分ける魔法 */
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* スマホなどで画面が狭くなった時に折り返す */
+  flex-wrap: wrap;
   gap: 1rem;
   padding-top: 1rem;
 }
 .page-top main article footer .footer-wrapper .footer-wrapper_bottom ul {
   display: flex;
   align-items: center;
-  gap: 2rem; /* リンク同士の隙間 */
+  gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2299,7 +1962,7 @@ footer .footer_attention .footer_attention_right h6 {
 .page-top main article footer .footer-wrapper .footer-wrapper_bottom ul li a {
   display: flex;
   align-items: center;
-  gap: 6px; /* テキストと外部リンクアイコンの隙間 */
+  gap: 6px;
   color: #ffffff;
   font-size: 13px;
   text-decoration: none;
@@ -2317,5 +1980,5 @@ footer .footer_attention .footer_attention_right h6 {
   font-size: 12px;
   font-weight: normal;
   margin: 0;
-  color: #cccccc;
+  color: #ffffff;
 }
