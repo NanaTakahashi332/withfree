@@ -2160,32 +2160,22 @@ footer {
     }
   }
   #privacy-content {
-    /* 🚨 魔法のネガティブマージン：白いコンテナを上の波背景に食い込ませる */
     margin-top: -6rem;
     position: relative;
     z-index: 10;
-    padding-bottom: 8rem; /* フッターとの間の余白 */
-
+    padding-bottom: 8rem;
     /* 白い大きな書類型コンテナのラッパー */
     .privacy-content_wrapper {
-      @include container; /* 共通の横幅を適用して中央寄せ */
-      background-color: $white;
-      padding: 5rem 6rem; /* カンプに合わせた、文字の周りの広大な白い余白 */
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04); /* ふんわりとした柔らかな影 */
-
-      /* 各規約の項目ブロック（塊） */
+      width: 90%;
+      margin: 4rem auto;
       &_block {
         margin-bottom: 4rem; /* 項目と項目の間の広い縦の隙間 */
-
         h3 {
           font-size: 18px;
           font-weight: bold;
           color: $font_basic;
           padding-bottom: 0.75rem;
           margin: 0 0 1.5rem 0;
-
-          /* カンプに合わせた、見出しの下のうっすらとした区切り線 */
           border-bottom: 1px solid #e2e8f0;
         }
 

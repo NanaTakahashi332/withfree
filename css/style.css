@@ -2261,22 +2261,15 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   text-decoration: underline;
 }
 .page-policy #privacy-content {
-  /* 🚨 魔法のネガティブマージン：白いコンテナを上の波背景に食い込ませる */
   margin-top: -6rem;
   position: relative;
   z-index: 10;
-  padding-bottom: 8rem; /* フッターとの間の余白 */
+  padding-bottom: 8rem;
   /* 白い大きな書類型コンテナのラッパー */
 }
 .page-policy #privacy-content .privacy-content_wrapper {
   width: 90%;
-  margin: 0 auto;
-  /* 共通の横幅を適用して中央寄せ */
-  background-color: #ffffff;
-  padding: 5rem 6rem; /* カンプに合わせた、文字の周りの広大な白い余白 */
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04); /* ふんわりとした柔らかな影 */
-  /* 各規約の項目ブロック（塊） */
+  margin: 4rem auto;
 }
 .page-policy #privacy-content .privacy-content_wrapper_block {
   margin-bottom: 4rem; /* 項目と項目の間の広い縦の隙間 */
@@ -2287,7 +2280,6 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   color: #515151;
   padding-bottom: 0.75rem;
   margin: 0 0 1.5rem 0;
-  /* カンプに合わせた、見出しの下のうっすらとした区切り線 */
   border-bottom: 1px solid #e2e8f0;
 }
 .page-policy #privacy-content .privacy-content_wrapper_block p {
