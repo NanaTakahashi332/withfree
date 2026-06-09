@@ -2265,14 +2265,13 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   position: relative;
   z-index: 10;
   padding-bottom: 8rem;
-  /* 白い大きな書類型コンテナのラッパー */
 }
 .page-policy #privacy-content .privacy-content_wrapper {
   width: 90%;
   margin: 4rem auto;
 }
 .page-policy #privacy-content .privacy-content_wrapper_block {
-  margin-bottom: 4rem; /* 項目と項目の間の広い縦の隙間 */
+  margin-bottom: 4rem;
 }
 .page-policy #privacy-content .privacy-content_wrapper_block h3 {
   font-size: 18px;
@@ -2280,22 +2279,18 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   color: #515151;
   padding-bottom: 0.75rem;
   margin: 0 0 1.5rem 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #8e79e8;
 }
 .page-policy #privacy-content .privacy-content_wrapper_block p {
   font-size: 14px;
-  line-height: 1.85; /* 🚨 文書が詰まって見えないようにするための広い行間 */
-  color: #4a4a4a; /* 柔らかい黒にして可読性を格段にアップ */
+  line-height: 1.85;
+  color: #4a4a4a;
   margin: 0;
-  /* 10.お問い合わせ内のメールアドレス部分（pの2番目）を強調 */
 }
 .page-policy #privacy-content .privacy-content_wrapper_block p + p {
   margin-top: 0.5rem;
   font-weight: bold;
-  color: #6667ab; /* カンプのメールアドレス用（ブランドカラー等） */
-}
-.page-policy #privacy-content .privacy-content_wrapper {
-  /* 右下の制定日・改定日エリア */
+  color: #6667ab;
 }
 .page-policy #privacy-content .privacy-content_wrapper .privacy-content_meta {
   text-align: right; /* 右寄せ */
@@ -2303,29 +2298,113 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
 }
 .page-policy #privacy-content .privacy-content_wrapper .privacy-content_meta p {
   font-size: 12px;
-  color: #999999; /* 日付情報は目立たない薄いグレーに */
+  color: #999999;
   margin: 0 0 0.25rem 0;
-}
-.page-policy {
-  /* ==========================================
-     Responsive (レスポンシブ・スマホ対応)
-  ========================================== */
 }
 @media (max-width: 768px) {
   .page-policy #privacy-content {
-    margin-top: -4rem; /* スマホ時は波背景への食い込みを少し浅く調整 */
+    margin-top: -4rem;
   }
   .page-policy #privacy-content .privacy-content_wrapper {
-    padding: 3rem 2rem; /* スマホ画面の横幅に合わせて白い余白を狭める */
+    padding: 3rem 2rem;
     border-radius: 8px;
   }
   .page-policy #privacy-content .privacy-content_wrapper_block {
-    margin-bottom: 3rem; /* スマホ向けに項目の隙間を少し詰める */
+    margin-bottom: 3rem;
   }
   .page-policy #privacy-content .privacy-content_wrapper_block h3 {
-    font-size: 16px; /* 見出しをスマホサイズに縮小 */
+    font-size: 16px;
   }
   .page-policy #privacy-content .privacy-content_wrapper_block p {
-    font-size: 13px; /* 本文もスマホ向けに最適化 */
+    font-size: 12px;
   }
+}
+
+.page-transaction #transaction-heading {
+  background-image: url("/img/hildpage-header.svg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 6rem 0 10rem;
+}
+.page-transaction #transaction-heading h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #515151;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+.page-transaction #transaction-heading .transaction-heading_path {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.page-transaction #transaction-heading .transaction-heading_path li {
+  font-size: 12px;
+  color: #888888;
+  display: flex;
+  align-items: center;
+}
+.page-transaction #transaction-heading .transaction-heading_path li:not(:last-child)::after {
+  content: ">";
+  font-size: 10px;
+  color: #cccccc;
+  margin: 0 10px;
+}
+.page-transaction #transaction-heading .transaction-heading_path li a {
+  text-decoration: none;
+  color: #555555;
+  transition: color 0.3s ease;
+}
+.page-transaction #transaction-heading .transaction-heading_path li a:hover {
+  color: #3e4252;
+  text-decoration: underline;
+}
+.page-transaction #transaction-content {
+  padding-bottom: 10rem;
+}
+.page-transaction #transaction-content .transaction-content_wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block {
+  margin-bottom: 3rem;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text {
+  background-color: #f7f8f9;
+  padding: 2.5rem;
+  border-radius: 8px;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text p,
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333333;
+  margin: 0;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text ul li {
+  margin-bottom: 0.8rem;
+}
+.page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text ul li:last-child {
+  margin-bottom: 0;
 }
