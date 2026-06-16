@@ -2408,3 +2408,433 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
 .page-transaction #transaction-content .transaction-content_wrapper .transaction-content_wrapper_block .transaction-content_wrapper_block_text ul li:last-child {
   margin-bottom: 0;
 }
+
+.page-single {
+  /* ================================================== */
+  /* ▼ 共通設定 ▼ */
+  /* ================================================== */
+}
+.page-single .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.page-single {
+  /* ================================================== */
+  /* ▼ 1. メインビジュアル (#single-heading) ▼ */
+  /* ================================================== */
+}
+.page-single #single-heading {
+  background-color: #f3f4fb;
+  padding-top: 4rem;
+  /* HTMLの先頭にある見出しは、カンプに存在しないため非表示 */
+}
+.page-single #single-heading > h2,
+.page-single #single-heading > p {
+  display: none;
+}
+.page-single #single-heading .single-heading_wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+.page-single #single-heading .single-heading_wrapper_text {
+  flex: 1;
+}
+.page-single #single-heading .single-heading_wrapper_text h1 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+.page-single #single-heading .single-heading_wrapper_text_description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;
+  margin-bottom: 2rem;
+}
+.page-single #single-heading .single-heading_wrapper_text_company {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+.page-single #single-heading .single-heading_wrapper_text_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.page-single #single-heading .single-heading_wrapper_text_tags li {
+  background-color: #ffffff;
+  border: 1px solid #d2d6eb;
+  color: #6667ab;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.page-single #single-heading .single-heading_wrapper_img {
+  flex: 1;
+  text-align: right;
+}
+.page-single #single-heading .single-heading_wrapper_img img {
+  max-width: 100%;
+  height: auto;
+}
+.page-single #single-heading {
+  /* パンくずリスト */
+}
+.page-single #single-heading .single-heading_wrapper_path {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+  display: flex;
+  list-style: none;
+  font-size: 12px;
+  color: #999;
+  border-top: 1px solid #e1e4f0;
+}
+.page-single #single-heading .single-heading_wrapper_path li {
+  display: flex;
+  align-items: center;
+}
+.page-single #single-heading .single-heading_wrapper_path li a {
+  color: #999;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.page-single #single-heading .single-heading_wrapper_path li a:hover {
+  opacity: 0.7;
+}
+.page-single #single-heading .single-heading_wrapper_path li:not(:last-child)::after {
+  content: ">";
+  margin: 0 8px;
+  font-weight: bold;
+}
+.page-single {
+  /* ================================================== */
+  /* ▼ 2. PROJECT OVERVIEW (#single-overview) ▼ */
+  /* ================================================== */
+}
+.page-single #single-overview {
+  padding: 6rem 20px;
+}
+.page-single #single-overview .single-overview_title {
+  margin-bottom: 3rem;
+}
+.page-single #single-overview .single-overview_title h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+.page-single #single-overview .single-overview_title p {
+  font-size: 14px;
+  color: #333333;
+  font-weight: bold;
+}
+.page-single #single-overview .single-overview_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+.page-single #single-overview .single-overview_row_text {
+  flex: 1;
+}
+.page-single #single-overview .single-overview_row_text_badge {
+  display: inline-block;
+  background-color: #6667ab;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+.page-single #single-overview .single-overview_row_text_checklist {
+  list-style: none;
+  padding: 0;
+}
+.page-single #single-overview .single-overview_row_text_checklist li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  /* 青丸とチェックマーク */
+}
+.page-single #single-overview .single-overview_row_text_checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #6667ab;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-single #single-overview .single-overview_row_text_checklist li h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333333;
+}
+.page-single #single-overview .single-overview_row_text_checklist li p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+}
+.page-single #single-overview .single-overview_row_text {
+  /* 改善結果（横並び3列カード） */
+}
+.page-single #single-overview .single-overview_row_text_results {
+  background-color: #f7f8f9;
+  border-radius: 20px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.page-single #single-overview .single-overview_row_text_results_card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+.page-single #single-overview .single-overview_row_text_results_card img {
+  height: 120px;
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+.page-single #single-overview .single-overview_row_text_results_card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.page-single #single-overview .single-overview_row_text_results_card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666666;
+  text-align: left;
+}
+.page-single #single-overview .single-overview_row_img {
+  flex: 1;
+}
+.page-single #single-overview .single-overview_row_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.page-single #single-overview .single-overview_row_img_tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.page-single #single-overview .single-overview_row_img_tech li {
+  border: 1px solid #6667ab;
+  color: #6667ab;
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+.page-single {
+  /* ================================================== */
+  /* ▼ 3. PRODUCTION WORKS (#single-production) ▼ */
+  /* ================================================== */
+}
+.page-single #single-production {
+  padding-bottom: 8rem;
+}
+.page-single #single-production .single-production_title {
+  margin-bottom: 3rem;
+}
+.page-single #single-production .single-production_title h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+.page-single #single-production .single-production_title p {
+  font-size: 14px;
+  color: #333333;
+  font-weight: bold;
+}
+.page-single #single-production .single-production__url {
+  text-align: right;
+  margin-top: -3.5rem;
+  margin-bottom: 3rem;
+  font-size: 14px;
+}
+.page-single #single-production .single-production__url a {
+  color: #6667ab;
+  text-decoration: none;
+  font-weight: bold;
+}
+.page-single #single-production .single-production__url a:hover {
+  text-decoration: underline;
+}
+.page-single #single-production .single-production_works {
+  margin-bottom: 4rem;
+}
+.page-single #single-production .single-production_works_label {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 1rem;
+}
+.page-single #single-production .single-production_works .works-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.page-single {
+  /* ================================================== */
+  /* ▼ 4. PROJECT MANAGER (#single-manager) ▼ */
+  /* ================================================== */
+}
+.page-single #single-manager {
+  background-color: #e4eaf5;
+  padding: 6rem 0;
+}
+.page-single #single-manager .single-manager_wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.page-single #single-manager .single-manager_wrapper_title {
+  margin-bottom: 3rem;
+}
+.page-single #single-manager .single-manager_wrapper_title h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+.page-single #single-manager .single-manager_wrapper_title p {
+  font-size: 14px;
+  color: #333333;
+  font-weight: bold;
+}
+.page-single #single-manager .single-manager_wrapper_card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.page-single #single-manager .single-manager_wrapper_card_img {
+  flex-shrink: 0;
+}
+.page-single #single-manager .single-manager_wrapper_card_img img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.page-single #single-manager .single-manager_wrapper_card_info_header {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.page-single #single-manager .single-manager_wrapper_card_info_header h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+}
+.page-single #single-manager .single-manager_wrapper_card_info_header_tags {
+  font-size: 12px;
+  color: #666666;
+  font-weight: bold;
+}
+.page-single #single-manager .single-manager_wrapper_card_info p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+.page-single #single-manager .single-manager_wrapper_card_info p:last-child {
+  margin-bottom: 0;
+}
+.page-single {
+  /* ================================================== */
+  /* ▼ 5. 関連実績 (#single-related) ▼ */
+  /* ================================================== */
+}
+.page-single #single-related {
+  padding: 6rem 20px 8rem;
+}
+.page-single #single-related .single-related_title {
+  margin-bottom: 3rem;
+}
+.page-single #single-related .single-related_title h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+}
+.page-single #single-related .single-related_projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.page-single #single-related .single-related_projects_card {
+  text-decoration: none;
+  color: #333333;
+  transition: transform 0.3s ease;
+}
+.page-single #single-related .single-related_projects_card:hover {
+  transform: translateY(-5px);
+}
+.page-single #single-related .single-related_projects_card .single-related_card_projects_img {
+  background-color: #f7f8f9;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.page-single #single-related .single-related_projects_card .single-related_card_projects_img img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.page-single #single-related .single-related_projects_card .single-related_card_projects_text h3 {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.page-single #single-related .single-related_projects_card .single-related_card_projects_text_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.page-single #single-related .single-related_projects_card .single-related_card_projects_text_tags li {
+  background-color: #ffffff;
+  border: 1px solid #d2d6eb;
+  color: #6667ab;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
