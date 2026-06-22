@@ -170,9 +170,6 @@ header {
       @include mq(tab) {
         display: none;
       }
-      @include mq(sp) {
-        display: none;
-      }
       .header_wrap_nav {
         display: inline-block;
         margin: 0 0.5rem;
@@ -181,6 +178,9 @@ header {
         }
         @include mq(tab) {
           margin: 0 0.25rem;
+        }
+        @include mq(sp) {
+          display: none;
         }
       }
       .header_wrap_nav_a {
@@ -241,6 +241,9 @@ header {
           background-clip: padding-box, border-box;
           opacity: 1;
         }
+        @include mq(sp) {
+          display: none;
+        }
       }
     }
   }
@@ -264,6 +267,9 @@ header {
     @include mq(sp) {
       display: block;
     }
+    // @include mq(sp) {
+    //   display: none;
+    // }
     & span {
       @include mq(tab) {
         display: inline-block;
@@ -309,7 +315,7 @@ header {
       display: block;
     }
     @include mq(sp) {
-      display: block;
+      display: none;
     }
   }
   #h-nav {
@@ -480,11 +486,26 @@ footer {
         font-weight: bold;
         letter-spacing: 0.05em;
         margin: 0 0 1.5rem 0;
+        @include mq(sp) {
+          font-size: 26px;
+          line-height: 1.5;
+        }
+        & sponly {
+          @include mq(pc) {
+            display: none;
+          }
+          @include mq(sp) {
+            display: block;
+          }
+        }
       }
       p {
         font-size: 14px;
         line-height: 1.8;
         margin: 0;
+        @include mq(sp) {
+          font-size: 12px;
+        }
       }
       .top-cta_free_button {
         display: inline-flex;
@@ -500,17 +521,25 @@ footer {
           opacity: 0.8;
         }
         .top-cta_free_button_registration {
+          margin: 0 1.5rem 0 0;
+          padding: 1rem 2rem;
           background-color: #4a4e59;
           color: #ffffff;
           font-size: 14px;
-          padding: 10px 24px;
           border-radius: 50px;
-          margin: 0 24px 0 0;
+          @include mq(sp) {
+            margin: 0 0.75rem 0 0;
+            padding: 0.75rem 1rem;
+            font-size: 12px;
+          }
         }
         .top-cta_free_button_serch {
           font-size: 16px;
           font-weight: bold;
-          margin: 0;
+          // margin: 0;
+          @include mq(sp) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -519,14 +548,23 @@ footer {
       align-items: center;
       gap: 1.5rem;
       margin-bottom: 1.5rem;
+      @include mq(sp) {
+        justify-content: space-between;
+      }
       img {
-        height: 40px;
+        height: 3.5rem;
         width: auto;
+        @include mq(sp) {
+          height: 2rem;
+        }
       }
       h6 {
         font-size: 16px;
         font-weight: normal;
         margin: 0;
+        @include mq(sp) {
+          font-size: 12px;
+        }
       }
     }
     .footer-wrapper_bottom {
@@ -536,29 +574,41 @@ footer {
       flex-wrap: wrap;
       gap: 1rem;
       padding-top: 1rem;
+      @include mq(sp) {
+        display: block;
+      }
       ul {
         display: flex;
         align-items: center;
         gap: 2rem;
         list-style: none;
-        padding: 0;
-        margin: 0;
+        // padding: 0;
+        // margin: 0;
+        @include mq(sp) {
+          display: block;
+        }
         li {
+          @include mq(sp) {
+            line-height: 1.75;
+          }
           a {
             display: flex;
             align-items: center;
             gap: 6px;
             color: #ffffff;
-            font-size: 13px;
+            font-size: 14px;
             text-decoration: none;
             cursor: pointer;
             transition: opacity 0.3s ease;
+            @include mq(sp) {
+              font-size: 12px;
+            }
             &:hover {
               opacity: 0.7;
             }
             img {
-              width: 12px;
-              height: 12px;
+              width: 1rem;
+              height: 1rem;
             }
           }
         }
@@ -568,6 +618,11 @@ footer {
         font-weight: normal;
         margin: 0;
         color: $white;
+        @include mq(sp) {
+          margin-top: 2rem;
+          text-align: center;
+          font-size: 8px;
+        }
       }
     }
   }
@@ -609,7 +664,6 @@ footer {
             padding: 8rem 0 2rem;
             display: flex;
             justify-content: center;
-            // gap: 2.5%;
             .fv-wrapper_group {
               width: 50%;
               & p {
