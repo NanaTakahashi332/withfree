@@ -312,7 +312,7 @@ header {
       display: none;
     }
     @include mq(tab) {
-      display: block;
+      display: none;
     }
     @include mq(sp) {
       display: none;
@@ -664,8 +664,17 @@ footer {
             padding: 8rem 0 2rem;
             display: flex;
             justify-content: center;
+            @include mq(tab) {
+              display: block;
+            }
+            @include mq(sp) {
+              padding: 6rem 0 2rem;
+            }
             .fv-wrapper_group {
               width: 50%;
+              @include mq(tab) {
+                width: 100%;
+              }
               & p {
                 width: 40%;
                 margin: 0 auto;
@@ -694,6 +703,9 @@ footer {
                 & h4 {
                   display: inline-block;
                   font-size: 22px;
+                  @include mq(sp) {
+                    font-size: 18px;
+                  }
                 }
               }
               & h1 {
@@ -704,6 +716,10 @@ footer {
                 margin: 2rem 0;
                 font-size: 18px;
                 line-height: 26px;
+                @include mq(sp) {
+                  font-size: 14px;
+                  line-height: 22px;
+                }
               }
               .fv-wrapper_group_worries {
                 margin: 1rem auto;
@@ -713,6 +729,9 @@ footer {
                 }
                 .fv-wrapper_group_worries_img {
                   width: 60%;
+                  @include mq(sp) {
+                    width: 85%;
+                  }
                   margin: 0 auto;
                   & img {
                     width: 100%;
@@ -722,6 +741,9 @@ footer {
             }
             .fv-wrapper_img {
               width: 50%;
+              @include mq(tab) {
+                width: 100%;
+              }
               & img {
                 width: 100%;
               }
@@ -740,6 +762,16 @@ footer {
             & li {
               width: auto;
               height: 100%;
+              & img {
+                width: auto;
+                height: 65px;
+                @include mq(tab) {
+                  height: 40px;
+                }
+                @include mq(sp) {
+                  height: 30px;
+                }
+              }
             }
             & :nth-child(odd) {
               animation: loop3 80s -40s linear infinite;
@@ -771,6 +803,9 @@ footer {
           .top-forallfreelancers_wrapper {
             @include container;
             padding: 4rem 0;
+            @include mq(sp) {
+              padding: 2rem 0;
+            }
             & h3 {
               display: inline-block;
               background-image: linear-gradient(
@@ -784,12 +819,18 @@ footer {
               font-size: 40px;
               font-weight: bold;
               opacity: 0.2;
+              @include mq(sp) {
+                font-size: 32px;
+              }
             }
             & p {
               margin: 2rem 0;
               line-height: 1.5;
               color: $strong_gray;
               font-weight: bold;
+              @include mq(sp) {
+                margin: 1.5rem 0;
+              }
             }
             .top-forallfreelancers_wrapper_slider {
               display: flex;
@@ -878,14 +919,30 @@ footer {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @include mq(sp) {
+          background-position: 50% center;
+          background-size: auto 70%;
+          background-color: #f3f4fb;
+        }
         .top-introduction_wrapper {
           @include container;
-          padding: 5vw 0;
+          padding: 1rem 0;
           & h4 {
             padding: 3rem 0;
             line-height: 1.5;
             font-size: 30px;
             color: $font_basic;
+            @include mq(tab) {
+              font-size: 24px;
+            }
+            @include mq(sp) {
+              writing-mode: vertical-rl;
+              letter-spacing: 0.1em;
+              font-size: 20px;
+            }
+            & span {
+              writing-mode: horizontal-tb;
+            }
           }
           .top-introduction_wrapper_group {
             width: 80%;
@@ -899,12 +956,19 @@ footer {
             border-radius: 0 50px 0 0;
             position: relative;
             z-index: 5;
+            @include mq(sp) {
+              padding: 1.25rem;
+            }
             & li {
               padding: 0.5rem 1rem;
               background-color: $weak_gray;
               border-radius: 20px;
               font-weight: 500;
               white-space: nowrap;
+              @include mq(sp) {
+                padding: 0.25rem 0.5rem;
+                font-size: 12px;
+              }
             }
           }
         }

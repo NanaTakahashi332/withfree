@@ -482,7 +482,7 @@ header .h-open.active span:nth-of-type(3) {
 }
 @media screen and (max-width: 768px) {
   header .sp-only {
-    display: block;
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {
@@ -873,8 +873,23 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .page-top main article #top-fv .fv .fv-wrapper {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv .fv .fv-wrapper {
+    padding: 6rem 0 2rem;
+  }
+}
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group {
+    width: 100%;
+  }
 }
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group p {
   width: 40%;
@@ -902,6 +917,11 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   display: inline-block;
   font-size: 22px;
 }
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_logogroup h4 {
+    font-size: 18px;
+  }
+}
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group h1 {
   font-size: 30px;
   line-height: 40px;
@@ -910,6 +930,12 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   margin: 2rem 0;
   font-size: 18px;
   line-height: 26px;
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group h2 {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries {
   margin: 1rem auto;
@@ -920,6 +946,13 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
 }
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img {
   width: 60%;
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img {
+    width: 85%;
+  }
+}
+.page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img {
   margin: 0 auto;
 }
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_group .fv-wrapper_group_worries .fv-wrapper_group_worries_img img {
@@ -927,6 +960,11 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
 }
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_img {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_img {
+    width: 100%;
+  }
 }
 .page-top main article #top-fv .fv .fv-wrapper .fv-wrapper_img img {
   width: 100%;
@@ -943,6 +981,20 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
 .page-top main article #top-fv #top-customers .top-customers_slider li {
   width: auto;
   height: 100%;
+}
+.page-top main article #top-fv #top-customers .top-customers_slider li img {
+  width: auto;
+  height: 65px;
+}
+@media screen and (max-width: 768px) {
+  .page-top main article #top-fv #top-customers .top-customers_slider li img {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv #top-customers .top-customers_slider li img {
+    height: 30px;
+  }
 }
 .page-top main article #top-fv #top-customers .top-customers_slider :nth-child(odd) {
   animation: loop3 80s -40s linear infinite;
@@ -971,6 +1023,11 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   margin: 0 auto;
   padding: 4rem 0;
 }
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper {
+    padding: 2rem 0;
+  }
+}
 .page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper h3 {
   display: inline-block;
   background-image: linear-gradient(to right, #c58fff 0%, #6667ab 100%);
@@ -981,11 +1038,21 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   font-weight: bold;
   opacity: 0.2;
 }
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper h3 {
+    font-size: 32px;
+  }
+}
 .page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper p {
   margin: 2rem 0;
   line-height: 1.5;
   color: #4b5563;
   font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper p {
+    margin: 1.5rem 0;
+  }
 }
 .page-top main article #top-fv #top-forallfreelancers .top-forallfreelancers_wrapper .top-forallfreelancers_wrapper_slider {
   display: flex;
@@ -1064,16 +1131,38 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 480px) {
+  .page-top main article #top-introduction {
+    background-position: 50% center;
+    background-size: auto 70%;
+    background-color: #f3f4fb;
+  }
+}
 .page-top main article #top-introduction .top-introduction_wrapper {
   width: 90%;
   margin: 0 auto;
-  padding: 5vw 0;
+  padding: 1rem 0;
 }
 .page-top main article #top-introduction .top-introduction_wrapper h4 {
   padding: 3rem 0;
   line-height: 1.5;
   font-size: 30px;
   color: #515151;
+}
+@media screen and (max-width: 768px) {
+  .page-top main article #top-introduction .top-introduction_wrapper h4 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-introduction .top-introduction_wrapper h4 {
+    writing-mode: vertical-rl;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+  }
+}
+.page-top main article #top-introduction .top-introduction_wrapper h4 span {
+  writing-mode: horizontal-tb;
 }
 .page-top main article #top-introduction .top-introduction_wrapper .top-introduction_wrapper_group {
   width: 80%;
@@ -1088,12 +1177,23 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   position: relative;
   z-index: 5;
 }
+@media screen and (max-width: 480px) {
+  .page-top main article #top-introduction .top-introduction_wrapper .top-introduction_wrapper_group {
+    padding: 1.25rem;
+  }
+}
 .page-top main article #top-introduction .top-introduction_wrapper .top-introduction_wrapper_group li {
   padding: 0.5rem 1rem;
   background-color: #f1f1f1;
   border-radius: 20px;
   font-weight: 500;
   white-space: nowrap;
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-introduction .top-introduction_wrapper .top-introduction_wrapper_group li {
+    padding: 0.25rem 0.5rem;
+    font-size: 12px;
+  }
 }
 .page-top main article #top-features {
   background-image: url(/img/featuresofwithfree.svg);
