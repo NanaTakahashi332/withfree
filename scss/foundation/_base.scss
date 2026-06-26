@@ -694,6 +694,10 @@ footer {
                 display: flex;
                 gap: 5%;
                 align-items: center;
+                @include mq(tab) {
+                  gap: 0%;
+                  justify-content: space-between;
+                }
                 .fv-wrapper_group_logogroup_img {
                   width: 30%;
                   & img {
@@ -927,6 +931,9 @@ footer {
         .top-introduction_wrapper {
           @include container;
           padding: 1rem 0;
+          @include mq(sp) {
+            padding: 0 0 8rem 0;
+          }
           & h4 {
             padding: 3rem 0;
             line-height: 1.5;
@@ -980,6 +987,9 @@ footer {
         background-position: center;
         padding: 8rem 0 4rem;
         color: $font_basic;
+        @include mq(sp) {
+          padding: 4rem 0 4rem;
+        }
         .top-features_wrapper {
           @include container;
           .top-features_wrapper_heading {
@@ -987,20 +997,34 @@ footer {
             .top-features_wrapper_heading_main {
               margin: 0.5rem 0;
               font-size: 34px;
+              @include mq(sp) {
+                font-size: 28px;
+              }
             }
             .top-features_wrapper_heading_sub {
               margin-bottom: 2rem;
               font-size: 18px;
+              @include mq(sp) {
+                font-size: 14px;
+              }
             }
             & p {
               line-height: 1.5;
               font-size: 16px;
+              @include mq(sp) {
+                font-size: 14px;
+              }
             }
           }
           .top-features_wrapper_point {
             @include flex_center;
             margin: 2rem 0;
             gap: 2.5%;
+            @include mq(sp) {
+              width: 60%;
+              display: block;
+              margin: 1.5rem auto;
+            }
             .top-features_wrapper_point_item {
               padding: 0.5rem 1rem 0.75rem;
               background-image: linear-gradient(
@@ -1012,6 +1036,10 @@ footer {
               line-height: 1.25;
               border-radius: 50px;
               text-align: center;
+              @include mq(sp) {
+                margin: 0.5rem auto;
+                padding: 0.25rem 0.5rem 0.5rem;
+              }
               & span {
                 font-size: 10px;
                 line-height: 2;
@@ -1022,11 +1050,17 @@ footer {
           .top-features_wrapper_group {
             @include flex_center;
             margin-bottom: 4rem;
+            @include mq(sp) {
+              display: block;
+            }
             &:nth-child(even) {
               flex-direction: row-reverse;
             }
             .top-features_wrapper_group_img {
               width: 48%;
+              @include mq(sp) {
+                width: 100%;
+              }
               img {
                 width: 100%;
                 height: auto;
@@ -1034,17 +1068,26 @@ footer {
             }
             .top-features_wrapper_group_description {
               width: 48%;
+              @include mq(sp) {
+                width: 100%;
+              }
               .top-features_wrapper_group_description_heading {
                 display: flex;
                 align-items: flex-end;
                 gap: 1rem;
                 margin-bottom: 1.75rem;
-                .top-features_wrapper_group_description_headin_gnumber {
+                @include mq(sp) {
+                  margin-bottom: 1rem;
+                }
+                .top-features_wrapper_group_description_heading_number {
                   font-size: 60px;
                   font-weight: bold;
                   color: $purple_heading;
-                  line-height: 1;
+                  // line-height: 1;
                   padding-bottom: 0.5rem;
+                  @include mq(sp) {
+                    font-size: 40px;
+                  }
                 }
                 .top-features_wrapper_group_description_heading_slash {
                   display: inline-block;
@@ -1053,18 +1096,28 @@ footer {
                   background-color: $very_weak_gray;
                   transform: rotate(-60deg);
                   margin-bottom: 1rem;
+                  @include mq(sp) {
+                    width: 3rem;
+                  }
                 }
                 .top-features_wrapper_group_description_heading_title {
                   font-size: 24px;
                   font-weight: bold;
                   color: #333333;
-                  margin: 0 0 6px 0;
+                  margin-bottom: 0.5rem;
+                  @include mq(sp) {
+                    font-size: 20px;
+                  }
                 }
               }
               p {
                 line-height: 1.6;
                 color: #666666;
-                margin-bottom: 32px;
+                margin-bottom: 1.5rem;
+                @include mq(sp) {
+                  margin-bottom: 1rem;
+                  font-size: 12px;
+                }
               }
               .top-features_wrapper_group_description_category {
                 background-color: $white;
@@ -1074,6 +1127,9 @@ footer {
                 gap: 0.75rem;
                 border-radius: 10px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+                @include mq(sp) {
+                  padding: 1rem;
+                }
                 li {
                   background-color: $weak_gray;
                   padding: 0.5rem 1rem;
@@ -1081,10 +1137,17 @@ footer {
                   font-size: 12px;
                   color: $tag_gray;
                   white-space: nowrap;
+                  @include mq(sp) {
+                    padding: 0.5rem 0.75rem;
+                    font-size: 11px;
+                  }
                   &:last-child {
                     background-color: transparent;
                     padding: 0.5rem 1rem;
                     color: #777777;
+                    @include mq(sp) {
+                      padding: 0.5rem 0.75rem;
+                    }
                   }
                 }
               }
@@ -1095,6 +1158,9 @@ footer {
       // =====whychoosewithfree======
       #top-whychoosewithfree {
         margin-top: 4rem;
+        @include mq(sp) {
+          margin-top: 3rem;
+        }
         .top-whychoosewithfree_wrapper {
           @include container;
           .top-whychoosewithfree_wrapper_heading {
@@ -1102,10 +1168,16 @@ footer {
             .top-whychoosewithfree_wrapper_heading_main {
               margin: 0.5rem 0;
               font-size: 34px;
+              @include mq(sp) {
+                font-size: 28px;
+              }
             }
             .top-whychoosewithfree_wrapper_heading_sub {
               margin-bottom: 2rem;
               font-size: 18px;
+              @include mq(sp) {
+                font-size: 14px;
+              }
             }
           }
           .top-whychoosewithfree_wrapper_merit {
@@ -1117,6 +1189,9 @@ footer {
               padding: 0.5rem 1rem;
               border-radius: 20px;
               font-size: 16px;
+              @include mq(sp) {
+                font-size: 12px;
+              }
             }
             .top-whychoosewithfree_wrapper_merit_accept {
               color: $white;
@@ -1137,13 +1212,20 @@ footer {
           }
           .top-whychoosewithfree_wrapper_group {
             margin-top: 4rem;
+            @include mq(sp) {
+              margin-top: 2.5rem;
+            }
             .top-whychoosewithfree_wrapper_group_heading {
               display: flex;
               align-items: center;
               gap: 1.5rem;
+              margin-bottom: 1.5rem;
               padding-bottom: 1.5rem;
               border-bottom: 2px dotted #cccccc;
-              margin-bottom: 1.5rem;
+              @include mq(sp) {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+              }
               .top-whychoosewithfree_wrapper_group_heading_number {
                 background-color: $purple_numberbackground_whychoosewithfree;
                 color: $white;
@@ -1155,17 +1237,23 @@ footer {
                 justify-content: center;
                 align-items: center;
                 flex-shrink: 0;
+                @include mq(sp) {
+                  width: 60px;
+                  height: 60px;
+                }
                 p:first-child {
                   font-size: 12px;
-                  // font-weight: bold;
                   margin: 0 0 4px 0;
-                  // line-height: 1;
+                  @include mq(sp) {
+                    font-size: 10px;
+                  }
                 }
                 p:last-child {
                   font-size: 28px;
                   font-weight: bold;
-                  // margin: 0;
-                  // line-height: 1;
+                  @include mq(sp) {
+                    font-size: 22px;
+                  }
                 }
               }
               h4 {
@@ -1173,23 +1261,40 @@ footer {
                 font-weight: bold;
                 color: #333333;
                 margin: 0;
+                @include mq(sp) {
+                  font-size: 20px;
+                  line-height: 1.5;
+                }
               }
             }
             > p {
               line-height: 1.8;
               color: #666666;
               margin-bottom: 2.5rem;
+              @include mq(sp) {
+                line-height: 1.5;
+                margin-bottom: 1.5rem;
+                font-size: 12px;
+              }
             }
             .top-whychoosewithfree_wrapper_group_card {
               display: flex;
               justify-content: space-between;
-              gap: 24px;
+              gap: 1rem;
+              @include mq(sp) {
+                display: block;
+                gap: 0;
+              }
               .top-whychoosewithfree_wrapper_group_card_item {
                 width: calc((100% - 48px) / 3);
                 background-color: #ffffff;
                 border-radius: 12px;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
                 overflow: hidden;
+                @include mq(sp) {
+                  width: 100%;
+                  margin: 1.5rem 0;
+                }
                 .top-whychoosewithfree_wrapper_group_card_item_img {
                   background-color: #f2f2f2;
                   padding: 30px 20px;
@@ -1210,7 +1315,11 @@ footer {
                     font-weight: bold;
                     color: #333333;
                     text-align: center;
-                    margin: 0 0 16px 0;
+                    margin: 0 0 0.75rem 0;
+                    @include mq(sp) {
+                      font-size: 16px;
+                      line-height: 1.5;
+                    }
                   }
                   p {
                     font-size: 12px;
@@ -1232,6 +1341,9 @@ footer {
           & h3 {
             font-size: 30px;
             line-height: 1.5;
+            @include mq(sp) {
+              font-size: 24px;
+            }
             & span {
               margin: 0 0.2rem;
               background-image: linear-gradient(
@@ -1244,13 +1356,23 @@ footer {
               color: transparent;
               font-weight: bolder;
               font-size: 38px;
+              @include mq(sp) {
+                font-size: 32px;
+              }
             }
           }
           .top-environment_group {
             @include flex_between;
             gap: 5%;
+            @include mq(sp) {
+              display: block;
+              gap: 0;
+            }
             .top-environment_group_textbox {
               width: 50%;
+              @include mq(sp) {
+                width: 100%;
+              }
               .top-environment_group_textbox_text {
                 margin: 1.5rem 0;
                 line-height: 1.5;
@@ -1266,11 +1388,17 @@ footer {
                   color: transparent;
                   font-weight: bolder;
                   font-size: 20px;
+                  @include mq(sp) {
+                    font-size: 18px;
+                  }
                 }
               }
             }
             .top-environment_group_img {
               width: 40%;
+              @include mq(sp) {
+                width: 100%;
+              }
               align-self: center;
               & img {
                 width: 100%;
@@ -1287,7 +1415,6 @@ footer {
         padding: 8rem 0;
         margin-top: -50px;
         margin-bottom: -5px;
-
         background-image:
           linear-gradient(
             135deg,
@@ -1300,7 +1427,6 @@ footer {
         background-repeat: no-repeat;
         color: $white;
         text-align: center;
-
         -webkit-mask-image: radial-gradient(
           ellipse 60% 50px at top center,
           transparent 99%,
@@ -1381,11 +1507,17 @@ footer {
               font-size: 34px;
               font-weight: bold;
               margin: 0 0 0.5rem 0;
+              @include mq(sp) {
+                font-size: 28px;
+              }
             }
             .top-casestudies_wrapper_heading_sub {
               font-size: 16px;
               font-weight: bold;
               margin: 0 0 3rem 0;
+              @include mq(sp) {
+                font-size: 14px;
+              }
             }
           }
           .top-casestudies_wrapper_category {
@@ -1418,6 +1550,9 @@ footer {
                 color: transparent;
                 transition: opacity 0.3s ease;
                 line-height: 1;
+                @include mq(sp) {
+                  font-size: 12px;
+                }
                 &:hover {
                   opacity: 0.7;
                 }
@@ -1449,6 +1584,9 @@ footer {
             margin: 4rem 0;
             animation: caseStudiesSlide 54s linear infinite;
             animation-direction: var(--case-slider-direction, normal);
+            @include mq(sp) {
+              width: 100%;
+            }
             &:nth-of-type(3) {
               animation-delay: -18s;
             }
@@ -1618,11 +1756,17 @@ footer {
               font-size: 32px;
               font-weight: bold;
               margin: 0 0 0.5rem 0;
+              @include mq(sp) {
+                font-size: 28px;
+              }
             }
             .top-pricingplan_wrapper_heading_sub {
               font-size: 16px;
               font-weight: bold;
-              margin: 0;
+              // margin: 0;
+              @include mq(sp) {
+                font-size: 14px;
+              }
             }
           }
           .scroll {
@@ -1632,7 +1776,7 @@ footer {
             padding: 0.5rem 0 1.5rem;
             .top-pricingplan_wrapper_cards {
               display: flex;
-              gap: 12px;
+              gap: 1rem;
               width: 100%;
               min-width: 800px;
               margin: 0 auto 2rem;
@@ -1640,8 +1784,8 @@ footer {
                 display: flex;
                 flex-direction: column;
                 list-style: none;
-                padding: 0;
-                margin: 0;
+                // padding: 0;
+                // margin: 0;
                 border-radius: 8px;
                 overflow: hidden;
                 background-color: #ffffff;
@@ -1673,7 +1817,6 @@ footer {
                   font-size: 24px;
                   font-weight: bold;
                   color: #555555;
-                  // border-bottom: 1px solid #e0e0e0;
                   min-height: 80px;
                   &:last-child {
                     border-bottom: none;
@@ -1704,7 +1847,7 @@ footer {
                   overflow: hidden;
                   .header_cell {
                     background-color: #000000;
-                    color: #ffffff; /* 見出しの文字色を白に */
+                    color: #ffffff;
                   }
                   li {
                     position: relative;
@@ -1810,27 +1953,41 @@ footer {
         background-image: url(/img/support-background.svg);
         background-size: cover;
         background-position: center;
+        @include mq(sp) {
+          padding: 3rem 0;
+        }
         .top-support_wrapper {
           @include container;
           .top-support_wrapper_howtouse {
             margin-bottom: 6rem;
-            h3:nth-of-type(1) {
+            .top-support_wrapper_howtouse_main {
               font-size: 32px;
               font-weight: bold;
               color: #555555;
               margin: 0 0 0.5rem 0;
+              @include mq(sp) {
+                font-size: 28px;
+              }
             }
-            h3:nth-of-type(2) {
+            .top-support_wrapper_howtouse_sub {
               font-size: 16px;
               font-weight: bold;
               color: #555555;
-              margin: 0 0 3rem 0;
+              margin-bottom: 3rem;
+              @include mq(sp) {
+                font-size: 14px;
+              }
             }
             .top-support_wrapper_howtouse_cardgroup {
               display: flex;
               gap: 2rem;
               margin-bottom: 2rem;
               justify-content: flex-start;
+              @include mq(sp) {
+                display: block;
+                gap: 0;
+                margin: 1.5rem 0;
+              }
               &:nth-of-type(2) {
                 justify-content: flex-end;
                 margin-bottom: 0;
@@ -1843,6 +2000,12 @@ footer {
                 padding: 2.5rem 1.5rem 2rem;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
                 text-align: center;
+                box-sizing: border-box;
+                @include mq(sp) {
+                  width: 100%;
+                  margin: 2rem 0;
+                  padding: 1.5rem 1rem 1.5rem;
+                }
                 p:nth-of-type(1) {
                   background-color: #f7d12f;
                   color: #ffffff;
@@ -1856,6 +2019,11 @@ footer {
                   font-size: 14px;
                   font-weight: bold;
                   margin: 0 auto 0.75rem;
+                  @include mq(sp) {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 12px;
+                  }
                 }
                 .card_line_box {
                   display: flex;
@@ -1879,13 +2047,19 @@ footer {
                   font-weight: bold;
                   color: #333333;
                   margin: 0 0 1rem 0;
+                  @include mq(sp) {
+                    font-size: 16px;
+                  }
                 }
                 p:nth-of-type(2) {
                   font-size: 13px;
                   line-height: 1.6;
                   color: #666666;
                   text-align: left;
-                  margin: 0;
+                  // margin: 0;
+                  @include mq(sp) {
+                    font-size: 12px;
+                  }
                 }
               }
             }
@@ -1896,52 +2070,66 @@ footer {
             width: 100%;
             max-width: 900px;
             margin: 0 auto;
-            &_heading {
+            @include mq(sp) {
+              padding: 0 0 3rem 0;
+            }
+            .top-support_wrapper_faq_heading {
               text-align: center;
               margin-bottom: 3rem;
-
-              &_main {
+              .top-support_wrapper_faq_heading_main {
                 font-size: 36px;
                 font-weight: bold;
                 margin: 0 0 0.5rem 0;
                 color: #555555;
               }
-
-              &_sub {
+              .top-support_wrapper_faq_heading_main_sub {
                 font-size: 16px;
                 font-weight: bold;
                 margin: 0;
                 color: #777777;
               }
             }
-            &_list {
+            .top-support_wrapper_faq_list {
               display: flex;
               flex-direction: column;
               gap: 1.5rem;
-              &_item {
+              .top-support_wrapper_faq_list_item {
                 background-color: #ffffff;
                 border-radius: 12px;
                 padding: 2rem 2.5rem;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-                &_q {
+                @include mq(sp) {
+                  padding: 1.5rem;
+                }
+                .top-support_wrapper_faq_list_item_q {
                   display: flex;
                   align-items: center;
                   cursor: pointer;
                   gap: 1.5rem;
-                  &_icon {
+                  @include mq(sp) {
+                    gap: 1rem;
+                  }
+                  .top-support_wrapper_faq_list_item_q_icon {
                     font-size: 28px;
                     font-weight: bold;
                     color: #7b61ff;
                     line-height: 1;
+                    @include mq(sp) {
+                      font-size: 20px;
+                    }
                   }
-                  &_text {
+                  .top-support_wrapper_faq_list_item_q_text {
                     flex: 1;
                     font-size: 16px;
                     font-weight: bold;
                     margin: 0;
                     color: #333333;
+                    @include mq(sp) {
+                      font-size: 14px;
+                      line-height: 1.5;
+                    }
                   }
-                  &_plus {
+                  .top-support_wrapper_faq_list_item_q_plus {
                     position: relative;
                     width: 16px;
                     height: 16px;
@@ -1973,6 +2161,9 @@ footer {
                   margin-top: 1.5rem;
                   padding-left: calc(28px + 1.5rem);
                   display: none;
+                  @include mq(sp) {
+                    padding: 0;
+                  }
                   & p {
                     line-height: 1.5rem;
                   }
