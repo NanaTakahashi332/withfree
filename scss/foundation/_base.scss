@@ -486,9 +486,12 @@ footer {
         font-weight: bold;
         letter-spacing: 0.05em;
         margin: 0 0 1.5rem 0;
+        @include mq(tab) {
+          font-size: 28px;
+          line-height: 1.5;
+        }
         @include mq(sp) {
           font-size: 26px;
-          line-height: 1.5;
         }
         & sponly {
           @include mq(pc) {
@@ -554,6 +557,9 @@ footer {
       img {
         height: 3.5rem;
         width: auto;
+        @include mq(tab) {
+          height: 3rem;
+        }
         @include mq(sp) {
           height: 2rem;
         }
@@ -687,6 +693,9 @@ footer {
                   #6667ab 100%
                 );
                 border-radius: 20px;
+                @include mq(tab) {
+                  font-size: 16px;
+                }
               }
               .fv-wrapper_group_logogroup {
                 width: 100%;
@@ -728,8 +737,12 @@ footer {
               .fv-wrapper_group_worries {
                 margin: 1rem auto;
                 & h3 {
-                  margin-bottom: 1rem;
+                  margin: 0 0 1rem 0;
                   text-align: center;
+                  @include mq(tab) {
+                    margin: 2rem 0 1rem 0;
+                    font-size: 16px;
+                  }
                 }
                 .fv-wrapper_group_worries_img {
                   width: 60%;
@@ -832,6 +845,9 @@ footer {
               line-height: 1.5;
               color: $strong_gray;
               font-weight: bold;
+              @include mq(tab) {
+                font-size: 16px;
+              }
               @include mq(sp) {
                 margin: 1.5rem 0;
               }
@@ -972,6 +988,9 @@ footer {
               border-radius: 20px;
               font-weight: 500;
               white-space: nowrap;
+              @include mq(tab) {
+                font-size: 14px;
+              }
               @include mq(sp) {
                 padding: 0.25rem 0.5rem;
                 font-size: 12px;
@@ -987,6 +1006,9 @@ footer {
         background-position: center;
         padding: 8rem 0 4rem;
         color: $font_basic;
+        @include mq(tab) {
+          padding: 10rem 0 4rem;
+        }
         @include mq(sp) {
           padding: 4rem 0 4rem;
         }
@@ -997,6 +1019,9 @@ footer {
             .top-features_wrapper_heading_main {
               margin: 0.5rem 0;
               font-size: 34px;
+              @include mq(tab) {
+                font-size: 30px;
+              }
               @include mq(sp) {
                 font-size: 28px;
               }
@@ -1004,6 +1029,9 @@ footer {
             .top-features_wrapper_heading_sub {
               margin-bottom: 2rem;
               font-size: 18px;
+              @include mq(tab) {
+                font-size: 16px;
+              }
               @include mq(sp) {
                 font-size: 14px;
               }
@@ -1036,6 +1064,9 @@ footer {
               line-height: 1.25;
               border-radius: 50px;
               text-align: center;
+              @include mq(tab) {
+                font-size: 14px;
+              }
               @include mq(sp) {
                 margin: 0.5rem auto;
                 padding: 0.25rem 0.5rem 0.5rem;
@@ -1085,6 +1116,9 @@ footer {
                   color: $purple_heading;
                   // line-height: 1;
                   padding-bottom: 0.5rem;
+                  @include mq(tab) {
+                    font-size: 46px;
+                  }
                   @include mq(sp) {
                     font-size: 40px;
                   }
@@ -1105,6 +1139,10 @@ footer {
                   font-weight: bold;
                   color: #333333;
                   margin-bottom: 0.5rem;
+                  @include mq(tab) {
+                    font-size: 22px;
+                    line-height: 1.2;
+                  }
                   @include mq(sp) {
                     font-size: 20px;
                   }
@@ -1114,6 +1152,9 @@ footer {
                 line-height: 1.6;
                 color: #666666;
                 margin-bottom: 1.5rem;
+                @include mq(tab) {
+                  font-size: 14px;
+                }
                 @include mq(sp) {
                   margin-bottom: 1rem;
                   font-size: 12px;
@@ -1168,6 +1209,9 @@ footer {
             .top-whychoosewithfree_wrapper_heading_main {
               margin: 0.5rem 0;
               font-size: 34px;
+              @include mq(tab) {
+                font-size: 30px;
+              }
               @include mq(sp) {
                 font-size: 28px;
               }
@@ -1175,6 +1219,9 @@ footer {
             .top-whychoosewithfree_wrapper_heading_sub {
               margin-bottom: 2rem;
               font-size: 18px;
+              @include mq(tab) {
+                font-size: 16px;
+              }
               @include mq(sp) {
                 font-size: 14px;
               }
@@ -1189,6 +1236,9 @@ footer {
               padding: 0.5rem 1rem;
               border-radius: 20px;
               font-size: 16px;
+              @include mq(tab) {
+                font-size: 16px;
+              }
               @include mq(sp) {
                 font-size: 12px;
               }
@@ -1237,6 +1287,10 @@ footer {
                 justify-content: center;
                 align-items: center;
                 flex-shrink: 0;
+                @include mq(tab) {
+                  width: 66px;
+                  height: 66px;
+                }
                 @include mq(sp) {
                   width: 60px;
                   height: 60px;
@@ -1251,6 +1305,9 @@ footer {
                 p:last-child {
                   font-size: 28px;
                   font-weight: bold;
+                  @include mq(tab) {
+                    font-size: 26px;
+                  }
                   @include mq(sp) {
                     font-size: 22px;
                   }
@@ -1261,6 +1318,7 @@ footer {
                 font-weight: bold;
                 color: #333333;
                 margin: 0;
+                line-height: 1.25;
                 @include mq(sp) {
                   font-size: 20px;
                   line-height: 1.5;
@@ -1271,6 +1329,9 @@ footer {
               line-height: 1.8;
               color: #666666;
               margin-bottom: 2.5rem;
+              @include mq(tab) {
+                font-size: 14px;
+              }
               @include mq(sp) {
                 line-height: 1.5;
                 margin-bottom: 1.5rem;
@@ -1309,13 +1370,14 @@ footer {
                   }
                 }
                 .top-whychoosewithfree_wrapper_group_card_item_content {
-                  padding: 24px 20px;
+                  padding: 1.5rem 1rem;
                   h3 {
                     font-size: 18px;
                     font-weight: bold;
                     color: #333333;
                     text-align: center;
                     margin: 0 0 0.75rem 0;
+                    line-height: 1.25;
                     @include mq(sp) {
                       font-size: 16px;
                       line-height: 1.5;
@@ -1341,6 +1403,9 @@ footer {
           & h3 {
             font-size: 30px;
             line-height: 1.5;
+            @include mq(tab) {
+              font-size: 28px;
+            }
             @include mq(sp) {
               font-size: 24px;
             }
@@ -1356,6 +1421,9 @@ footer {
               color: transparent;
               font-weight: bolder;
               font-size: 38px;
+              @include mq(tab) {
+                font-size: 36px;
+              }
               @include mq(sp) {
                 font-size: 32px;
               }
@@ -1364,18 +1432,21 @@ footer {
           .top-environment_group {
             @include flex_between;
             gap: 5%;
-            @include mq(sp) {
+            @include mq(tab) {
               display: block;
               gap: 0;
             }
             .top-environment_group_textbox {
               width: 50%;
-              @include mq(sp) {
+              @include mq(tab) {
                 width: 100%;
               }
               .top-environment_group_textbox_text {
                 margin: 1.5rem 0;
                 line-height: 1.5;
+                @include mq(tab) {
+                  font-size: 14px;
+                }
                 & span {
                   margin: 0 0.2rem;
                   background-image: linear-gradient(
@@ -1396,6 +1467,10 @@ footer {
             }
             .top-environment_group_img {
               width: 40%;
+              @include mq(tab) {
+                width: 60%;
+                margin: 0 auto;
+              }
               @include mq(sp) {
                 width: 100%;
               }
@@ -1437,6 +1512,9 @@ footer {
           transparent 99%,
           black 100%
         );
+        @include mq(sp) {
+          padding: 5.5rem 0;
+        }
         &::after {
           content: "";
           position: absolute;
@@ -1458,10 +1536,18 @@ footer {
         & h2 {
           margin-bottom: 1rem;
           font-size: 28px;
+          @include mq(sp) {
+            font-size: 20px;
+            line-height: 1.5;
+          }
         }
         & p {
           line-height: 1.5;
           font-size: 16px;
+          @include mq(sp) {
+            font-size: 12px;
+            line-height: 1.5;
+          }
         }
         .top-cta_free_button {
           display: inline-flex;
@@ -1469,26 +1555,35 @@ footer {
           background-color: #6667ab;
           border-radius: 50px;
           padding: 0.5rem 2rem 0.5rem 0.5rem;
-          margin-top: 3rem;
+          margin: 3rem 0 0 0;
           cursor: pointer;
           transition: opacity 0.3s ease;
+          @include mq(sp) {
+            margin: 2rem 0 0 0;
+          }
           &:hover {
             opacity: 0.8;
           }
           .top-cta_free_button_registration {
             background-color: #ffffff;
             color: #6667ab;
-            padding: 12px 24px;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 14px;
             font-weight: bold;
             margin-right: 1rem;
+            @include mq(sp) {
+              font-size: 12px;
+            }
           }
           .top-cta_free_button_serch {
             color: #ffffff;
             font-size: 16px;
             font-weight: bold;
             margin: 0;
+            @include mq(sp) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -1507,6 +1602,9 @@ footer {
               font-size: 34px;
               font-weight: bold;
               margin: 0 0 0.5rem 0;
+              @include mq(tab) {
+                font-size: 30px;
+              }
               @include mq(sp) {
                 font-size: 28px;
               }
@@ -1515,6 +1613,9 @@ footer {
               font-size: 16px;
               font-weight: bold;
               margin: 0 0 3rem 0;
+              @include mq(tab) {
+                font-size: 16px;
+              }
               @include mq(sp) {
                 font-size: 14px;
               }
@@ -1580,12 +1681,13 @@ footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 40px;
+            gap: 2rem;
             margin: 4rem 0;
             animation: caseStudiesSlide 54s linear infinite;
             animation-direction: var(--case-slider-direction, normal);
-            @include mq(sp) {
+            @include mq(tab) {
               width: 100%;
+              display: block;
             }
             &:nth-of-type(3) {
               animation-delay: -18s;
@@ -1595,12 +1697,19 @@ footer {
             }
             .top-casestudies_wrapper_work_img {
               width: 48%;
+              @include mq(tab) {
+                width: 90%;
+                margin: 0 0 1rem 0;
+              }
               & img {
                 width: 100%;
               }
             }
             .top-casestudies_wrapper_work_textbox {
               width: 48%;
+              @include mq(tab) {
+                width: 100%;
+              }
               .top-casestudies_wrapper_work_textbox_outline {
                 border-bottom: 1px solid #cccccc;
                 padding-bottom: 1.5rem;
@@ -1610,20 +1719,30 @@ footer {
                   font-weight: bold;
                   margin: 0 0 1rem 0;
                   color: #333333;
+                  @include mq(sp) {
+                    font-size: 20px;
+                  }
                 }
                 ul {
                   display: flex;
                   gap: 12px;
                   list-style: none;
-                  padding: 0;
-                  margin: 0;
+                  // padding: 0;
+                  // margin: 0;
                   li {
                     background-color: #aeb5c0;
                     color: #ffffff;
-                    padding: 4px 16px;
+                    padding: 0.25rem 1rem;
                     border-radius: 50px;
                     font-size: 12px;
                     font-weight: bold;
+                    @include mq(tab) {
+                      padding: 0.5rem 1rem;
+                      font-size: 14px;
+                    }
+                    @include mq(sp) {
+                      font-size: 12px;
+                    }
                   }
                 }
               }
@@ -1672,6 +1791,9 @@ footer {
                 font-weight: bold;
                 margin: 0;
                 cursor: pointer;
+                @include mq(tab) {
+                  font-size: 14px;
+                }
               }
             }
           }
@@ -1717,7 +1839,7 @@ footer {
               display: inline-block;
               background-color: $purple_heading;
               color: $white;
-              padding: 16px 40px;
+              padding: 1rem 2rem;
               border-radius: 50px;
               font-size: 16px;
               font-weight: bold;
@@ -1725,6 +1847,10 @@ footer {
               cursor: pointer;
               transition: opacity 0.3s ease;
               box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+              @include mq(sp) {
+                padding: 1rem 1.5rem;
+                font-size: 14px;
+              }
               &:hover {
                 opacity: 0.8;
               }
@@ -1756,6 +1882,9 @@ footer {
               font-size: 32px;
               font-weight: bold;
               margin: 0 0 0.5rem 0;
+              @include mq(tab) {
+                font-size: 30px;
+              }
               @include mq(sp) {
                 font-size: 28px;
               }
@@ -1764,6 +1893,9 @@ footer {
               font-size: 16px;
               font-weight: bold;
               // margin: 0;
+              @include mq(tab) {
+                font-size: 16px;
+              }
               @include mq(sp) {
                 font-size: 14px;
               }
@@ -1965,6 +2097,9 @@ footer {
               font-weight: bold;
               color: #555555;
               margin: 0 0 0.5rem 0;
+              @include mq(tab) {
+                font-size: 30px;
+              }
               @include mq(sp) {
                 font-size: 28px;
               }
@@ -1974,6 +2109,9 @@ footer {
               font-weight: bold;
               color: #555555;
               margin-bottom: 3rem;
+              @include mq(tab) {
+                font-size: 16px;
+              }
               @include mq(sp) {
                 font-size: 14px;
               }
@@ -1983,6 +2121,9 @@ footer {
               gap: 2rem;
               margin-bottom: 2rem;
               justify-content: flex-start;
+              @include mq(tab) {
+                justify-content: space-around;
+              }
               @include mq(sp) {
                 display: block;
                 gap: 0;
@@ -1991,6 +2132,9 @@ footer {
               &:nth-of-type(2) {
                 justify-content: flex-end;
                 margin-bottom: 0;
+                @include mq(tab) {
+                  justify-content: space-around;
+                }
               }
               .top-support_wrapper_howtouse_cardgroup_card {
                 width: 26%;
@@ -2001,6 +2145,9 @@ footer {
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
                 text-align: center;
                 box-sizing: border-box;
+                @include mq(tab) {
+                  width: 30%;
+                }
                 @include mq(sp) {
                   width: 100%;
                   margin: 2rem 0;
@@ -2019,6 +2166,10 @@ footer {
                   font-size: 14px;
                   font-weight: bold;
                   margin: 0 auto 0.75rem;
+                  @include mq(tab) {
+                    width: 58px;
+                    height: 58px;
+                  }
                   @include mq(sp) {
                     width: 50px;
                     height: 50px;
@@ -2047,6 +2198,7 @@ footer {
                   font-weight: bold;
                   color: #333333;
                   margin: 0 0 1rem 0;
+                  line-height: 1.25;
                   @include mq(sp) {
                     font-size: 16px;
                   }
@@ -2081,12 +2233,24 @@ footer {
                 font-weight: bold;
                 margin: 0 0 0.5rem 0;
                 color: #555555;
+                @include mq(tab) {
+                  font-size: 30px;
+                }
+                @include mq(sp) {
+                  font-size: 28px;
+                }
               }
-              .top-support_wrapper_faq_heading_main_sub {
+              .top-support_wrapper_faq_heading_sub {
                 font-size: 16px;
                 font-weight: bold;
                 margin: 0;
                 color: #777777;
+                @include mq(tab) {
+                  font-size: 16px;
+                }
+                @include mq(sp) {
+                  font-size: 14px;
+                }
               }
             }
             .top-support_wrapper_faq_list {
@@ -2166,6 +2330,9 @@ footer {
                   }
                   & p {
                     line-height: 1.5rem;
+                    @include mq(tab) {
+                      font-size: 14px;
+                    }
                   }
                 }
                 &.is-open {
@@ -2325,7 +2492,7 @@ footer {
           /* 2行以上のテキストを三点リーダーにする場合 */
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
+          // -webkit-line-clamp: 2;
           overflow: hidden;
         }
         .archive-works_all_card_customer {
