@@ -2350,15 +2350,21 @@ footer {
   }
 }
 
-// 制作事例
+// 制作事例一覧
 .page-archive {
   #archive-heading {
     background-image: url("/img/hildpage-header.svg");
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     padding: 6rem 0 10rem;
+    @include mq(tab) {
+      background-size: 100% auto;
+      padding: 6rem 0 6rem;
+      background-position: center top;
+    }
     h2 {
       font-size: 36px;
       font-weight: bold;
@@ -2366,12 +2372,25 @@ footer {
       margin-bottom: 2rem;
       position: relative;
       display: inline-block;
+      @include mq(tab) {
+        font-size: 30px;
+      }
+      @include mq(sp) {
+        font-size: 26px;
+      }
     }
     p {
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.8;
       color: #555555;
       margin: 0 0 0.5rem 0;
+      @include mq(tab) {
+        font-size: 14px;
+      }
+      @include mq(sp) {
+        font-size: 12px;
+        line-height: 1.25;
+      }
     }
     .archive-heading_path {
       @include container;
@@ -2383,6 +2402,9 @@ footer {
         color: #888888;
         display: flex;
         align-items: center;
+        @include mq(sp) {
+          font-size: 10px;
+        }
         /* 最後の要素以外（トップ）の直後に > を自動生成する */
         &:not(:last-child)::after {
           content: ">";
@@ -2408,12 +2430,18 @@ footer {
     position: relative;
     z-index: 10;
     padding-bottom: 8rem;
+    @include mq(sp) {
+      padding-bottom: 2rem;
+    }
     .archive-works_category {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       align-items: center;
       margin-bottom: 4rem;
+      @include mq(tab) {
+        margin: 4rem 0;
+      }
       li {
         overflow: hidden;
         background-color: #ffffff;
@@ -2432,6 +2460,9 @@ footer {
           color: transparent;
           transition: opacity 0.3s ease;
           line-height: 1;
+          @include mq(sp) {
+            font-size: 12px;
+          }
           &:hover {
             opacity: 0.7;
           }
@@ -2453,7 +2484,13 @@ footer {
       grid-template-columns: repeat(3, 1fr);
       gap: 3rem 2rem;
       margin-bottom: 4rem;
-      &_card {
+      @include mq(tab) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mq(sp) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .archive-works_all_card {
         background-color: $white;
         border-radius: 16px;
         overflow: hidden;
@@ -2468,7 +2505,7 @@ footer {
           transform: translateY(-6px);
           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
-        &_img {
+        .archive-works_all_card_img {
           width: 100%;
           aspect-ratio: 16 / 10;
           background-color: #e2e8f0; /* 画像がない時のダミーグレー */
@@ -2489,7 +2526,7 @@ footer {
           line-height: 1.5;
           color: $font_basic;
           margin: 1.5rem 1.5rem 1rem 1.5rem;
-          /* 2行以上のテキストを三点リーダーにする場合 */
+          /* 2行以上のテキストを三点リーダーにする */
           display: -webkit-box;
           -webkit-box-orient: vertical;
           // -webkit-line-clamp: 2;
@@ -2514,45 +2551,11 @@ footer {
         }
       }
     }
-    @media (max-width: 960px) {
-      #archive-works {
-        .archive-works_all {
-          grid-template-columns: repeat(
-            2,
-            1fr
-          ); /* タブレットサイズでは2カラムにする */
-          gap: 2rem 1.5rem;
-        }
-      }
-    }
-    @media (max-width: 599px) {
-      #archive-heading {
-        padding: 4rem 1rem 8rem;
-        h2 {
-          font-size: 28px;
-        }
-      }
-      #archive-works {
-        margin-top: -5rem;
-        .archive-works_category {
-          gap: 0.5rem;
-          margin-bottom: 2.5rem;
-          li a {
-            padding: 8px 16px;
-            font-size: 13px;
-          }
-        }
-        .archive-works_all {
-          grid-template-columns: 1fr; /* スマホでは縦1カラムにスッキリ整える */
-          gap: 2rem;
-        }
-      }
-    }
     .archive-pagination {
       display: flex;
       justify-content: center;
       margin: 4rem 0;
-      &_list {
+      .archive-pagination_list {
         display: flex;
         align-items: center;
         gap: 2rem;
@@ -2572,6 +2575,16 @@ footer {
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease;
+            @include mq(tab) {
+              width: 42px;
+              height: 42px;
+              font-size: 14px;
+            }
+            @include mq(sp) {
+              width: 36px;
+              height: 36px;
+              font-size: 12px;
+            }
             &:hover {
               background-color: $weak_gray;
               transform: translateY(-2px);
@@ -2596,8 +2609,14 @@ footer {
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     padding: 6rem 0 10rem;
+    @include mq(tab) {
+      background-size: 100% auto;
+      padding: 6rem 0 2rem;
+      background-position: center top;
+    }
     h2 {
       font-size: 36px;
       font-weight: bold;
@@ -2605,6 +2624,12 @@ footer {
       margin-bottom: 2rem;
       position: relative;
       display: inline-block;
+      @include mq(tab) {
+        font-size: 30px;
+      }
+      @include mq(sp) {
+        font-size: 26px;
+      }
     }
     .policy-heading_path {
       @include container;
@@ -2612,11 +2637,17 @@ footer {
       text-align: left;
       display: flex;
       align-items: center;
+      @include mq(sp) {
+        margin-bottom: 3rem;
+      }
       li {
         font-size: 12px;
         color: #888888;
         display: flex;
         align-items: center;
+        @include mq(sp) {
+          font-size: 10px;
+        }
         &:not(:last-child)::after {
           content: ">";
           font-size: 10px;
@@ -2640,11 +2671,18 @@ footer {
     position: relative;
     z-index: 10;
     padding-bottom: 8rem;
+    @include mq(tab) {
+      padding-bottom: 4rem;
+    }
     .privacy-content_wrapper {
       width: 90%;
       margin: 4rem auto;
-      &_block {
+      box-sizing: border-box;
+      .privacy-content_wrapper_block {
         margin-bottom: 4rem;
+        @include mq(sp) {
+          margin-bottom: 3rem;
+        }
         h3 {
           font-size: 18px;
           font-weight: bold;
@@ -2652,12 +2690,20 @@ footer {
           padding-bottom: 0.75rem;
           margin: 0 0 1.5rem 0;
           border-bottom: 1px solid #8e79e8;
+          line-height: 1.25;
+          @include mq(sp) {
+            margin: 0 0 1rem 0;
+            font-size: 16px;
+          }
         }
         p {
           font-size: 14px;
           line-height: 1.85;
           color: #4a4a4a;
           margin: 0;
+          @include mq(sp) {
+            font-size: 12px;
+          }
           & + p {
             margin-top: 0.5rem;
             font-weight: bold;
@@ -2666,30 +2712,12 @@ footer {
         }
       }
       .privacy-content_meta {
-        text-align: right; /* 右寄せ */
+        text-align: right;
         margin-top: 4rem;
         p {
           font-size: 12px;
           color: #999999;
           margin: 0 0 0.25rem 0;
-        }
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    #privacy-content {
-      margin-top: -4rem;
-      .privacy-content_wrapper {
-        padding: 3rem 2rem;
-        border-radius: 8px;
-        &_block {
-          margin-bottom: 3rem;
-          h3 {
-            font-size: 16px;
-          }
-          p {
-            font-size: 12px;
-          }
         }
       }
     }
@@ -2703,8 +2731,14 @@ footer {
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     padding: 6rem 0 10rem;
+    @include mq(tab) {
+      background-size: 100% auto;
+      padding: 6rem 0 2rem;
+      background-position: center top;
+    }
     h2 {
       font-size: 36px;
       font-weight: bold;
@@ -2712,6 +2746,12 @@ footer {
       margin-bottom: 2rem;
       position: relative;
       display: inline-block;
+      @include mq(tab) {
+        font-size: 30px;
+      }
+      @include mq(sp) {
+        font-size: 26px;
+      }
     }
     .transaction-heading_path {
       @include container;
@@ -2719,11 +2759,17 @@ footer {
       text-align: left;
       display: flex;
       align-items: center;
+      @include mq(sp) {
+        margin-bottom: 3rem;
+      }
       li {
         font-size: 12px;
         color: #888888;
         display: flex;
         align-items: center;
+        @include mq(sp) {
+          font-size: 10px;
+        }
         &:not(:last-child)::after {
           content: ">";
           font-size: 10px;
@@ -2744,11 +2790,15 @@ footer {
   }
   #transaction-content {
     padding-bottom: 10rem;
+    @include mq(tab) {
+      padding-bottom: 6rem;
+    }
+    @include mq(sp) {
+      padding-bottom: 4rem;
+    }
     .transaction-content_wrapper {
-      // @include container;
-      max-width: 800px;
+      @include container;
       margin: 0 auto;
-      padding: 0 20px;
       .transaction-content_wrapper_block {
         margin-bottom: 3rem;
         h3 {
@@ -2756,17 +2806,30 @@ footer {
           font-weight: bold;
           color: #333333;
           margin-bottom: 1rem;
+          @include mq(sp) {
+            margin: 0 0 1rem 0;
+            font-size: 16px;
+          }
         }
         .transaction-content_wrapper_block_text {
           background-color: #f7f8f9;
           padding: 2.5rem;
           border-radius: 8px;
+          @include mq(tab) {
+            padding: 1.5rem;
+          }
+          @include mq(sp) {
+            padding: 1rem;
+          }
           p,
           li {
             font-size: 15px;
             line-height: 1.8;
             color: #333333;
             margin: 0;
+            @include mq(sp) {
+              font-size: 12px;
+            }
           }
           p:not(:last-child) {
             margin-bottom: 1rem;
@@ -2790,69 +2853,63 @@ footer {
 
 // 制作事例
 .page-single {
-  /* ================================================== */
-  /* ▼ 共通設定 ▼ */
-  /* ================================================== */
   .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+    @include container;
   }
-
-  /* ================================================== */
-  /* ▼ 1. メインビジュアル (#single-heading) ▼ */
-  /* ================================================== */
   #single-heading {
     background-color: #f3f4fb;
     padding-top: 4rem;
-
-    /* HTMLの先頭にある見出しは、カンプに存在しないため非表示 */
-    > h2,
-    > p {
-      display: none;
-    }
-
+    // & h2,
+    // & p {
+    //   display: none;
+    // }
     .single-heading_wrapper {
       max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
+      margin: 0 auto 3rem;
+      padding: 4rem 4rem 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 4rem;
-      margin-bottom: 3rem;
-
-      &_text {
+      @include mq(tab) {
+        padding: 3rem 3rem 0;
+      }
+      @include mq(sp) {
+        display: block;
+      }
+      .single-heading_wrapper_text {
         flex: 1;
-
         h1 {
           font-size: 30px;
           line-height: 1.5;
           margin-bottom: 1.5rem;
           color: #333333;
+          @include mq(sp) {
+            font-size: 26px;
+          }
         }
-
-        &_description {
+        .single-heading_wrapper_text_description {
           font-size: 14px;
           line-height: 1.8;
           color: #666666;
           margin-bottom: 2rem;
+          @include mq(sp) {
+            font-size: 12px;
+            line-height: 1.5;
+          }
         }
-
-        &_company {
+        .single-heading_wrapper_text_company {
           font-size: 14px;
           font-weight: bold;
           color: #333333;
           margin-bottom: 1.5rem;
         }
-
-        &_tags {
+        .single-heading_wrapper_text_tags {
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
           list-style: none;
           padding: 0;
-
           li {
             background-color: #ffffff;
             border: 1px solid #d2d6eb;
@@ -2864,41 +2921,41 @@ footer {
           }
         }
       }
-
-      &_img {
+      .single-heading_wrapper_img {
         flex: 1;
         text-align: right;
+        @include mq(sp) {
+          width: 100%;
+        }
         img {
           max-width: 100%;
           height: auto;
         }
       }
     }
-
-    /* パンくずリスト */
     .single-heading_wrapper_path {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 1rem 20px;
+      padding: 1rem 0.75rem;
       display: flex;
       list-style: none;
       font-size: 12px;
       color: #999;
       border-top: 1px solid #e1e4f0;
-
+      @include mq(sp) {
+        font-size: 10px;
+      }
       li {
         display: flex;
         align-items: center;
-
         a {
-          color: #999;
+          color: #999999;
           text-decoration: none;
           transition: opacity 0.3s;
           &:hover {
             opacity: 0.7;
           }
         }
-
         &:not(:last-child)::after {
           content: ">";
           margin: 0 8px;
@@ -2907,58 +2964,59 @@ footer {
       }
     }
   }
-
-  /* ================================================== */
-  /* ▼ 2. PROJECT OVERVIEW (#single-overview) ▼ */
-  /* ================================================== */
   #single-overview {
-    padding: 6rem 20px;
-
+    padding: 6rem 1.5rem;
     .single-overview_title {
-      margin-bottom: 3rem;
+      margin: 0 0 3rem 0;
       h2 {
+        margin: 0 0 0.5rem 0;
         font-size: 28px;
         font-weight: bold;
         color: #333333;
-        margin-bottom: 0.5rem;
+        @include mq(sp) {
+          font-size: 24px;
+        }
       }
       p {
         font-size: 14px;
         color: #333333;
         font-weight: bold;
+        @include mq(sp) {
+          font-size: 12px;
+        }
       }
     }
-
     .single-overview_row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 4rem;
       margin-bottom: 6rem;
-
-      &_text {
+      @include mq(tab) {
+        display: block;
+      }
+      .single-overview_row_text {
         flex: 1;
-
-        &_badge {
+        .single-overview_row_text_badge {
           display: inline-block;
+          margin: 0 0 2rem 0;
+          padding: 0.5rem 1.25rem;
           background-color: #6667ab;
           color: #ffffff;
-          padding: 8px 24px;
           border-radius: 50px;
           font-weight: bold;
-          font-size: 14px;
-          margin-bottom: 2rem;
+          font-size: 18px;
+          @include mq(sp) {
+            font-size: 16px;
+          }
         }
-
-        &_checklist {
+        .single-overview_row_text_checklist {
           list-style: none;
           padding: 0;
           li {
             position: relative;
             padding-left: 2rem;
             margin-bottom: 1.5rem;
-
-            /* 青丸とチェックマーク */
             &::before {
               content: "";
               position: absolute;
@@ -2974,56 +3032,70 @@ footer {
               background-repeat: no-repeat;
             }
             h4 {
-              font-size: 16px;
+              font-size: 18px;
               font-weight: bold;
               margin-bottom: 0.5rem;
               color: #333333;
+              @include mq(sp) {
+                font-size: 16px;
+              }
             }
             p {
               font-size: 14px;
               line-height: 1.6;
               color: #666666;
+              @include mq(sp) {
+                font-size: 12px;
+              }
             }
           }
         }
-
-        /* 改善結果（横並び3列カード） */
-        &_results {
+        .single-overview_row_results {
           background-color: #f7f8f9;
           border-radius: 20px;
           padding: 3rem;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 2rem;
-
-          &_card {
+          @include mq(tab) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+          .single-overview_row_results_card {
             background-color: #ffffff;
             padding: 2.5rem 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             text-align: center;
-
             img {
               height: 120px;
               width: auto;
               margin-bottom: 1.5rem;
             }
             h4 {
-              font-size: 16px;
+              font-size: 20px;
               font-weight: bold;
               margin-bottom: 1rem;
+              @include mq(tab) {
+                font-size: 18px;
+                line-height: 1.25;
+                @include mq(sp) {
+                  font-size: 16px;
+                }
+              }
             }
             p {
-              font-size: 13px;
+              font-size: 14px;
               line-height: 1.6;
               color: #666666;
               text-align: left;
+              @include mq(sp) {
+                font-size: 12px;
+              }
             }
           }
         }
       }
-
-      &_img {
+      .single-overview_row_img {
         flex: 1;
         img {
           width: 100%;
@@ -3031,7 +3103,7 @@ footer {
           border-radius: 12px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
-        &_tech {
+        .single-overview_row_img_tech {
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
@@ -3041,21 +3113,24 @@ footer {
           li {
             border: 1px solid #6667ab;
             color: #6667ab;
-            padding: 4px 16px;
+            padding: 0.5rem 0.75rem;
             border-radius: 50px;
-            font-size: 12px;
+            font-size: 14px;
+            @include mq(tab) {
+              padding: 0.5rem 1rem;
+              font-size: 14px;
+              @include mq(sp) {
+                padding: 0.25rem 0.5rem;
+                font-size: 12px;
+              }
+            }
           }
         }
       }
     }
   }
-
-  /* ================================================== */
-  /* ▼ 3. PRODUCTION WORKS (#single-production) ▼ */
-  /* ================================================== */
   #single-production {
     padding-bottom: 8rem;
-
     .single-production_title {
       margin-bottom: 3rem;
       h2 {
@@ -3063,19 +3138,27 @@ footer {
         font-weight: bold;
         color: #333333;
         margin-bottom: 0.5rem;
+        @include mq(sp) {
+          font-size: 24px;
+        }
       }
       p {
         font-size: 14px;
         color: #333333;
         font-weight: bold;
+        @include mq(sp) {
+          font-size: 12px;
+        }
       }
     }
-
     .single-production__url {
       text-align: right;
       margin-top: -3.5rem;
       margin-bottom: 3rem;
       font-size: 14px;
+      @include mq(sp) {
+        font-size: 12px;
+      }
       a {
         color: #6667ab;
         text-decoration: none;
@@ -3085,7 +3168,6 @@ footer {
         }
       }
     }
-
     .single-production_works {
       margin-bottom: 4rem;
       &_label {
@@ -3101,74 +3183,103 @@ footer {
       }
     }
   }
-
-  /* ================================================== */
-  /* ▼ 4. PROJECT MANAGER (#single-manager) ▼ */
-  /* ================================================== */
   #single-manager {
-    background-color: #e4eaf5;
+    background-image: url(/img/single_projectmanager_background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 6rem 0;
-
     .single-manager_wrapper {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0 20px;
-
-      &_title {
+      padding: 0 2rem;
+      .single-manager_wrapper_title {
         margin-bottom: 3rem;
         h2 {
           font-size: 28px;
           font-weight: bold;
           color: #333333;
-          margin-bottom: 0.5rem;
+          margin: 0 0 0.5rem 0;
+          @include mq(sp) {
+            font-size: 24px;
+          }
         }
         p {
           font-size: 14px;
           color: #333333;
           font-weight: bold;
+          @include mq(sp) {
+            font-size: 12px;
+          }
         }
       }
-
-      &_card {
+      .single-manager_wrapper_card {
         display: flex;
         align-items: center;
         gap: 4rem;
-
-        &_img {
+        @include mq(tab) {
+          display: block;
+        }
+        .single-manager_wrapper_card_img {
           flex-shrink: 0;
+          @include mq(tab) {
+            margin: 0 0 2rem 0;
+            text-align: center;
+          }
           img {
-            width: 220px;
-            height: 220px;
+            width: 14rem;
+            height: 14rem;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #ffffff;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            @include mq(tab) {
+              width: 10rem;
+              height: 10rem;
+            }
           }
         }
-
-        &_info {
-          &_header {
+        .single-manager_wrapper_card_info {
+          padding: 2rem 4rem;
+          background-color: $white;
+          border-radius: 10px;
+          @include mq(tab) {
+            padding: 2rem;
+          }
+          .single-manager_wrapper_card_info_header {
             display: flex;
             align-items: flex-end;
             gap: 1.5rem;
             margin-bottom: 1.5rem;
+            @include mq(sp) {
+              display: block;
+            }
             h3 {
               font-size: 24px;
               font-weight: bold;
               color: #333333;
-              margin: 0;
+              @include mq(sp) {
+                margin: 0 0 0.5rem 0;
+              }
             }
-            &_tags {
+            .single-manager_wrapper_card_info_header_tags {
               font-size: 12px;
               color: #666666;
               font-weight: bold;
             }
           }
           p {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1.8;
             color: #333333;
             margin-bottom: 1.5rem;
+            @include mq(tab) {
+              font-size: 14px;
+              line-height: 1.5;
+            }
+            @include mq(sp) {
+              font-size: 12px;
+            }
             &:last-child {
               margin-bottom: 0;
             }
@@ -3177,36 +3288,37 @@ footer {
       }
     }
   }
-
-  /* ================================================== */
-  /* ▼ 5. 関連実績 (#single-related) ▼ */
-  /* ================================================== */
   #single-related {
-    padding: 6rem 20px 8rem;
-
+    margin-bottom: 4rem;
+    padding: 6rem 0 8rem;
+    @include mq(sp) {
+      padding: 6rem 0 4rem;
+    }
     .single-related_title {
       margin-bottom: 3rem;
       h2 {
         font-size: 28px;
         font-weight: bold;
         color: #333333;
+        @include mq(sp) {
+          font-size: 24px;
+        }
       }
     }
-
     .single-related_projects {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-
-      &_card {
+      @include mq(sp) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .single-related_projects_card {
         text-decoration: none;
         color: #333333;
         transition: transform 0.3s ease;
-
         &:hover {
           transform: translateY(-5px);
         }
-
         .single-related_card_projects_img {
           background-color: #f7f8f9;
           padding: 2.5rem;
@@ -3219,26 +3331,23 @@ footer {
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
           }
         }
-
         .single-related_card_projects_text {
           h3 {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: bold;
             line-height: 1.6;
             margin-bottom: 1rem;
           }
-          &_tags {
+          .single-related_card_projects_text_tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            list-style: none;
+            gap: 1rem;
             padding: 0;
-
             li {
-              background-color: #ffffff;
+              background-color: $white;
               border: 1px solid #d2d6eb;
               color: #6667ab;
-              padding: 6px 16px;
+              padding: 0.5rem 1rem;
               border-radius: 50px;
               font-size: 12px;
               font-weight: bold;
