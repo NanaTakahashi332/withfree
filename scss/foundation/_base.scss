@@ -1081,6 +1081,7 @@ footer {
           .top-features_wrapper_group {
             @include flex_center;
             margin-bottom: 4rem;
+            gap: 2rem;
             @include mq(sp) {
               display: block;
             }
@@ -1088,9 +1089,13 @@ footer {
               flex-direction: row-reverse;
             }
             .top-features_wrapper_group_img {
-              width: 48%;
+              width: 40%;
+              @include mq(tab) {
+                width: 60%;
+                margin: 0 auto;
+              }
               @include mq(sp) {
-                width: 100%;
+                width: 80%;
               }
               img {
                 width: 100%;
