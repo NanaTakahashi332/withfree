@@ -658,6 +658,32 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 70vw;
+          height: 100%;
+          background-image: url(/img/decoration-top.svg);
+          background-size: contain;
+          background-position: right top;
+          background-repeat: no-repeat;
+          z-index: -1;
+          @include mq(tab) {
+            width: 100vw;
+            top: auto;
+            bottom: 0;
+            transform: none;
+            width: 100vw;
+            // height: 60%;
+            // background-position: bottom center;
+          }
+        }
         .fv {
           width: 100%;
           background-attachment: fixed;
@@ -1000,7 +1026,7 @@ footer {
         }
       }
       #top-features {
-        background-image: url(/img/featuresofwithfree.svg);
+        background-image: url(/img/features_background.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1203,12 +1229,102 @@ footer {
       }
       // =====whychoosewithfree======
       #top-whychoosewithfree {
-        margin-top: 4rem;
+        padding-top: 4rem;
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(/img/decoration-whychoosewithfree_1.svg);
+          background-size: 60% auto;
+          background-position: right 2rem;
+          background-repeat: no-repeat;
+          z-index: -1;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(/img/decoration-whychoosewithfree_3.svg);
+          background-size: 70% auto;
+          background-position: right center;
+          background-repeat: no-repeat;
+          z-index: -1;
+          top: 20%;
+          right: 0;
+          // @include mq(tab) {
+          //   width: 15rem;
+          //   height: 15rem;
+          // }
+          @include mq(sp) {
+            width: 50rem;
+            height: 50rem;
+            top: 30%;
+          }
+        }
         @include mq(sp) {
-          margin-top: 3rem;
+          padding-top: 3rem;
         }
         .top-whychoosewithfree_wrapper {
           @include container;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -5rem;
+            left: -6rem;
+            width: 16rem;
+            height: 16rem;
+            background-image: url(/img/decoration-whychoosewithfree_4.svg);
+            background-size: contain;
+            background-position: left center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            @include mq(tab) {
+              width: 12rem;
+              height: 12rem;
+              left: -4rem;
+              bottom: -3rem;
+            }
+            @include mq(sp) {
+              width: 50rem;
+              height: 50rem;
+              left: -2rem;
+              bottom: -2rem;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 42%;
+            left: -6rem;
+            width: 12rem;
+            height: 12rem;
+            background-image: url(/img/decoration-whychoosewithfree_2.svg);
+            background-size: contain;
+            background-position: left center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            @include mq(tab) {
+              top: 38%;
+              width: 10rem;
+              height: 10rem;
+              left: -4rem;
+            }
+            @include mq(sp) {
+              top: 33%;
+              width: 8rem;
+              height: 8rem;
+              left: -3rem;
+            }
+          }
           .top-whychoosewithfree_wrapper_heading {
             text-align: center;
             .top-whychoosewithfree_wrapper_heading_main {
@@ -1402,7 +1518,7 @@ footer {
         }
       }
       #top-environment {
-        margin: 4rem 0;
+        margin: 8rem 0 4rem;
         .top-environment_wrapper {
           @include container;
           & h3 {

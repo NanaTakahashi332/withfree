@@ -213,7 +213,9 @@ body {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
 }
 
@@ -223,7 +225,10 @@ body {
   margin: 80px auto;
   position: relative;
   text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
   transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
 
@@ -236,11 +241,21 @@ body {
 
 .loader:before {
   left: -3.5em;
+  -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
 .loader:after {
   left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+  0%, 80%, 100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
 }
 @keyframes load7 {
   0%, 80%, 100% {
@@ -302,8 +317,7 @@ header .header_inner .title {
 header .header_inner .title a img {
   width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .header_inner .header_wrap {
   width: 15%;
@@ -853,6 +867,32 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.page-top main article #top-fv::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 70vw;
+  height: 100%;
+  background-image: url(/img/decoration-top.svg);
+  background-size: contain;
+  background-position: right top;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .page-top main article #top-fv::before {
+    width: 100vw;
+    top: auto;
+    bottom: 0;
+    transform: none;
+    width: 100vw;
+  }
 }
 .page-top main article #top-fv .fv {
   width: 100%;
@@ -1224,7 +1264,7 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   }
 }
 .page-top main article #top-features {
-  background-image: url(/img/featuresofwithfree.svg);
+  background-image: url(/img/features_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1476,16 +1516,111 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   }
 }
 .page-top main article #top-whychoosewithfree {
-  margin-top: 4rem;
+  padding-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+.page-top main article #top-whychoosewithfree::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/decoration-whychoosewithfree_1.svg);
+  background-size: 60% auto;
+  background-position: right 2rem;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.page-top main article #top-whychoosewithfree::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/decoration-whychoosewithfree_3.svg);
+  background-size: 70% auto;
+  background-position: right center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 20%;
+  right: 0;
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-whychoosewithfree::after {
+    width: 50rem;
+    height: 50rem;
+    top: 30%;
+  }
 }
 @media screen and (max-width: 480px) {
   .page-top main article #top-whychoosewithfree {
-    margin-top: 3rem;
+    padding-top: 3rem;
   }
 }
 .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper {
   width: 90%;
   margin: 0 auto;
+  position: relative;
+}
+.page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -5rem;
+  left: -6rem;
+  width: 16rem;
+  height: 16rem;
+  background-image: url(/img/decoration-whychoosewithfree_4.svg);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper::before {
+    width: 12rem;
+    height: 12rem;
+    left: -4rem;
+    bottom: -3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper::before {
+    width: 50rem;
+    height: 50rem;
+    left: -2rem;
+    bottom: -2rem;
+  }
+}
+.page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper::after {
+  content: "";
+  position: absolute;
+  top: 42%;
+  left: -6rem;
+  width: 12rem;
+  height: 12rem;
+  background-image: url(/img/decoration-whychoosewithfree_2.svg);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper::after {
+    top: 38%;
+    width: 10rem;
+    height: 10rem;
+    left: -4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper::after {
+    top: 33%;
+    width: 8rem;
+    height: 8rem;
+    left: -3rem;
+  }
 }
 .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper .top-whychoosewithfree_wrapper_heading {
   text-align: center;
@@ -1685,8 +1820,7 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
 .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper .top-whychoosewithfree_wrapper_group .top-whychoosewithfree_wrapper_group_card .top-whychoosewithfree_wrapper_group_card_item .top-whychoosewithfree_wrapper_group_card_item_img img {
   width: 80%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .page-top main article #top-whychoosewithfree .top-whychoosewithfree_wrapper .top-whychoosewithfree_wrapper_group .top-whychoosewithfree_wrapper_group_card .top-whychoosewithfree_wrapper_group_card_item .top-whychoosewithfree_wrapper_group_card_item_content {
   padding: 1.5rem 1rem;
@@ -1713,7 +1847,7 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   margin: 0;
 }
 .page-top main article #top-environment {
-  margin: 4rem 0;
+  margin: 8rem 0 4rem;
 }
 .page-top main article #top-environment .top-environment_wrapper {
   width: 90%;
@@ -2116,8 +2250,7 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .page-top main article #top-casestudies .top-casestudies_wrapper .top-casestudies_wrapper_work .top-casestudies_wrapper_work_textbox .top-casestudies_wrapper_work_textbox_engineer .top-casestudies_wrapper_work_textbox_engineer_tag {
   display: flex;
@@ -2927,8 +3060,7 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
 .page-archive #archive-works .archive-works_all .archive-works_all_card .archive-works_all_card_img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 .page-archive #archive-works .archive-works_all .archive-works_all_card:hover .page-archive #archive-works .archive-works_all .archive-works_all_card_img img {
@@ -3730,8 +3862,7 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   width: 14rem;
   height: 14rem;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 4px solid #ffffff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
@@ -3869,4 +4000,4 @@ footer .footer-wrapper .footer-wrapper_bottom h6 {
   border-radius: 50px;
   font-size: 12px;
   font-weight: bold;
-}/*# sourceMappingURL=style.css.map */
+}
